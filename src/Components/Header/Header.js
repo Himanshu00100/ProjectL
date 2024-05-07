@@ -207,9 +207,9 @@ const Header = () => {
                                         <div className='bottom w-full h-[60%]   cursor-default  px-[60px] 2k:px-[200px] pt-[50px]'>
                                             <div className='w-full flex'>
                                                 {/* special section starts from here */}
-                                                <div className='w-[200px]  flex flex-col'>
+                                                <div className='w-[200px]  flex flex-col items-start'>
                                                     <h3 className='font-semibold'>Special</h3>
-                                                    <div className='flex flex-col gap-y-[10px] mt-[15px]'>
+                                                    <div className='flex flex-col gap-y-[10px] mt-[15px] items-start'>
                                                         <a href=' #' className='w-full hover:text-red-500 duration-200'>Leatest products </a>
                                                         <a href=' #' className='w-full hover:text-red-500 duration-200'>Sale </a>
                                                         <a href=' #' className='w-full hover:text-red-500 duration-200'>Bestsellers </a>

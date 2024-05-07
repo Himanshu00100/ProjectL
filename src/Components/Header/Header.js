@@ -161,8 +161,8 @@ const Header = () => {
 
                                     {/* Shop dropdown starts from here */}
 
-                                    <div className="shopdrop    w-screen h-[460px] bg-white  absolute top-[83px] left-[-254.5px] border-t-[1px] border-gray-300 transition-[height] duration-[300ms] ease-out  opacity-0 invisible shadow-lg shadow-gray-400">
-                                        <div className='top w-full h-[40%]  border-b-[1px] border-gray-200 cursor-default flex justify-between items-center px-[100px]'>
+                                    <div className="shopdrop    w-screen h-[460px] bg-white  absolute top-[83px] left-[-269px] border-t-[1px] 2k:left-[-462px] border-gray-300 transition-[height] duration-[300ms] ease-out  opacity-0 invisible shadow-lg shadow-gray-400">
+                                        <div className='top w-full h-[40%]  border-b-[1px] border-gray-200 cursor-default flex justify-between items-center px-[100px] 2k:px-[250px]'>
                                             <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
                                                 <img src={football} alt='' className='w-[40px] h-[40px]' />
                                                 <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Football</h3>
@@ -204,7 +204,7 @@ const Header = () => {
                                                 <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Hiking</h3>
                                             </div>
                                         </div>
-                                        <div className='bottom w-full h-[60%]   cursor-default  px-[60px] pt-[50px]'>
+                                        <div className='bottom w-full h-[60%]   cursor-default  px-[60px] 2k:px-[200px] pt-[50px]'>
                                             <div className='w-full flex'>
                                                 {/* special section starts from here */}
                                                 <div className='w-[200px]  flex flex-col'>
@@ -310,7 +310,7 @@ const Header = () => {
 
                                                     </div>
                                                 </div>
-                                                <div className='flex justify-center items-center relative w-[424.457px] h-auto  overflow-hidden '>
+                                                <div className='flex justify-center items-center  relative w-[424.457px] h-auto  overflow-hidden '>
                                                     <a href=' #'>
                                                         <img src={yoga} alt='' className='h-[100%] hover:scale-110 duration-300' />
                                                         <div className='absolute left-[50px] top-[15px]'>
@@ -331,9 +331,9 @@ const Header = () => {
                                     <p className="text-lg font-medium py-7">Women</p>
                                     <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
                                     {/* women's dropdown section starts from here */}
-                                    <div className='womendrop flex w-screen  h-[300px] absolute top-[83px] left-[-330px]  bg-white border-t-[1px] border-gray-200 px-[60px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible shadow-lg shadow-gray-400  '>
+                                    <div className='womendrop flex w-screen  h-[300px] absolute top-[83px] left-[-336px] 2k:left-[-528px]  bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible shadow-lg shadow-gray-400  '>
                                         <div className='h-full w-full ' >
-                                            <div className='w-full h-full  flex justify-center gap-x-[40px] '>
+                                            <div className='w-full h-full  flex justify-center 2k:justify-between gap-x-[40px] '>
                                                 {/* special section starts from here */}
                                                 <div className='w-[200px] h-[90%] flex flex-col'>
                                                     <h3 className='font-semibold'>Special</h3>
@@ -456,9 +456,9 @@ const Header = () => {
 
                                     {/* men dropdown section from here on */}
 
-                                    <div className='mendrop flex w-screen  h-[300px] absolute top-[83px] left-[-420px] bg-white border-t-[1px] border-gray-200 px-[60px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible shadow-lg shadow-gray-400  '>
+                                    <div className='mendrop flex w-screen  h-[300px] absolute top-[83px] left-[-425px] 2k:left-[-620px] bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible shadow-lg shadow-gray-400  '>
                                         <div className='h-full w-full ' >
-                                            <div className='w-full h-full  flex justify-center gap-x-[40px] '>
+                                            <div className='w-full h-full  flex justify-center 2k:justify-between gap-x-[40px] '>
                                                 {/* special section starts from here */}
                                                 <div className='w-[200px] h-[90%] flex flex-col'>
                                                     <h3 className='font-semibold'>Special</h3>
@@ -578,7 +578,7 @@ const Header = () => {
                                 <div className="accessory relative flex justify-center keys cursor-pointer">
                                     <p className="text-lg font-medium py-7">Accessories</p>
                                     <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
-                                    <div className='accessorydrop flex bg-white w-screen  h-[333px] absolute top-[83px] left-[-480px]  border-t-[1px] border-gray-200 pl-[80px] px-[50px] py-[50px]  justify-center transition-[padding,height] duration-[300ms] ease-out  opacity-0 invisible shadow-lg shadow-gray-400 '>
+                                    <div className='accessorydrop flex bg-white w-screen  h-[333px] absolute top-[83px] left-[-486px] 2k:left-[-678px]  border-t-[1px] border-gray-200 pl-[80px] px-[50px] 2xl:px-[240px] py-[50px]  justify-center transition-[padding,height] duration-[300ms] ease-out  opacity-0 invisible shadow-lg shadow-gray-400 '>
                                         <div className=' w-full h-full  flex flex-col gap-y-[10px] '>
                                             <div className='w-full h-[33.33%]  flex gap-x-[10px]'>
                                                 <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>

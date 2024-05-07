@@ -7,7 +7,8 @@ module.exports = {
         oswald: "Oswald"
       },
       screens: {
-        phone: "430px"
+        phone: "430px",
+        "2k":"1920px",
       },
       scale: {
         300: "3"

@@ -1,0 +1,141 @@
+/* language dropdown from here */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* navbar effect from here */
+.activenav {
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    box-shadow: 0px 10px 10px rgb(148, 148, 148);
+}
+
+.inactivenav {
+    position: static;
+    box-shadow: none;
+}
+
+.lang:hover .langdrop {
+    display: flex;
+    height: 90px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.currency:hover .currencydrop {
+    display: flex;
+    height: 90px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.keys:hover .underline {
+    opacity: 1;
+    width: 100%;
+}
+
+/* wishlist tooltip from here */
+
+.wishlist:hover .wishlistdrop {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* cart tooltip from here */
+
+.cart:hover .cartdrop {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* shop dropdown from here */
+
+.shop:hover .shopdrop {
+    visibility: visible;
+    z-index: 10;
+    height: 515px;
+    opacity: 1;
+}
+
+.shop:hover .shopoverlay {
+    opacity: 0.5;
+}
+
+.shopoverlay:hover {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+}
+
+.cta1:hover {
+    background-color: black;
+    color: white;
+}
+
+/* women's dropdown from here */
+
+.women:hover .womendrop {
+    padding-top: 65px;
+    visibility: visible;
+    z-index: 10;
+    height: 333px;
+    opacity: 1;
+}
+
+.women:hover .womenoverlay {
+    opacity: 0.5;
+}
+
+.womenoverlay:hover {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+}
+
+/* men's dropdown from here */
+
+.men:hover .mendrop {
+    padding-top: 65px;
+    visibility: visible;
+    z-index: 10;
+    height: 333px;
+    opacity: 1;
+}
+
+.men:hover .menoverlay {
+    opacity: 0.5;
+}
+
+.menoverlay:hover {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+}
+
+/* accessorie's dropdown from here */
+
+.accessory:hover .accessorydrop {
+    padding-top: 65px;
+    visibility: visible;
+    z-index: 10;
+    height: 353px;
+    opacity: 1;
+}
+
+.accessory:hover .accessoryoverlay {
+    opacity: 0.5;
+}
+
+.accessoryoverlay:hover {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+}

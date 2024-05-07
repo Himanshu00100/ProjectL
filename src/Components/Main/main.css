@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+
+/* sports section starts from here */
+
+.sp:hover img{
+    transform: scale(1.2);
+} 

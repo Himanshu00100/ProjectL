@@ -29,7 +29,7 @@ const Main = () => {
         {/* hero one section starts from here */}
 
         <div className='w-full h-[330.600px] md:h-[403.600px] lg:h-[800px]  flex  bg-green-500   justify-center items-center overflow-hidden relative'>
-          <video src={hero1} className='video h-full scale-300 phone:scale-150 md:scale-150 lg:scale-[125' loop autoPlay muted>
+          <video src={hero1} className='video h-full scale-300 phone:scale-150 md:scale-150 lg:scale-125' loop autoPlay muted>
           </video>
           {/* text inside hero section starts from here */}
           <div className='absolute left-[10px] md:left-[50px] top-[50px] lg:left-[50px] flex flex-col justify-center   items-start gap-y-[18.5px] lg:gap-y-8'>

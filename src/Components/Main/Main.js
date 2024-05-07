@@ -29,7 +29,7 @@ const Main = () => {
         {/* hero one section starts from here */}
 
         <div className='w-full h-[330.600px] md:h-[403.600px] lg:h-[800px]  flex  bg-green-500   justify-center items-center overflow-hidden relative'>
-          <video src={hero1} className='video h-full scale-300 phone:scale-150 md:scale-150 lg:scale-125' loop autoPlay muted>
+          <video src={hero1} className='video h-full scale-300 phone:scale-150 md:scale-150 lg:scale-150' loop autoPlay muted>
           </video>
           {/* text inside hero section starts from here */}
           <div className='absolute left-[10px] md:left-[50px] top-[50px] lg:left-[50px] flex flex-col justify-center   items-start gap-y-[18.5px] lg:gap-y-8'>
@@ -48,26 +48,26 @@ const Main = () => {
         {/* sport section starts from here */}
 
 
-        <div className='w-screen h-[380.188px] bg-red-500 hidden'>
-          <div className='w-[33.33%] h-full flex justify-center items-center bg-purple-500 overflow-hidden relative sp'>
-            <img src={sport1} alt='' className='w-full  duration-300 ease-out' />
-            <div className='absolute bottom-[65px] flex flex-col justify-center items-center gap-y-[26px]'>
-              <h1 className='text-white text-[50px] leading-[50px] font-[oswald] font-[600]'>ALL FOR TENNIS</h1>
-              <a href='' className=' px-[30px] py-[5px]  bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</a>
+        <div className='w-screen h-auto md:-[191.988px] xl:h-[380.188px] bg-white flex flex-col md:flex-row'>
+          <div className='w-full md:w-[33.33%] h-[225px] phone:h-[322.8px] sm:h-[480px] md:h-[191.988px] lg:h-[255.988px] flex justify-center items-center bg-purple-500 overflow-hidden relative sp'>
+            <img src={sport1} alt='' className='w-full   duration-300 ease-out' />
+            <div className='absolute bottom-[30px] xl:bottom-[65px] flex flex-col justify-center items-center xl:gap-y-2 gap-y-[26px] sm:gap-y-[16px]'>
+              <h1 className=' text-[30px] md:text-[24px] lg:text-[30px] xl:text-[50px] text-white leading-[30px] xl:leading-[50px] font-[oswald] font-[600]'>ALL FOR TENNIS</h1>
+              <a href='' className='px-[20px] xl:px-[30px] py-[3px] xl:py-[5px]  bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</a>
             </div>
           </div>
-          <div className='w-[33.33%] h-full flex justify-center items-center bg-purple-500 overflow-hidden relative sp'>
+          <div className='w-full md:w-[33.33%] h-[225px] phone:h-[322.8px] sm:h-[480px] md:h-[191.988px] lg:h-[255.988px] flex justify-center items-center bg-purple-500 overflow-hidden relative sp'>
             <img src={sport2} alt='' className='w-full  duration-300 ease-out' />
-            <div className='absolute bottom-[65px] flex flex-col justify-center items-center gap-y-[26px]'>
-              <h1 className='text-white text-[50px] leading-[50px] font-[oswald] font-[600] text-center'>GYM <br /> ACCESSORIES</h1>
-              <a href='' className=' px-[30px] py-[5px]  bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</a>
+            <div className='absolute bottom-[30px] xl:bottom-[65px] flex flex-col justify-center items-center gap-y-[20px] xl:gap-y-[26px] sm:gap-y-[16px]'>
+              <h1 className='text-white text-[30px] md:text-[24px] lg:text-[30px] xl:text-[50px] xl:leading-[50px] font-[oswald] font-[600]  text-center'>GYM <br /> ACCESSORIES</h1>
+              <a href='' className=' px-[20px] xl:px-[30px] py-[3px] xl:py-[5px]  bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</a>
             </div>
           </div>
-          <div className='w-[33.33%] h-full flex justify-center items-center bg-purple-500 overflow-hidden relative sp'>
+          <div className='w-full md:w-[33.33%] h-[225px] phone:h-[322.8px] sm:h-[480px] md:h-[191.988px] lg:h-[255.988px] flex justify-center items-center bg-purple-500 overflow-hidden relative sp'>
             <img src={sport3} alt='' className='w-full  duration-300 ease-out' />
-            <div className='absolute bottom-[65px] flex flex-col justify-center items-center gap-y-[26px]'>
-              <h1 className='text-white text-[50px] leading-[50px] font-[oswald] font-[600]'>BE SAFE ON BIKE</h1>
-              <a href='' className=' px-[30px] py-[5px]  bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</a>
+            <div className='absolute bottom-[30px] xl:bottom-[65px] flex flex-col justify-center items-center gap-y-[26px] xl:gap-y-2 sm:gap-y-[16px]'>
+              <h1 className='text-white text-[30px] md:text-[24px] lg:text-[30px] xl:text-[50px] xl:leading-[50px] font-[oswald] font-[600]'>BE SAFE ON BIKE</h1>
+              <a href='' className=' px-[20px] xl:px-[30px] py-[3px] xl:py-[5px]   bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</a>
             </div>
           </div>
         </div>

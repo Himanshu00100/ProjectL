@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className="w-full h-full bg-black flex flex-col gap-y-[20px] 2xl:flex-row justify-between items-center">
                     <h3 className=" text-[22px] 2xl:text-[30px] leading-[30px] font-[600] text-white font-oswald xl:text-nowrap">JOIN OUR NEWSLETTER AND GET $20 DISCOUNT FOR YOUR FIRST ORDER</h3>
                     <div className=" px-[10px] h-full flex gap-x-[10px] 2xl:pr-[100px] 2k:pr-[0px]  ">
-                        <input type="email" name="Email" className="focus:outline-none w-[158.487px] phone:w-auto sm:w-[358px] xl:w-[158.487px] 2k:w-[298.4px] text-center phone:text-start text-[14px] 2xl:text-[18px] text-white px-[20px] py-[9px] border-[1px] border-white bg-black" placeholder="Your email here..." />
+                        <input type="email" name="Email" className="focus:outline-none w-[158.487px] phone:w-auto  2k:w-[298.4px] text-center phone:text-start text-[14px] 2xl:text-[18px] text-white px-[20px] py-[9px] border-[1px] border-white bg-black" placeholder="Your email here..." />
                         <button type="submit" className="bg-white  text-black px-[20px] 2xl:px-[40px] py-[9px] text-[14px] 2xl:text-[18px] hover:text-white hover:bg-red-500 duration-300">Subscribe</button>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ const Footer = () => {
             {/* footer section starts from here */}
 
             {/* section 1 from here */}
-            <div className="w-full 2xl;h-[222px] bg-black px-[15px] sm:px-[20px] xl:px-[50px] 2k:px-[250px]">
+            <div className="w-full 2xl:h-[222px] bg-black px-[15px] sm:px-[20px] xl:px-[50px] 2k:px-[250px]">
                 <div className="w-full h-full bg-black flex flex-col xl:flex-row gap-y-[20px lg:flex-row]">
 
                     <div className="md:flex md:gap-x-[20px]">
@@ -129,7 +129,7 @@ const Footer = () => {
                     </div>
 
 
-                    <div className="flex ">
+                    <div className="flex md:mt-[40px] lg:mt-[0px]">
                         {/* Account section starts from here */}
                         <div className="w-[135px] phone:w-[200px] sm:w-[305px] md:w-[200px] xl:w-[200px] h-full bg-black flex flex-col items-start gap-y-[6px]">
                             <h6 className="text-[22px] text-white font-[500]">Account</h6>

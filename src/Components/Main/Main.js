@@ -75,9 +75,9 @@ const Main = () => {
 
         {/* shop by category section starts from here */}
 
-        <div className='w-screen h-[151.600px]  px-[50px] 2k:px-[250px] mt-[80px] mb-[70px]   '>
+        <div className='w-screen 2xl:h-[151.600px]  2xl:px-[50px] 2k:px-[250px] mt-[80px] mb-[70px]   '>
           <h2 className='text-[20px] sm:text-[30px] font-oswald font-[600] mb-[23px] '>SHOP BY CATEGORIES</h2>
-          <div className='top w-full   h-[91.600px] border-gray-200 cursor-default flex flex-col lg:flex-row justify-between items-center gap-y-[20px] lg:gap-x-[35px] xl:justify-between xl:gap-x-[60px] 2xl:gap-x-[100px] '>
+          <div className='top w-full   2xl:h-[91.600px] border-gray-200 cursor-default flex flex-col lg:flex-row justify-between items-center gap-y-[20px] lg:gap-x-[35px] xl:justify-between xl:gap-x-[60px] 2xl:gap-x-[100px] '>
             <div className='flex  w-full justify-around lg:justify-between'>
               <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
                 <img src={football} alt='' className='w-[40px] h-[40px]' />

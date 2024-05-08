@@ -7,3 +7,20 @@
 .sp:hover img{
     transform: scale(1.2);
 } 
+  /* leatest product tab from here */
+
+
+.product:hover .stats{
+    right:10px;
+}
+.product:hover .stats{
+    right:10px;
+}
+
+.product:hover .addtocart{
+    bottom:10px;
+}
+
+.product:hover .quickbar{
+    bottom:10px;
+}

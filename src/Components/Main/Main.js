@@ -1,5 +1,6 @@
 import React from 'react'
 import "./main.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import hero1 from "../Assets/hero1/h1.mp4"
 import sport1 from "../Assets/sports/sport-1-banner-1.jpg"
 import sport2 from "../Assets/sports/sport-1-banner-2.jpg"
@@ -18,7 +19,31 @@ import skate from "../Assets/category/skate.png"
 import snowboard from "../Assets/category/snowboard.png"
 import hiking from "../Assets/category/hiking.png"
 
+// leatest product images from here on 
 
+import product1 from "../Assets/leatest products/p1.jpg"
+import product2 from "../Assets/leatest products/p2.jpg"
+import product3 from "../Assets/leatest products/p3.jpg"
+import product4 from "../Assets/leatest products/p4.jpg"
+import product5 from "../Assets/leatest products/p5.jpg"
+import { faChartBar, faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faChevronLeft, faChevronRight, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+
+// best seller images from here
+
+import bestproduct1 from "../Assets/best seller/p1.jpg"
+import bestproduct2 from "../Assets/best seller/p2.jpg"
+import bestproduct3 from "../Assets/best seller/p3.jpg"
+import bestproduct4 from "../Assets/best seller/p4.jpg"
+import bestproduct5 from "../Assets/best seller/p5.jpg"
+
+// on sale products from here
+
+import saleproduct1 from "../Assets/onsale products/p1.jpg"
+import saleproduct2 from "../Assets/onsale products/p2.jpg"
+import saleproduct3 from "../Assets/onsale products/p3.jpg"
+import saleproduct4 from "../Assets/onsale products/p4.jpg"
+import saleproduct5 from "../Assets/onsale products/p5.jpg"
 
 const Main = () => {
 
@@ -131,9 +156,508 @@ const Main = () => {
         {/* shop by category section ends here */}
 
         {/* a divider */}
-        <div className=' w-screen py-[10px] mb-[50px] hidden '>
+        <div className=' w-screen py-[10px] mb-[50px]  '>
           <div className='w-full h-[0.800px] bg-gray-200'></div>
         </div>
+
+        {/* New arrival section starts from here  */}
+        <div className='w-full h-[534.250px] bg-white mt-[100px]  px-[50px]'>
+          <div className='w-full h-full bg-white-500 flex flex-col gap-y-[20px]'>
+            <div className='w-[658.787px] h-[44px] bg-white text-[40px] leading-[44px] font-oswald font-[600] '>
+              {/* product section tabs */}
+              <ul className='flex gap-x-[35px] text-[#808080]'>
+                <li className='cursor-pointer'>NEW ARRIVALS</li>
+                <li className='cursor-pointer'>BEST SELLERS</li>
+                <li className='cursor-pointer'>ON SALE</li>
+              </ul>
+              {/* tabs end here */}
+            </div>
+            {/* product section starts from here */}
+
+            {/* new arrival products section from here */}
+
+            <div className='flex items-center   w-full h-[411.250px] bg-white   gap-x-[20px] relative productsection'>
+              <span className='absolute left-0 bg-white arrow z-10 shadow-md cursor-pointer'>
+                <FontAwesomeIcon icon={faChevronLeft} className='bg-white px-[10px] py-[10px]' />
+              </span>
+
+              {/* product 1  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 1*/}
+                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center '>
+
+                  {/* stats from here */}
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* add to cart from here */}
+                  <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
+                    <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
+                  </div>
+
+                  <img src={product1} alt='Product 1' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Swim shorts in black</a>
+                  <p>$40.00</p>
+                </div>
+              </div>
+              {/* product 2  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 2 */}
+                <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+                  <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-28%</span>
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* quick add from here */}
+
+                  <div className='w-[250px] px-[20px] py-[15px] bg-white shadow-md absolute bottom-[-100%] quickbar cursor-default transition-[bottom] duration-500 ease-out'>
+                    <div className='w-full h-[53.6px] bg-white flex flex-col justify-center gap-y-[10px]'>
+                      <p className='text-[14px]'>Quick add to cart</p>
+                      <div className='w-full  bg-white flex justify-between text-[14px]  '>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[8px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XS</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2xp] hover:bg-black hover:text-white duration-300 cursor-pointer'>S</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>M</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>L</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XL</span>
+                      </div>
+                    </div>
+                  </div>
+                  <img src={product2} alt='Product 2' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>High stretch sports shorts</a>
+                  <p>$79.00 &#160; - &#160; $110.00</p>
+                </div>
+              </div>
+              {/* product 3  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 3*/}
+                <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+                  <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-16%</span>
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* quick add from here */}
+
+                  <div className='w-[250px] px-[20px] py-[15px] bg-white shadow-md absolute bottom-[-100%] quickbar cursor-default transition-[bottom] duration-500 ease-out'>
+                    <div className='w-full h-[53.6px] bg-white flex flex-col justify-center gap-y-[10px]'>
+                      <p className='text-[14px]'>Quick add to cart</p>
+                      <div className='w-full  bg-white flex justify-between text-[14px]  '>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[8px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XS</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2xp] hover:bg-black hover:text-white duration-300 cursor-pointer'>S</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>M</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>L</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XL</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <img src={product3} alt='Product 3' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Letter sports tank top</a>
+                  <p className='text-red-500'>$40.00 &#160;  <span className='text-[#808080] line-through'> $70.00</span></p>
+                </div>
+              </div>
+              {/* product 4  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 4*/}
+                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* add to cart from here */}
+                  <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
+                    <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
+                  </div>
+
+                  <img src={product4} alt='Product 4' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Colorsports tank top</a>
+                  <p>$90.00</p>
+                </div>
+              </div>
+              {/* product 5  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 5*/}
+                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* add to cart from here */}
+                  <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md '>
+                    <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
+                  </div>
+
+                  <img src={product5} alt='Product 5' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Minimalist training bag</a>
+                  <p>$80.00</p>
+                </div>
+              </div>
+
+              <span className='absolute right-0 bg-white arrow z-10 shadow-md cursor-pointer'>
+                <FontAwesomeIcon icon={faChevronRight} className='bg-white px-[10px] py-[10px]' />
+              </span>
+            </div>
+            {/* new arrival products section ends here */}
+
+            {/* best seller's product section starts from here */}
+
+            <div className='hidden w-full h-[411.250px] bg-white  gap-x-[20px]'>
+
+              {/* product 1  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 1*/}
+                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center '>
+
+                  {/* stats from here */}
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* add to cart from here */}
+                  <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
+                    <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
+                  </div>
+
+                  <img src={bestproduct1} alt='Product 1' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Asso crop tank top</a>
+                  <p>$60.00</p>
+                </div>
+              </div>
+              {/* product 2  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 2 */}
+                <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* add to cart from here */}
+                  <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
+                    <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
+                  </div>
+
+                  <img src={bestproduct2} alt='Product 2' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Athletic tank top</a>
+                  <p>$79.00 &#160; - &#160; $88.00</p>
+                </div>
+              </div>
+              {/* product 3  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 3*/}
+                <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* quick add from here */}
+
+                  <div className='w-[250px] px-[20px] py-[15px] bg-white shadow-md absolute bottom-[-100%] quickbar cursor-default transition-[bottom] duration-500 ease-out'>
+                    <div className='w-full h-[53.6px] bg-white flex flex-col justify-center gap-y-[10px]'>
+                      <p className='text-[14px]'>Quick add to cart</p>
+                      <div className='w-full  bg-white flex justify-between text-[14px] px-[20px] '>
+
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2xp] hover:bg-black hover:text-white duration-300 cursor-pointer'>M</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>L</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XL</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XXL</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <img src={bestproduct3} alt='Product 3' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Knit sport  wristbands</a>
+                  <p className=''>$60.00</p>
+                </div>
+              </div>
+              {/* product 4  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 4*/}
+                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* add to cart from here */}
+                  <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
+                    <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
+                  </div>
+
+                  <img src={bestproduct4} alt='Product 4' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Contrast binding  layered  dress</a>
+                  <p>$70.00</p>
+                </div>
+              </div>
+              {/* product 5  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 5*/}
+                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* quick add from here */}
+
+                  <div className='w-[250px] px-[20px] py-[15px] bg-white shadow-md absolute bottom-[-100%] quickbar cursor-default transition-[bottom] duration-500 ease-out'>
+                    <div className='w-full h-[53.6px] bg-white flex flex-col justify-center gap-y-[10px]'>
+                      <p className='text-[14px]'>Quick add to cart</p>
+                      <div className='w-full  bg-white flex justify-between text-[14px]  '>
+
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2xp] hover:bg-black hover:text-white duration-300 cursor-pointer'>Green</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>Brown</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>Gray</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>Pink</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-22%</span>
+
+                  <img src={bestproduct5} alt='Product 5' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Colorful sport tank top</a>
+                  <p>$109.00.00</p>
+                </div>
+              </div>
+
+
+
+            </div>
+
+            {/* best seller's product section ends here */}
+
+            {/* on sale product section starts from here */}
+
+            <div className='hidden w-full h-[411.250px] bg-white  gap-x-[20px]'>
+
+              {/* product 1  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 1*/}
+                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center '>
+
+                  {/* stats from here */}
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* quick add from here */}
+
+                  <div className='w-[250px] px-[20px] py-[15px] bg-white shadow-md absolute bottom-[-100%] quickbar cursor-default transition-[bottom] duration-500 ease-out'>
+                    <div className='w-full h-[53.6px] bg-white flex flex-col justify-center gap-y-[10px]'>
+                      <p className='text-[14px]'>Quick add to cart</p>
+                      <div className='w-full  bg-white flex justify-between text-[14px]  '>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[8px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XS</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2xp] hover:bg-black hover:text-white duration-300 cursor-pointer'>S</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>M</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>L</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XL</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-28%</span>
+
+                  <img src={saleproduct1} alt='Product 1' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>High stretch sports shorts</a>
+                  <p>$70.00 &#160;-&#160; $110.00</p>
+                </div>
+              </div>
+              {/* product 2  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 2 */}
+                <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* quick add from here */}
+
+                  <div className='w-[250px] px-[20px] py-[15px] bg-white shadow-md absolute bottom-[-100%] quickbar cursor-default transition-[bottom] duration-500 ease-out'>
+                    <div className='w-full h-[53.6px] bg-white flex flex-col justify-center gap-y-[10px]'>
+                      <p className='text-[14px]'>Quick add to cart</p>
+                      <div className='w-full  bg-white flex justify-between text-[14px] px-[20px] '>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>M</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>L</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XL</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XXL</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-16%</span>
+
+                  <img src={saleproduct2} alt='Product 2' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Athletic tank top</a>
+                  <p className='text-red-500'>$59.00 &#160;  <span className='text-[#808080] line-through'> $70.00</span></p>
+                </div>
+              </div>
+              {/* product 3  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 3*/}
+                <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* quick add from here */}
+
+                  <div className='w-[250px] px-[20px] py-[15px] bg-white shadow-md absolute bottom-[-100%] quickbar cursor-default transition-[bottom] duration-500 ease-out'>
+                    <div className='w-full h-[53.6px] bg-white flex flex-col justify-center gap-y-[10px]'>
+                      <p className='text-[14px]'>Quick add to cart</p>
+                      <div className='w-full  bg-white flex justify-between text-[14px]  '>
+
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2xp] hover:bg-black hover:text-white duration-300 cursor-pointer'>Gray</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>Green</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>Pink</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>Brown</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-14%</span>
+
+                  <img src={saleproduct3} alt='Product 3' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Knit sport  wristbands</a>
+                  <p className='text-red-500'>$69.00 &#160;  <span className='text-[#808080] line-through'> $80.00</span></p>
+                </div>
+              </div>
+              {/* product 4  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 4*/}
+                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* add to cart from here */}
+                  <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
+                    <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
+                  </div>
+                  <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-44%</span>
+                  <span className=' absolute top-[28px] left-[10px] px-[10px] py-[1px] text-[12px] font-[400] text-white bg-green-800'>Feature</span>
+
+                  <img src={saleproduct4} alt='Product 4' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Contrast binding  layered  dress</a>
+                  <p className='text-red-500'>$39.00 &#160;  <span className='text-[#808080] line-through'> $70.00</span></p>
+                </div>
+              </div>
+              {/* product 5  */}
+              <div className='w-[20%] h-full bg-white product'>
+                {/* product image 5*/}
+                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                  <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
+                    <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                    <FontAwesomeIcon icon={faChartBar} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
+                  </div>
+
+                  {/* quick add from here */}
+
+                  <div className='w-[250px] px-[20px] py-[15px] bg-white shadow-md absolute bottom-[-100%] quickbar cursor-default transition-[bottom] duration-500 ease-out'>
+                    <div className='w-full h-[53.6px] bg-white flex flex-col justify-center gap-y-[10px]'>
+                      <p className='text-[14px]'>Quick add to cart</p>
+                      <div className='w-full  bg-white flex justify-between text-[14px]  '>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[8px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XS</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2xp] hover:bg-black hover:text-white duration-300 cursor-pointer'>S</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>M</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>L</span>
+                        <span className='bg-white border-[0.5px] border-gray-200 px-[10px] py-[2px] hover:bg-black hover:text-white duration-300 cursor-pointer'>XL</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-29%</span>
+
+                  <img src={saleproduct5} alt='Product 5' className='w-full' />
+                </div>
+                {/* product price */}
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                  <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Colorful sport tank top</a>
+                  <p className='text-red-500'>$99.00 &#160;  <span className='text-[#808080] line-through'> $140.00</span></p>
+                </div>
+              </div>
+
+
+
+            </div>
+
+
+            {/* on sale product section ends here */}
+
+            {/* product section ends here */}
+          </div>
+        </div>
+
+        {/* new arrival section ends here */}
 
 
       </main></>

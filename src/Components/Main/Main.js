@@ -27,7 +27,7 @@ import product3 from "../Assets/leatest products/p3.jpg"
 import product4 from "../Assets/leatest products/p4.jpg"
 import product5 from "../Assets/leatest products/p5.jpg"
 import { faChartBar, faHeart } from '@fortawesome/free-regular-svg-icons'
-import { faChevronLeft, faChevronRight, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight, faMagnifyingGlass, faPersonSkating, faPersonSkiing, faPersonSnowboarding } from '@fortawesome/free-solid-svg-icons'
 
 // best seller images from here
 
@@ -45,11 +45,18 @@ import saleproduct3 from "../Assets/onsale products/p3.jpg"
 import saleproduct4 from "../Assets/onsale products/p4.jpg"
 import saleproduct5 from "../Assets/onsale products/p5.jpg"
 
+// hero 3 image from here
+
+import hero3 from "../Assets/hero 3/hero3.jpg"
+
+// hero 4 image 
+import hero4 from "../Assets/hero 4/hero4.jpg"
+
 const Main = () => {
 
-//  active tabs and its sections from here
+  //  active tabs and its sections from here
 
-// tabs
+  // tabs
   const [tab1, settab1] = useState("activetab")
   const [tab2, settab2] = useState("")
   const [tab3, settab3] = useState("")
@@ -80,7 +87,7 @@ const Main = () => {
     setonsale("inactivesection")
 
   }
-//  tab 3
+  //  tab 3
   const tab3active = () => {
     settab1("")
     settab2("")
@@ -93,7 +100,7 @@ const Main = () => {
 
 
 
-  
+
 
 
 
@@ -229,7 +236,7 @@ const Main = () => {
 
             {/* new arrival products section from here */}
 
-            <div className={' flex flex-col gap-y-[15px] 2xl:gap-y-[0px] phone:flex-row 2xl:flex-row  items-center z-0   w-full h-auto 2xl:h-[411.250px] phone:overflow-y-hidden  phone:overflow-x-scroll 2xl:overflow-x-hidden bg-white phone:gap-x-[15px]   2xl:gap-x-[20px] relative productsection transition-all duration-500  '+ newarrival}>
+            <div className={' flex flex-col gap-y-[15px] 2xl:gap-y-[0px] phone:flex-row 2xl:flex-row  items-center z-0   w-full h-auto 2xl:h-[411.250px] phone:overflow-y-hidden  phone:overflow-x-scroll 2xl:overflow-x-hidden bg-white phone:gap-x-[15px]   2xl:gap-x-[20px] relative productsection transition-all duration-500  ' + newarrival}>
 
               {/* left arrow */}
 
@@ -741,6 +748,71 @@ const Main = () => {
         </div>
 
         {/* new arrival section ends here */}
+
+
+        {/* hero 2 section starts from here */}
+
+        <div className='hero2 w-screen h-[800px] bg-white  relative '>
+          <div className='overlay absolute w-full h-full bg-gradient-to-r from-[#047EAD]  to-transparent to-50%'>
+            <div className='absolute left-[50px] top-[100px] flex flex-col gap-y-[25px]'>
+              <h2 className='2xl:text-[100px] leading-[100px] font-oswald font-[600] text-white text-start'>WINTER <br /> IS COMING. <br /> TIME FOR <br /> THE SLOPE!</h2>
+              <p className='text-[20px] text-white font-[400] text-start'>Get ready for the winter season</p>
+              <div className='flex gap-x-[10px]'>
+                <a href='#' className=' bg-white flex justify-center items-center gap-x-[10px] px-[20px] py-[10px] border-[1px] border-white hover:bg-transparent hover:text-white duration-300'>
+                  <FontAwesomeIcon icon={faPersonSnowboarding} className='text-[24px]' />
+                  <p className='text-[16px] font-[500] '>Snowboard</p>
+                </a>
+
+                <a href='#' className=' bg-white flex justify-center items-center gap-x-[10px] px-[20px] py-[10px] border-[1px] border-white hover:bg-transparent hover:text-white duration-300'>
+                  <FontAwesomeIcon icon={faPersonSkiing} className='text-[24px]' />
+                  <p className='text-[16px] font-[500] '>Skiing</p>
+                </a>
+
+                <a href='#' className=' bg-white flex justify-center items-center gap-x-[10px] px-[20px] py-[10px] border-[1px] border-white hover:bg-transparent hover:text-white duration-300'>
+                  <FontAwesomeIcon icon={faPersonSkating} className='text-[24px]' />
+                  <p className='text-[16px] font-[500] '>Snowskating</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* hero 2 section ends here */}
+
+        {/* hero 3 section starts from here */}
+        <div className=' hero3 w-screen h-[800px] mb-[100px] bg-green-500 flex flex-col relative'>
+          <img src={hero3} alt='hero 3 bg' className='h-full' />
+          <div className='absolute w-full h-full  flex justify-center '>
+            <div className=' absolute top-[150px] flex flex-col gap-y-[25px]'>
+              <h2 className='text-[100px] leading-[100px] text-white font-oswald font-[600] text-center'>GET INSPIRED <br /> BY READY-MADE SETS <br /> OF CLOTHES</h2>
+              <p className='text-white text-[20px] font-[400]'>Save time on complete sets</p>
+              <div className='flex gap-x-[550px] mt-[10px] justify-center'>
+                <a href='#' className='bg-white border-[1px] border-white px-[40px] py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-white duration-300' >Sets for Women</a>
+                <a href='#' className=' bg-white border-[1px] border-white px-[40px] py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-white duration-300' >Sets for Women</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* hero 3 section ends here */}
+
+        {/* hero 4 section starts from here */}
+
+        <div className='w-screen h-[598.650px] bg-white mb-[100px] flex px-[50px]'>
+          <div className='w-[50%] h-full bg-white flex justify-center items-center overflow-hidden'>
+            <img src={hero4} alt='' className='h-full scale-[1.1]' />
+          </div>
+          <div className='w-[50%] h-full bg-[#f0f0f0] flex justify-center items-center '>
+            <div className='w-full h-full flex justify-center items-center bg-transparent text-black gap-y-[30px] flex-col'>
+              <h2 className='text-[70px] leading-[70px] font-[600] font-oswald text-center'>WE SUPPORT <br/>PASSIONS AND TRY <br/>TO HELP FUTURE <br/>ATHLETES</h2>
+              <p className=' text-[20px] font-[400]'>Save time on complete sets</p>
+            </div>
+          </div>
+        </div>
+
+        {/* hero 4 section ends here */}
 
 
       </main></>

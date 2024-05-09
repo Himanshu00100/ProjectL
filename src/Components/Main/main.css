@@ -55,4 +55,21 @@
     /* transition:all 500ms; */
 }
 
+/* hero 2 section from here */
+
+.hero2{
+    background-image: url("../Assets/hero 2/hero2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:-135px -50px;
+}
+
+/* hero 3 section from here */
+
+/* .hero3{
+    background-image:url("../Assets/hero 3/hero3.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+} */
+
 

@@ -24,3 +24,35 @@
 .product:hover .quickbar{
     bottom:10px;
 }
+
+.productsection:hover .arrow{
+    visibility:visible;
+    opacity:1;
+}
+
+/* product tab starts from here */
+.activetab{
+    color:black;
+    text-decoration: underline;
+    text-decoration-thickness:1px ;
+}
+
+.inactivetab{
+    color:#808080;
+    text-decoration: none;
+}
+
+.activesection{ 
+    display:flex;
+    visibility:visible;
+    opacity:1;
+    /* transition:all 500ms; */
+}
+.inactivesection{
+    display:none;
+    visibility:hidden;
+    opacity:0;
+    /* transition:all 500ms; */
+}
+
+

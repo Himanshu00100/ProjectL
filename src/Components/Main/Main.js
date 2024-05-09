@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./main.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import hero1 from "../Assets/hero1/h1.mp4"
@@ -46,6 +46,59 @@ import saleproduct4 from "../Assets/onsale products/p4.jpg"
 import saleproduct5 from "../Assets/onsale products/p5.jpg"
 
 const Main = () => {
+
+//  active tabs and its sections from here
+
+// tabs
+  const [tab1, settab1] = useState("activetab")
+  const [tab2, settab2] = useState("")
+  const [tab3, settab3] = useState("")
+
+  // product sections
+
+  const [newarrival, setnewarrival] = useState("activesection")
+  const [bestseller, setbestseller] = useState("inactivesection")
+  const [onsale, setonsale] = useState("inactivesection")
+
+  // tab 
+  const tab1active = () => {
+    settab1("activetab")
+    settab2("")
+    settab3("")
+    setnewarrival("activesection")
+    setbestseller("inactivesection")
+    setonsale("inactivesection")
+
+  }
+  // tab 2
+  const tab2active = () => {
+    settab1("")
+    settab2("activetab")
+    settab3("")
+    setnewarrival("inactivesection")
+    setbestseller("activesection")
+    setonsale("inactivesection")
+
+  }
+//  tab 3
+  const tab3active = () => {
+    settab1("")
+    settab2("")
+    settab3("activetab")
+    setnewarrival("inactivesection")
+    setbestseller("inactivesection")
+    setonsale("activesection")
+
+  }
+
+
+
+  
+
+
+
+
+
 
   return (
     <>
@@ -100,7 +153,7 @@ const Main = () => {
 
         {/* shop by category section starts from here */}
 
-        <div className='w-screen 2xl:h-[151.600px]  2xl:px-[50px] 2k:px-[250px] mt-[80px] mb-[70px]   '>
+        <div className='w-screen 2xl:h-[151.600px]  2xl:px-[50px] 2k:px-[250px] mt-[80px] mb-[30px] 2xl:mb-[70px]   '>
           <h2 className='text-[20px] sm:text-[30px] font-oswald font-[600] mb-[23px] '>SHOP BY CATEGORIES</h2>
           <div className='top w-full   2xl:h-[91.600px] border-gray-200 cursor-default flex flex-col lg:flex-row justify-between items-center gap-y-[20px] lg:gap-x-[35px] xl:justify-between xl:gap-x-[60px] 2xl:gap-x-[100px] '>
             <div className='flex  w-full justify-around lg:justify-between'>
@@ -156,19 +209,19 @@ const Main = () => {
         {/* shop by category section ends here */}
 
         {/* a divider */}
-        <div className=' w-screen py-[10px] mb-[50px]  '>
+        <div className=' w-screen py-[10px] mb-[30px] 2xl:mb-[50px]  '>
           <div className='w-full h-[0.800px] bg-gray-200'></div>
         </div>
 
         {/* New arrival section starts from here  */}
-        <div className='w-full h-[534.250px] bg-white mt-[100px]  px-[50px]'>
+        <div className='w-full 2xl:h-[534.250px] bg-white 2xl:mt-[100px] px-[10px] mb-[20px] 2xl:mb-[0px]  2xl:px-[50px]'>
           <div className='w-full h-full bg-white-500 flex flex-col gap-y-[20px]'>
-            <div className='w-[658.787px] h-[44px] bg-white text-[40px] leading-[44px] font-oswald font-[600] '>
+            <div className='w-full 2xl:w-[658.787px] 2xl:h-[44px] bg-white text-[28px] 2xl:text-[40px] leading-[44px] font-oswald font-[600] '>
               {/* product section tabs */}
-              <ul className='flex gap-x-[35px] text-[#808080]'>
-                <li className='cursor-pointer'>NEW ARRIVALS</li>
-                <li className='cursor-pointer'>BEST SELLERS</li>
-                <li className='cursor-pointer'>ON SALE</li>
+              <ul className='flex gap-x-[35px] text-[#808080] flex-col 2xl:flex-row'>
+                <li className={'cursor-pointer transition-all duration-500 ' + tab1} onClick={tab1active}  >NEW ARRIVALS</li>
+                <li className={'cursor-pointer transition-all duration-500 ' + tab2} onClick={tab2active}>BEST SELLERS</li>
+                <li className={'cursor-pointer transition-all duration-500 ' + tab3} onClick={tab3active} >ON SALE</li>
               </ul>
               {/* tabs end here */}
             </div>
@@ -176,15 +229,18 @@ const Main = () => {
 
             {/* new arrival products section from here */}
 
-            <div className='flex items-center   w-full h-[411.250px] bg-white   gap-x-[20px] relative productsection'>
-              <span className='absolute left-0 bg-white arrow z-10 shadow-md cursor-pointer'>
-                <FontAwesomeIcon icon={faChevronLeft} className='bg-white px-[10px] py-[10px]' />
+            <div className={' flex flex-col gap-y-[15px] 2xl:gap-y-[0px] 2xl:flex-row  items-center z-0   w-full h-auto 2xl:h-[411.250px] bg-white   2xl:gap-x-[20px] relative productsection transition-all duration-500 '+ newarrival}>
+
+              {/* left arrow */}
+
+              <span className='absolute left-0 flex justify-center items-center bg-white arrow z-10 shadow-md cursor-pointer  inviaible shadow-red-500 opacity-0 duration-500 ease-out'>
+                <FontAwesomeIcon icon={faChevronLeft} className='bg-white px-[10px] py-[10px] hover:bg-black hover:text-white  duration-300' />
               </span>
 
               {/* product 1  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product flex flex-col items-center 2xl:block'>
                 {/* product image 1*/}
-                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center '>
+                <div className='w-[268px] 2xl:w-full h-[357.25px] bg-white cursor-pointer relative  overflow-hidden flex justify-center '>
 
                   {/* stats from here */}
                   <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
@@ -198,16 +254,16 @@ const Main = () => {
                     <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                   </div>
 
-                  <img src={product1} alt='Product 1' className='w-full' />
+                  <img src={product1} alt='Product 1' className='2xl:w-full' />
                 </div>
                 {/* product price */}
-                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                <div className='w-[268px] 2xl:w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
                   <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Swim shorts in black</a>
                   <p>$40.00</p>
                 </div>
               </div>
               {/* product 2  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 2 */}
                 <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
                   <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-28%</span>
@@ -240,7 +296,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 3  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 3*/}
                 <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
                   <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-16%</span>
@@ -274,7 +330,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 4  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 4*/}
                 <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
                   <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
@@ -297,7 +353,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 5  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 5*/}
                 <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
                   <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
@@ -320,18 +376,26 @@ const Main = () => {
                 </div>
               </div>
 
-              <span className='absolute right-0 bg-white arrow z-10 shadow-md cursor-pointer'>
-                <FontAwesomeIcon icon={faChevronRight} className='bg-white px-[10px] py-[10px]' />
+              {/* right arrow */}
+
+              <span className='absolute right-0 flex justify-center items-center bg-white arrow z-10 shadow-md cursor-pointer shadow-red-500 hover:shadow-red-500 inviaible opacity-0 transition-all duration-500 ease-out'>
+                <FontAwesomeIcon icon={faChevronRight} className='bg-white px-[10px] py-[10px] hover:bg-black hover:text-white  duration-300' />
               </span>
             </div>
             {/* new arrival products section ends here */}
 
             {/* best seller's product section starts from here */}
 
-            <div className='hidden w-full h-[411.250px] bg-white  gap-x-[20px]'>
+            <div className={'flex flex-col gap-y-[15px] 2xl:gap-y-[0px] 2xl:flex-row w-full h-auto 2xl:h-[411.250px] z-0 bg-white  gap-x-[20px] relative productsection transition-all duration-500 ' + bestseller}>
+
+              {/* left arrow */}
+
+              <span className='absolute left-0 flex justify-center items-center bg-white arrow z-10 shadow-md cursor-pointer  inviaible shadow-red-500 opacity-0 duration-500 ease-out'>
+                <FontAwesomeIcon icon={faChevronLeft} className='bg-white px-[10px] py-[10px] hover:bg-black hover:text-white  duration-300' />
+              </span>
 
               {/* product 1  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 1*/}
                 <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center '>
 
@@ -356,7 +420,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 2  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 2 */}
                 <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
 
@@ -380,7 +444,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 3  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 3*/}
                 <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
 
@@ -414,7 +478,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 4  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 4*/}
                 <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
                   <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
@@ -437,7 +501,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 5  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 5*/}
                 <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
                   <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
@@ -472,6 +536,13 @@ const Main = () => {
               </div>
 
 
+              {/* right arrow */}
+
+              <span className='absolute right-0 flex justify-center items-center bg-white arrow z-10 shadow-md cursor-pointer shadow-red-500 hover:shadow-red-500 inviaible opacity-0 transition-all duration-500 ease-out'>
+                <FontAwesomeIcon icon={faChevronRight} className='bg-white px-[10px] py-[10px] hover:bg-black hover:text-white  duration-300' />
+              </span>
+
+
 
             </div>
 
@@ -479,10 +550,16 @@ const Main = () => {
 
             {/* on sale product section starts from here */}
 
-            <div className='hidden w-full h-[411.250px] bg-white  gap-x-[20px]'>
+            <div className={' flex flex-col gap-y-[15px] 2xl:gap-y-[0px] 2xl:flex-row w-full h-auto 2xl:h-[411.250px] z-0 bg-white  gap-x-[20px] relative productsection transition-all duration-500 ' + onsale}>
+
+              {/* left arrow */}
+
+              <span className='absolute left-0 flex justify-center items-center bg-white arrow z-10 shadow-md cursor-pointer  inviaible shadow-red-500 opacity-0 duration-500 ease-out'>
+                <FontAwesomeIcon icon={faChevronLeft} className='bg-white px-[10px] py-[10px] hover:bg-black hover:text-white  duration-300' />
+              </span>
 
               {/* product 1  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 1*/}
                 <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center '>
 
@@ -518,7 +595,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 2  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 2 */}
                 <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
 
@@ -552,7 +629,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 3  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 3*/}
                 <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
 
@@ -587,7 +664,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 4  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 4*/}
                 <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
                   <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
@@ -612,7 +689,7 @@ const Main = () => {
                 </div>
               </div>
               {/* product 5  */}
-              <div className='w-[20%] h-full bg-white product'>
+              <div className='w-full 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 5*/}
                 <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
                   <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
@@ -645,6 +722,12 @@ const Main = () => {
                   <p className='text-red-500'>$99.00 &#160;  <span className='text-[#808080] line-through'> $140.00</span></p>
                 </div>
               </div>
+
+              {/* right arrow */}
+
+              <span className='absolute right-0 flex justify-center items-center bg-white arrow z-10 shadow-md cursor-pointer shadow-red-500 hover:shadow-red-500 inviaible opacity-0 transition-all duration-500 ease-out'>
+                <FontAwesomeIcon icon={faChevronRight} className='bg-white px-[10px] py-[10px] hover:bg-black hover:text-white  duration-300' />
+              </span>
 
 
 

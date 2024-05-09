@@ -806,8 +806,12 @@ const Main = () => {
           </div>
           <div className='w-[50%] h-full bg-[#f0f0f0] flex justify-center items-center '>
             <div className='w-full h-full flex justify-center items-center bg-transparent text-black gap-y-[30px] flex-col'>
-              <h2 className='text-[70px] leading-[70px] font-[600] font-oswald text-center'>WE SUPPORT <br/>PASSIONS AND TRY <br/>TO HELP FUTURE <br/>ATHLETES</h2>
+              <h2 className='text-[70px] leading-[70px] font-[600] font-oswald text-center'>WE SUPPORT <br />PASSIONS AND TRY <br />TO HELP FUTURE <br />ATHLETES</h2>
               <p className=' text-[20px] font-[400]'>Save time on complete sets</p>
+              <div className='flex gap-x-[10px] mt-[10px] justify-center text-white'>
+                <a href='#' className='bg-black border-[1px] border-black px-[40px] py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-black duration-300' >Sets for Women</a>
+                <a href='#' className=' bg-black border-[1px] border-black px-[40px] py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-black duration-300' >Sets for Women</a>
+              </div>
             </div>
           </div>
         </div>

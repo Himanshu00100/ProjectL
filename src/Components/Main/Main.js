@@ -844,23 +844,23 @@ const Main = () => {
 
         {/* From the blog section starts from here */}
 
-        <div className='w-screen hidden h-[442.487px] mb-[100px] white px-[50px]  flex-col gap-y-[25px] '>
-          <h2 className='text-[40px] leading-[40px] font-oswald font-[600] 2xl:text-start'>FROM THE BLOG</h2>
+        <div className='w-screen flex  sm:h-[442.487px] mb-[50px] sm:mb-[100px] white  sm:px-[50px] flex-col gap-y-[25px]  '>
+          <h2 className='text-[40px] leading-[40px] font-oswald font-[600] sm:text-start'>FROM THE BLOG</h2>
 
-          <div className='w-full h-[442.487px] flex'>
+          <div className='w-full 2xl:h-[442.487px] flex flex-col sm:flex-row gap-y-[20px] sm:overflow-x-auto'>
 
             {/* blog 1 from here */}
             <div className='flex'>
-              <div className=' 2xl:h-[349.487px] bg-white 2xl:pr-[40px] border-r-[1px] border-gray-200 flex flex-col gap-y-[20px]'>
+              <div className=' sm:h-[349.487px] bg-white sm:pr-[40px] border-r-[1px] border-gray-200 flex flex-col gap-y-[20px]'>
 
                 {/* blog image 1 */}
-                <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
-                  <img src={blog1} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
+                <div className='sm:w-[420.325px] sm:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
+                  <img src={blog1} alt='' className=' sm:hover:scale-[1.20] duration-[400ms] ease-out' />
                 </div>
-                <div className='w-full h-[92px] bg-white'>
-                  <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
+                <div className='w-full h-[92px] bg-white pl-[15px] sm:pl-[0px]'>
+                  <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px] '>
                     {/* date and user  from here */}
-                    <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
+                    <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500 '>
                       {/* date */}
                       <span className='flex items-center gap-x-[10px]'>
                         <FontAwesomeIcon icon={faCalendarDays} className='text-[13px]' />
@@ -874,10 +874,10 @@ const Main = () => {
                       </span>
 
                     </div>
-                    <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer'>Ranking of the best tennis rackets in year</h4>
+                    <h4 className='text-[15px] sm:text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer text-start'>Ranking of the best tennis rackets in year</h4>
                   </div>
                   {/* readmore  */}
-                  <div className='w-full h-[24px] flex justify-start bg-white'>
+                  <div className='w-full h-[24px] flex justify-start bg-white '>
                     <a href='#' className=' text-start underline underline-offset-0 hover:text-red-500 duration-200 hover:underline hover:underline-offset-2'>Read more</a>
                   </div>
                 </div>
@@ -887,13 +887,13 @@ const Main = () => {
 
             {/* blog 2 from here */}
             <div className='flex'>
-              <div className=' 2xl:h-[349.487px] bg-white 2xl:px-[40px] border-r-[1px] border-gray-200 flex flex-col gap-y-[20px]'>
+              <div className=' sm:h-[349.487px] bg-white 2xl:pl-[40px]  sm:px-[40px] border-r-[1px] border-gray-200 flex flex-col gap-y-[20px]'>
 
                 {/* blog image 2 */}
-                <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
-                  <img src={blog2} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
+                <div className='sm:w-[420.325px] sm:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
+                  <img src={blog2} alt='' className=' sm:hover:scale-[1.20] duration-[400ms] ease-out' />
                 </div>
-                <div className='w-full h-[92px] bg-white'>
+                <div className='w-full h-[92px] bg-white pl-[15px] sm:pl-[0px] '>
                   <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
                     {/* date and user  from here */}
                     <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
@@ -910,7 +910,7 @@ const Main = () => {
                       </span>
 
                     </div>
-                    <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer'>How should I dress for gym workout?</h4>
+                    <h4 className='text-[15px] sm:text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer text-start'>How should I dress for gym workout?</h4>
                   </div>
                   {/* readmore  */}
                   <div className='w-full h-[24px] flex justify-start bg-white'>
@@ -922,8 +922,8 @@ const Main = () => {
             {/* blog 2 ends here */}
 
             {/* blog 3 from here */}
-            <div className='flex'>
-              <div className=' 2xl:h-[349.487px] bg-white 2xl:pl-[40px]  flex flex-col gap-y-[20px]'>
+            <div className='sm:flex hidden'>
+              <div className='2xl:h-[349.487px] bg-white sm:pl-[40px]   flex flex-col gap-y-[20px]'>
 
                 {/* blog image 3 */}
                 <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
@@ -964,14 +964,14 @@ const Main = () => {
         {/* From the blog section ends here */}
 
         {/* instagram section from here */}
-        <div className='w-screen hidden h-[464px] bg-[#f1f1f1] px-[50px]  justify-center items-center'>
+        <div className='w- hidden 2xl:flex flex-col sm:flex-row h-auto 2xl:h-[464px] bg-[#f1f1f1] 2xl:px-[50px]  justify-center items-center '>
           <div className='w-full flex flex-col gap-y-[30px]'>
-            <h2 className='2xl:text-[40px] 2xl:leading-[40px] 2xl:font-[600] font-oswald text-start'>WE ARE ON INSTAGRAM</h2>
-            <div className='w-full flex gap-x-[5px]'>
+            <h2 className='text-[28px]  2xl:text-[40px] 2xl:leading-[40px] font-[600] font-oswald text-start'>WE ARE ON INSTAGRAM</h2>
+            <div className='w-full  flex flex-col  gap-y-[20px]  sm:flex-row gap-x-[5px] justify-center items-center overflow-x-auto'>
 
               {/* post 1 from here */}
 
-              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+              <div className='postsection w-[199.562px] h-[199.562px] bg-white relative overflow-hidden'>
                 <img src={img1} alt='' className='post duration-[400ms] ease-out ' />
                 <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
                   <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[35px] opacity-0 duration-[400ms] ease-out' />
@@ -981,7 +981,7 @@ const Main = () => {
 
               {/* post 2 from here */}
 
-              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+              <div className='postsection  sm:w-[199.562px] sm:h-[199.562px] bg-white relative overflow-hidden'>
                 <img src={img2} alt='' className='post duration-[400ms] ease-out ' />
                 <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
                   <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[35px] opacity-0 duration-[400ms] ease-out' />
@@ -991,7 +991,7 @@ const Main = () => {
 
               {/* post 3 from here */}
 
-              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+              <div className='postsection  sm:w-[199.562px] sm:h-[199.562px] bg-white relative overflow-hidden'>
                 <img src={img3} alt='' className='post duration-[400ms] ease-out ' />
                 <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
                   <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[40px] opacity-0 duration-[400ms] ease-out' />
@@ -1001,7 +1001,7 @@ const Main = () => {
 
               {/* post 4 from here */}
 
-              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+              <div className='postsection  sm:w-[199.562px] sm:h-[199.562px] bg-white relative overflow-hidden'>
                 <img src={img4} alt='' className='post duration-[400ms] ease-out ' />
                 <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
                   <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[40px] opacity-0 duration-[400ms] ease-out' />
@@ -1011,7 +1011,7 @@ const Main = () => {
 
               {/* post 5 from here */}
 
-              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+              <div className='postsection  sm:w-[199.562px] sm:h-[199.562px] bg-white relative overflow-hidden'>
                 <img src={img5} alt='' className='post duration-[400ms] ease-out ' />
                 <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
                   <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[40px] opacity-0 duration-[400ms] ease-out' />
@@ -1021,7 +1021,7 @@ const Main = () => {
 
               {/* post 6 from here */}
 
-              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+              <div className='postsection  sm:w-[199.562px] sm:h-[199.562px] bg-white relative overflow-hidden'>
                 <img src={img6} alt='' className='post duration-[400ms] ease-out ' />
                 <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
                   <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[40px] opacity-0 duration-[400ms] ease-out' />
@@ -1031,7 +1031,7 @@ const Main = () => {
 
               {/* post 7 from here */}
 
-              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+              <div className='postsection  sm:w-[199.562px] sm:h-[199.562px] bg-white relative overflow-hidden'>
                 <img src={img7} alt='' className='post duration-[400ms] ease-out ' />
                 <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
                   <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[40px] opacity-0 duration-[400ms] ease-out' />

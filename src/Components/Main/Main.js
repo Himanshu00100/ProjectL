@@ -45,6 +45,9 @@ import saleproduct3 from "../Assets/onsale products/p3.jpg"
 import saleproduct4 from "../Assets/onsale products/p4.jpg"
 import saleproduct5 from "../Assets/onsale products/p5.jpg"
 
+// hero 2 image
+import hero2 from "../Assets/hero 2/hero2.jpg"
+
 // hero 3 image from here
 
 import hero3 from "../Assets/hero 3/hero3.jpg"
@@ -241,7 +244,7 @@ const Main = () => {
         </div>
 
         {/* New arrival section starts from here  */}
-        <div className='w-full 2xl:h-[534.250px] bg-white 2xl:mt-[100px] px-[10px] mb-[20px] 2xl:mb-[0px]  2xl:px-[50px]'>
+        <div className='w-full 2xl:h-[534.250px] bg-white 2xl:mt-[100px] px-[10px] mb-[20px] 2xl:mb-[0px]  2xl:px-[50px] 2k:px-[250px]'>
           <div className='w-full h-full bg-white-500 flex flex-col gap-y-[20px]'>
             <div className='w-full 2xl:w-[658.787px] 2xl:h-[44px] bg-white text-[28px] phone:text-[22px] 2xl:text-[40px]  leading-[44px] font-oswald font-[600] '>
               {/* product section tabs */}
@@ -772,23 +775,24 @@ const Main = () => {
 
         {/* hero 2 section starts from here */}
 
-        <div className='hero2 w-screen h-[800px] bg-white  relative '>
-          <div className='overlay absolute w-full h-full bg-gradient-to-r from-[#047EAD]  to-transparent to-50%'>
-            <div className='absolute left-[50px] top-[100px] flex flex-col gap-y-[25px]'>
-              <h2 className='2xl:text-[100px] leading-[100px] font-oswald font-[600] text-white text-start'>WINTER <br /> IS COMING. <br /> TIME FOR <br /> THE SLOPE!</h2>
-              <p className='text-[20px] text-white font-[400] text-start'>Get ready for the winter season</p>
-              <div className='flex gap-x-[10px]'>
-                <a href='#' className=' bg-white flex justify-center items-center gap-x-[10px] px-[20px] py-[10px] border-[1px] border-white hover:bg-transparent hover:text-white duration-300'>
-                  <FontAwesomeIcon icon={faPersonSnowboarding} className='text-[24px]' />
+        <div className='hero2 flex md:flex w-screen h-[400px] md:h-[800px] bg-white  relative  justify-center items-center overflow-hidden  '>
+          <img src={hero2} alt='' className='scale-[2.6] md:scale-[2]  2xl:hidden ' />
+          <div className='overlay absolute w-full h-full bg-gradient-to-r from-[#047EAD] flex   to-transparent to-50% md:to-80%  2xl:to-50%'>
+            <div className='absolute left-[15px] top-[20px] sm:top-[80px] sm:left-[50px] 2xl:left-[50px] 2k:left-[250px] md:top-[100px] flex flex-col gap-y-[15px] md:gap-y-[25px]'>
+              <h2 className='text-[36px] leading-[36px] md:text-[100px] md:leading-[100px] font-oswald font-[600] text-white text-start'>WINTER <br /> IS COMING. <br /> TIME FOR <br /> THE SLOPE!</h2>
+              <p className='text-[16px] md:text-[20px] text-white font-[400] text-start'>Get ready for the winter season</p>
+              <div className='flex flex-col justify-center items-start md:justify-normal md:items-baseline sm:flex-row gap-y-[15px] sm:gap-x-[10px] md:gap-x-[10px]'>
+                <a href='#' className=' bg-white flex justify-center items-center gap-x-[10px] px-[15px] py-[8px] md:px-[20px] md:py-[10px] border-[1px] border-white hover:bg-transparent hover:text-white duration-300'>
+                  <FontAwesomeIcon icon={faPersonSnowboarding} className='text-[23.8px] md:text-[24px]' />
                   <p className='text-[16px] font-[500] '>Snowboard</p>
                 </a>
 
-                <a href='#' className=' bg-white flex justify-center items-center gap-x-[10px] px-[20px] py-[10px] border-[1px] border-white hover:bg-transparent hover:text-white duration-300'>
+                <a href='#' className=' bg-white flex justify-center items-center gap-x-[10px] px-[15px] py-[8px] md:px-[20px] md:py-[10px] border-[1px] border-white hover:bg-transparent hover:text-white duration-300'>
                   <FontAwesomeIcon icon={faPersonSkiing} className='text-[24px]' />
                   <p className='text-[16px] font-[500] '>Skiing</p>
                 </a>
 
-                <a href='#' className=' bg-white flex justify-center items-center gap-x-[10px] px-[20px] py-[10px] border-[1px] border-white hover:bg-transparent hover:text-white duration-300'>
+                <a href='#' className=' bg-white flex justify-center items-center gap-x-[10px] px-[15px] py-[8px] md:px-[20px] md:py-[10px] border-[1px] border-white hover:bg-transparent hover:text-white duration-300'>
                   <FontAwesomeIcon icon={faPersonSkating} className='text-[24px]' />
                   <p className='text-[16px] font-[500] '>Snowskating</p>
                 </a>
@@ -801,15 +805,15 @@ const Main = () => {
         {/* hero 2 section ends here */}
 
         {/* hero 3 section starts from here */}
-        <div className=' hero3 w-screen h-[800px] mb-[100px] bg-green-500 flex flex-col relative'>
-          <img src={hero3} alt='hero 3 bg' className='h-full' />
+        <div className=' hero3 w-screen flex h-[400px] lg:h-[450px] xl:h-[800px] mb-[50px] md:mb-[100px]  justify-center md:justify-normal items-center  bg-green-500  flex-col relative overflow-hidden'>
+          <img src={hero3} alt='hero 3 bg' className='scale-[1.2] xl:h-full  md:scale-[1.1] lg:hidden' />
           <div className='absolute w-full h-full  flex justify-center '>
-            <div className=' absolute top-[150px] flex flex-col gap-y-[25px]'>
-              <h2 className='text-[100px] leading-[100px] text-white font-oswald font-[600] text-center'>GET INSPIRED <br /> BY READY-MADE SETS <br /> OF CLOTHES</h2>
-              <p className='text-white text-[20px] font-[400]'>Save time on complete sets</p>
-              <div className='flex gap-x-[550px] mt-[10px] justify-center'>
-                <a href='#' className='bg-white border-[1px] border-white px-[40px] py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-white duration-300' >Sets for Women</a>
-                <a href='#' className=' bg-white border-[1px] border-white px-[40px] py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-white duration-300' >Sets for Women</a>
+            <div className=' absolute top-[60px] md:top-[80px] xl:top-[150px] flex flex-col gap-y-[10px] md:gap-y-[25px] '>
+              <h2 className=' text-[36px] leading-[36px] md:text-[44px] md:leading-[44px] xl:text-[100px] xl:leading-[100px] text-white font-oswald font-[600] text-center'>GET INSPIRED <br /> BY READY-MADE SETS <br /> OF CLOTHES</h2>
+              <p className='text-white text-[16px] md:text-[20px] font-[400]'>Save time on complete sets</p>
+              <div className='flex flex-col md:flex-row md:gap-x-[270px] xl:gap-x-[550px] 2k:gap-x-[1050px] md:mt-[10px] justify-center items-center gap-y-[10px] '>
+                <a href='#' className='bg-white border-[1px] border-white px-[15px] py-[8px] xl:px-[40px] xl:py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-white duration-300' >Sets for Women</a>
+                <a href='#' className=' bg-white border-[1px] border-white px-[15px] py-[8px] xl:px-[40px] xl:py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-white duration-300' >Sets for Men</a>
               </div>
             </div>
           </div>
@@ -820,17 +824,17 @@ const Main = () => {
 
         {/* hero 4 section starts from here */}
 
-        <div className='w-screen h-[598.650px] bg-white mb-[100px] flex px-[50px]'>
-          <div className='w-[50%] h-full bg-white flex justify-center items-center overflow-hidden'>
-            <img src={hero4} alt='' className='h-full scale-[1.1]' />
+        <div className='w-screen flex flex-col md:flex-row 2xl:h-[598.650px] bg-white sm:mb-[50px] 2xl:mb-[100px] 2k:mb-[200px]  md:px-[50px]'>
+          <div className='w-full h-[253.238px] phone:h-[362.7px] sm:h-[539.325px] md:h-[306.737px] lg:h-[389.325px] xl:h-[497.19px] 2xl:h-[605.050px] 2k:h-[750px]  md:w-[50%]  bg-white flex justify-center items-center overflow-hidden'>
+            <img src={hero4} alt='' className='w-full  scale-[1.1]' />
           </div>
-          <div className='w-[50%] h-full bg-[#f0f0f0] flex justify-center items-center '>
-            <div className='w-full h-full flex justify-center items-center bg-transparent text-black gap-y-[30px] flex-col'>
-              <h2 className='text-[70px] leading-[70px] font-[600] font-oswald text-center'>WE SUPPORT <br />PASSIONS AND TRY <br />TO HELP FUTURE <br />ATHLETES</h2>
-              <p className=' text-[20px] font-[400]'>FInd out more about our activities</p>
+          <div className='w-full full px-[10px] py-[50px] md:p-[0px] md:w-[50%] md:h-[306.737px] lg:h-[389.325px] xl:h-[497.19px] 2xl:h-[605.050px] 2k:h-[750px] bg-[#f0f0f0] flex justify-center items-center '>
+            <div className='w-full h-full flex justify-center items-center bg-transparent text-black gap-y-[20px] md:gap-y-[15px] 2xl:gap-y-[30px] flex-col'>
+              <h2 className='text-[32px] leading-[32px] lg:text-[40px] lg:leading-[1em] xl:text-[50px] xl:leading-[50px] 2xl:text-[70px] 2xl:leading-[70px] font-[600] font-oswald text-center'>WE SUPPORT <br />PASSIONS AND TRY <br />TO HELP FUTURE <br />ATHLETES</h2>
+              <p className='text-[16px] md:text-[20px] font-[400]'>FInd out more about our activities</p>
               <div className='flex gap-x-[10px] mt-[10px] justify-center text-white'>
-                <a href='#' className='bg-black border-[1px] border-black px-[40px] py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-black duration-300' >Sets for Women</a>
-                <a href='#' className=' bg-black border-[1px] border-black px-[40px] py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-black duration-300' >Sets for Women</a>
+                <a href='#' className='bg-black border-[1px] border-black px-[20px] py-[8px] 2xl:px-[40px] 2xl:py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-black duration-300 text-nowrap' >About us</a>
+                <a href='#' className=' bg-black border-[1px] border-black px-[20px] py-[8px] 2xl:px-[40px] 2xl:py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-black duration-300 text-nowrap' >Our mission</a>
               </div>
             </div>
           </div>
@@ -840,119 +844,119 @@ const Main = () => {
 
         {/* From the blog section starts from here */}
 
-        <div className='w-screen h-[442.487px] mb-[100px] white px-[50px] flex flex-col gap-y-[25px] '>
+        <div className='w-screen hidden h-[442.487px] mb-[100px] white px-[50px]  flex-col gap-y-[25px] '>
           <h2 className='text-[40px] leading-[40px] font-oswald font-[600] 2xl:text-start'>FROM THE BLOG</h2>
 
-         <div className='w-full h-[442.487px] flex'>
+          <div className='w-full h-[442.487px] flex'>
 
-           {/* blog 1 from here */}
-           <div className='flex'>
-            <div className=' 2xl:h-[349.487px] bg-white 2xl:pr-[40px] border-r-[1px] border-gray-200 flex flex-col gap-y-[20px]'>
+            {/* blog 1 from here */}
+            <div className='flex'>
+              <div className=' 2xl:h-[349.487px] bg-white 2xl:pr-[40px] border-r-[1px] border-gray-200 flex flex-col gap-y-[20px]'>
 
-              {/* blog image 1 */}
-              <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
-                <img src={blog1} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
-              </div>
-              <div className='w-full h-[92px] bg-white'>
-                <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
-                  {/* date and user  from here */}
-                  <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
-                    {/* date */}
-                    <span className='flex items-center gap-x-[10px]'>
-                      <FontAwesomeIcon icon={faCalendarDays} className='text-[13px]' />
-                      <p className='text-[13px] font-[400]'>March 20,2024</p>
-                    </span>
-
-                    {/* user */}
-                    <span className='flex items-center gap-x-[10px]'>
-                      <FontAwesomeIcon icon={faUser} className='text-[13px]' />
-                      <a href='#' className='text-[13px] hover:text-red-500 duration-200 font-[400]'>Park John</a>
-                    </span>
-
-                  </div>
-                  <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer'>Ranking of the best tennis rackets in year</h4>
+                {/* blog image 1 */}
+                <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
+                  <img src={blog1} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
                 </div>
-                {/* readmore  */}
-                <div className='w-full h-[24px] flex justify-start bg-white'>
-                  <a href='#' className=' text-start underline underline-offset-0 hover:text-red-500 duration-200 hover:underline hover:underline-offset-2'>Read more</a>
+                <div className='w-full h-[92px] bg-white'>
+                  <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
+                    {/* date and user  from here */}
+                    <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
+                      {/* date */}
+                      <span className='flex items-center gap-x-[10px]'>
+                        <FontAwesomeIcon icon={faCalendarDays} className='text-[13px]' />
+                        <p className='text-[13px] font-[400]'>March 20,2024</p>
+                      </span>
+
+                      {/* user */}
+                      <span className='flex items-center gap-x-[10px]'>
+                        <FontAwesomeIcon icon={faUser} className='text-[13px]' />
+                        <a href='#' className='text-[13px] hover:text-red-500 duration-200 font-[400]'>Park John</a>
+                      </span>
+
+                    </div>
+                    <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer'>Ranking of the best tennis rackets in year</h4>
+                  </div>
+                  {/* readmore  */}
+                  <div className='w-full h-[24px] flex justify-start bg-white'>
+                    <a href='#' className=' text-start underline underline-offset-0 hover:text-red-500 duration-200 hover:underline hover:underline-offset-2'>Read more</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          {/* blog 1 ends here */}
+            {/* blog 1 ends here */}
 
-          {/* blog 2 from here */}
-          <div className='flex'>
-            <div className=' 2xl:h-[349.487px] bg-white 2xl:px-[40px] border-r-[1px] border-gray-200 flex flex-col gap-y-[20px]'>
+            {/* blog 2 from here */}
+            <div className='flex'>
+              <div className=' 2xl:h-[349.487px] bg-white 2xl:px-[40px] border-r-[1px] border-gray-200 flex flex-col gap-y-[20px]'>
 
-              {/* blog image 2 */}
-              <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
-                <img src={blog2} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
-              </div>
-              <div className='w-full h-[92px] bg-white'>
-                <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
-                  {/* date and user  from here */}
-                  <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
-                    {/* date */}
-                    <span className='flex items-center gap-x-[10px]'>
-                      <FontAwesomeIcon icon={faCalendarDays} className='text-[13px]' />
-                      <p className='text-[13px] font-[400]'>March 20,2024</p>
-                    </span>
-
-                    {/* user */}
-                    <span className='flex items-center gap-x-[10px]'>
-                      <FontAwesomeIcon icon={faUser} className='text-[13px]' />
-                      <a href='#' className='text-[13px] hover:text-red-500 duration-200 font-[400]'>Park John</a>
-                    </span>
-
-                  </div>
-                  <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer'>How should I dress for gym workout?</h4>
+                {/* blog image 2 */}
+                <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
+                  <img src={blog2} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
                 </div>
-                {/* readmore  */}
-                <div className='w-full h-[24px] flex justify-start bg-white'>
-                  <a href='#' className=' text-start underline underline-offset-0 hover:text-red-500 duration-200 hover:underline hover:underline-offset-2'>Read more</a>
+                <div className='w-full h-[92px] bg-white'>
+                  <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
+                    {/* date and user  from here */}
+                    <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
+                      {/* date */}
+                      <span className='flex items-center gap-x-[10px]'>
+                        <FontAwesomeIcon icon={faCalendarDays} className='text-[13px]' />
+                        <p className='text-[13px] font-[400]'>March 20,2024</p>
+                      </span>
+
+                      {/* user */}
+                      <span className='flex items-center gap-x-[10px]'>
+                        <FontAwesomeIcon icon={faUser} className='text-[13px]' />
+                        <a href='#' className='text-[13px] hover:text-red-500 duration-200 font-[400]'>Park John</a>
+                      </span>
+
+                    </div>
+                    <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer'>How should I dress for gym workout?</h4>
+                  </div>
+                  {/* readmore  */}
+                  <div className='w-full h-[24px] flex justify-start bg-white'>
+                    <a href='#' className=' text-start underline underline-offset-0 hover:text-red-500 duration-200 hover:underline hover:underline-offset-2'>Read more</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          {/* blog 2 ends here */}
+            {/* blog 2 ends here */}
 
-          {/* blog 3 from here */}
-          <div className='flex'>
-            <div className=' 2xl:h-[349.487px] bg-white 2xl:pl-[40px]  flex flex-col gap-y-[20px]'>
+            {/* blog 3 from here */}
+            <div className='flex'>
+              <div className=' 2xl:h-[349.487px] bg-white 2xl:pl-[40px]  flex flex-col gap-y-[20px]'>
 
-              {/* blog image 3 */}
-              <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
-                <img src={blog3} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
-              </div>
-              <div className='w-full h-[92px] bg-white'>
-                <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
-                  {/* date and user  from here */}
-                  <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
-                    {/* date */}
-                    <span className='flex items-center gap-x-[10px]'>
-                      <FontAwesomeIcon icon={faCalendarDays} className='text-[13px]' />
-                      <p className='text-[13px] font-[400]'>March 20,2024</p>
-                    </span>
-
-                    {/* user */}
-                    <span className='flex items-center gap-x-[10px]'>
-                      <FontAwesomeIcon icon={faUser} className='text-[13px]' />
-                      <a href='#' className='text-[13px] hover:text-red-500 duration-200 font-[400]'>Park John</a>
-                    </span>
-
-                  </div>
-                  <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer text-nowrap'>Evolution of strengthening  vital muscles</h4>
+                {/* blog image 3 */}
+                <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
+                  <img src={blog3} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
                 </div>
-                {/* readmore  */}
-                <div className='w-full h-[24px] flex justify-start bg-white'>
-                  <a href='#' className=' text-start underline underline-offset-0 hover:text-red-500 duration-200 hover:underline hover:underline-offset-2'>Read more</a>
+                <div className='w-full h-[92px] bg-white'>
+                  <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
+                    {/* date and user  from here */}
+                    <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
+                      {/* date */}
+                      <span className='flex items-center gap-x-[10px]'>
+                        <FontAwesomeIcon icon={faCalendarDays} className='text-[13px]' />
+                        <p className='text-[13px] font-[400]'>March 20,2024</p>
+                      </span>
+
+                      {/* user */}
+                      <span className='flex items-center gap-x-[10px]'>
+                        <FontAwesomeIcon icon={faUser} className='text-[13px]' />
+                        <a href='#' className='text-[13px] hover:text-red-500 duration-200 font-[400]'>Park John</a>
+                      </span>
+
+                    </div>
+                    <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer text-nowrap'>Evolution of strengthening  vital muscles</h4>
+                  </div>
+                  {/* readmore  */}
+                  <div className='w-full h-[24px] flex justify-start bg-white'>
+                    <a href='#' className=' text-start underline underline-offset-0 hover:text-red-500 duration-200 hover:underline hover:underline-offset-2'>Read more</a>
+                  </div>
                 </div>
               </div>
             </div>
+            {/* blog 3 ends here */}
           </div>
-          {/* blog 3 ends here */}
-         </div>
 
 
         </div>
@@ -960,7 +964,7 @@ const Main = () => {
         {/* From the blog section ends here */}
 
         {/* instagram section from here */}
-        <div className='w-screen h-[464px] bg-[#f1f1f1] px-[50px] flex justify-center items-center'>
+        <div className='w-screen hidden h-[464px] bg-[#f1f1f1] px-[50px]  justify-center items-center'>
           <div className='w-full flex flex-col gap-y-[30px]'>
             <h2 className='2xl:text-[40px] 2xl:leading-[40px] 2xl:font-[600] font-oswald text-start'>WE ARE ON INSTAGRAM</h2>
             <div className='w-full flex gap-x-[5px]'>

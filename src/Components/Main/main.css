@@ -66,11 +66,12 @@
 
 /* hero 3 section from here */
 
-/* .hero3{
-    background-image:url("../Assets/hero 3/hero3.jpg");
+.hero3{
+    background-image:url("../Assets//hero 3/hero3.jpg");
     background-repeat:no-repeat;
-    background-position:center;
-} */
+     background-position:top center;
+     background-size: cover;
+}
 
 /* instagram post section starts from here */
 

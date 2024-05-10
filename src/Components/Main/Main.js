@@ -26,7 +26,7 @@ import product2 from "../Assets/leatest products/p2.jpg"
 import product3 from "../Assets/leatest products/p3.jpg"
 import product4 from "../Assets/leatest products/p4.jpg"
 import product5 from "../Assets/leatest products/p5.jpg"
-import { faChartBar, faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faCalendarDays, faChartBar, faHeart, faUser } from '@fortawesome/free-regular-svg-icons'
 import { faChevronLeft, faChevronRight, faMagnifyingGlass, faPersonSkating, faPersonSkiing, faPersonSnowboarding } from '@fortawesome/free-solid-svg-icons'
 
 // best seller images from here
@@ -51,6 +51,26 @@ import hero3 from "../Assets/hero 3/hero3.jpg"
 
 // hero 4 image 
 import hero4 from "../Assets/hero 4/hero4.jpg"
+
+// instagram section images from here
+
+import img1 from "../Assets/instagram/one.jpg"
+import img2 from "../Assets/instagram/two.jpg"
+import img3 from "../Assets/instagram/three.jpg"
+import img4 from "../Assets/instagram/four.jpg"
+import img5 from "../Assets/instagram/five.jpg"
+import img6 from "../Assets/instagram/six.jpg"
+import img7 from "../Assets/instagram/seven.jpg"
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+
+
+//  blog section images from here
+
+import blog1 from "../Assets/blog/blog 1.jpg"
+import blog2 from "../Assets/blog/blog 2.jpg"
+import blog3 from "../Assets/blog/blog3.jpg"
+
+
 
 const Main = () => {
 
@@ -807,7 +827,7 @@ const Main = () => {
           <div className='w-[50%] h-full bg-[#f0f0f0] flex justify-center items-center '>
             <div className='w-full h-full flex justify-center items-center bg-transparent text-black gap-y-[30px] flex-col'>
               <h2 className='text-[70px] leading-[70px] font-[600] font-oswald text-center'>WE SUPPORT <br />PASSIONS AND TRY <br />TO HELP FUTURE <br />ATHLETES</h2>
-              <p className=' text-[20px] font-[400]'>Save time on complete sets</p>
+              <p className=' text-[20px] font-[400]'>FInd out more about our activities</p>
               <div className='flex gap-x-[10px] mt-[10px] justify-center text-white'>
                 <a href='#' className='bg-black border-[1px] border-black px-[40px] py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-black duration-300' >Sets for Women</a>
                 <a href='#' className=' bg-black border-[1px] border-black px-[40px] py-[10px] text-[16px] leading-[24px] font-[500] hover:bg-transparent hover:text-black duration-300' >Sets for Women</a>
@@ -817,6 +837,210 @@ const Main = () => {
         </div>
 
         {/* hero 4 section ends here */}
+
+        {/* From the blog section starts from here */}
+
+        <div className='w-screen h-[442.487px] mb-[100px] white px-[50px] flex flex-col gap-y-[25px] '>
+          <h2 className='text-[40px] leading-[40px] font-oswald font-[600] 2xl:text-start'>FROM THE BLOG</h2>
+
+         <div className='w-full h-[442.487px] flex'>
+
+           {/* blog 1 from here */}
+           <div className='flex'>
+            <div className=' 2xl:h-[349.487px] bg-white 2xl:pr-[40px] border-r-[1px] border-gray-200 flex flex-col gap-y-[20px]'>
+
+              {/* blog image 1 */}
+              <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
+                <img src={blog1} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
+              </div>
+              <div className='w-full h-[92px] bg-white'>
+                <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
+                  {/* date and user  from here */}
+                  <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
+                    {/* date */}
+                    <span className='flex items-center gap-x-[10px]'>
+                      <FontAwesomeIcon icon={faCalendarDays} className='text-[13px]' />
+                      <p className='text-[13px] font-[400]'>March 20,2024</p>
+                    </span>
+
+                    {/* user */}
+                    <span className='flex items-center gap-x-[10px]'>
+                      <FontAwesomeIcon icon={faUser} className='text-[13px]' />
+                      <a href='#' className='text-[13px] hover:text-red-500 duration-200 font-[400]'>Park John</a>
+                    </span>
+
+                  </div>
+                  <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer'>Ranking of the best tennis rackets in year</h4>
+                </div>
+                {/* readmore  */}
+                <div className='w-full h-[24px] flex justify-start bg-white'>
+                  <a href='#' className=' text-start underline underline-offset-0 hover:text-red-500 duration-200 hover:underline hover:underline-offset-2'>Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* blog 1 ends here */}
+
+          {/* blog 2 from here */}
+          <div className='flex'>
+            <div className=' 2xl:h-[349.487px] bg-white 2xl:px-[40px] border-r-[1px] border-gray-200 flex flex-col gap-y-[20px]'>
+
+              {/* blog image 2 */}
+              <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
+                <img src={blog2} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
+              </div>
+              <div className='w-full h-[92px] bg-white'>
+                <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
+                  {/* date and user  from here */}
+                  <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
+                    {/* date */}
+                    <span className='flex items-center gap-x-[10px]'>
+                      <FontAwesomeIcon icon={faCalendarDays} className='text-[13px]' />
+                      <p className='text-[13px] font-[400]'>March 20,2024</p>
+                    </span>
+
+                    {/* user */}
+                    <span className='flex items-center gap-x-[10px]'>
+                      <FontAwesomeIcon icon={faUser} className='text-[13px]' />
+                      <a href='#' className='text-[13px] hover:text-red-500 duration-200 font-[400]'>Park John</a>
+                    </span>
+
+                  </div>
+                  <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer'>How should I dress for gym workout?</h4>
+                </div>
+                {/* readmore  */}
+                <div className='w-full h-[24px] flex justify-start bg-white'>
+                  <a href='#' className=' text-start underline underline-offset-0 hover:text-red-500 duration-200 hover:underline hover:underline-offset-2'>Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* blog 2 ends here */}
+
+          {/* blog 3 from here */}
+          <div className='flex'>
+            <div className=' 2xl:h-[349.487px] bg-white 2xl:pl-[40px]  flex flex-col gap-y-[20px]'>
+
+              {/* blog image 3 */}
+              <div className='2xl:w-[420.325px] 2xl:h-[242.488px] overflow-hidden bg-green-500 flex justify-center items-center '>
+                <img src={blog3} alt='' className=' 2xl:hover:scale-[1.20] duration-[400ms] ease-out' />
+              </div>
+              <div className='w-full h-[92px] bg-white'>
+                <div className='w-full h-[58px] bg-white flex flex-col gap-x-[10px] gap-y-[10px]'>
+                  {/* date and user  from here */}
+                  <div className='w-full h-[20px] bg-white flex items-center gap-x-[20px] text-gray-500'>
+                    {/* date */}
+                    <span className='flex items-center gap-x-[10px]'>
+                      <FontAwesomeIcon icon={faCalendarDays} className='text-[13px]' />
+                      <p className='text-[13px] font-[400]'>March 20,2024</p>
+                    </span>
+
+                    {/* user */}
+                    <span className='flex items-center gap-x-[10px]'>
+                      <FontAwesomeIcon icon={faUser} className='text-[13px]' />
+                      <a href='#' className='text-[13px] hover:text-red-500 duration-200 font-[400]'>Park John</a>
+                    </span>
+
+                  </div>
+                  <h4 className='text-[20px] leading-[20px] font-[500] 2xl:text-start hover:text-red-500 duration-300 cursor-pointer text-nowrap'>Evolution of strengthening  vital muscles</h4>
+                </div>
+                {/* readmore  */}
+                <div className='w-full h-[24px] flex justify-start bg-white'>
+                  <a href='#' className=' text-start underline underline-offset-0 hover:text-red-500 duration-200 hover:underline hover:underline-offset-2'>Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* blog 3 ends here */}
+         </div>
+
+
+        </div>
+
+        {/* From the blog section ends here */}
+
+        {/* instagram section from here */}
+        <div className='w-screen h-[464px] bg-[#f1f1f1] px-[50px] flex justify-center items-center'>
+          <div className='w-full flex flex-col gap-y-[30px]'>
+            <h2 className='2xl:text-[40px] 2xl:leading-[40px] 2xl:font-[600] font-oswald text-start'>WE ARE ON INSTAGRAM</h2>
+            <div className='w-full flex gap-x-[5px]'>
+
+              {/* post 1 from here */}
+
+              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+                <img src={img1} alt='' className='post duration-[400ms] ease-out ' />
+                <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
+                  <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[35px] opacity-0 duration-[400ms] ease-out' />
+                </div>
+              </div>
+              {/* post 1 ends here */}
+
+              {/* post 2 from here */}
+
+              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+                <img src={img2} alt='' className='post duration-[400ms] ease-out ' />
+                <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
+                  <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[35px] opacity-0 duration-[400ms] ease-out' />
+                </div>
+              </div>
+              {/* post 2 ends here */}
+
+              {/* post 3 from here */}
+
+              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+                <img src={img3} alt='' className='post duration-[400ms] ease-out ' />
+                <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
+                  <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[40px] opacity-0 duration-[400ms] ease-out' />
+                </div>
+              </div>
+              {/* post 3 ends here */}
+
+              {/* post 4 from here */}
+
+              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+                <img src={img4} alt='' className='post duration-[400ms] ease-out ' />
+                <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
+                  <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[40px] opacity-0 duration-[400ms] ease-out' />
+                </div>
+              </div>
+              {/* post 4 ends here */}
+
+              {/* post 5 from here */}
+
+              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+                <img src={img5} alt='' className='post duration-[400ms] ease-out ' />
+                <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
+                  <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[40px] opacity-0 duration-[400ms] ease-out' />
+                </div>
+              </div>
+              {/* post 5 ends here */}
+
+              {/* post 6 from here */}
+
+              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+                <img src={img6} alt='' className='post duration-[400ms] ease-out ' />
+                <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
+                  <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[40px] opacity-0 duration-[400ms] ease-out' />
+                </div>
+              </div>
+              {/* post 6 ends here */}
+
+              {/* post 7 from here */}
+
+              <div className='postsection 2xl:w-[199.562px] 2xl:h-[199.562px] bg-white relative overflow-hidden'>
+                <img src={img7} alt='' className='post duration-[400ms] ease-out ' />
+                <div className='absolute overlay top-0 right-0 bottom-0 left-0  flex justify-center items-center duration-[400ms] ease-out'>
+                  <FontAwesomeIcon icon={faInstagram} className='instagram text-white text-[40px] opacity-0 duration-[400ms] ease-out' />
+                </div>
+              </div>
+              {/* post 7 ends here */}
+
+            </div>
+          </div>
+        </div>
+        {/* instagram section ends here */}
+
+
 
 
       </main></>

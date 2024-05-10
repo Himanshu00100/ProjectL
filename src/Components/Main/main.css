@@ -72,4 +72,16 @@
     background-position:center;
 } */
 
+/* instagram post section starts from here */
+
+.postsection:hover .post{
+    transform:scale(1.2);
+}
+.postsection:hover .overlay{
+    background-color:rgba(0,0,0,0.3);
+}
+.postsection:hover .instagram{
+    opacity:1;
+}
+
 

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Header from "../../Header/Header"
 import Footer from "../../Header/Header"
 import { faAngleRight, faLeaf, faRankingStar, faSeedling, faTree } from '@fortawesome/free-solid-svg-icons'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import {  Link } from 'react-router-dom'
 // import Home from '../../Home/Home'
 
 // banner 1 image from here
@@ -60,7 +60,7 @@ const About = () => {
     <>
       <main className='w-screen '>
         {/* home > About section from here */}
-        <div className='w-full px-[50px] py-[15px]'>
+        <div className='w-full px-[50px] py-[15px] 2k:px-[250px]'>
           <div className='w-full h-[24px] bg-white flex justify-start items-center gap-x-[9px] text-[13px] font-[500] '>
             <Link to={"/"} className='hover:text-red-500 duration-200 leading-[24px]' >Home</Link>
             <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
@@ -71,7 +71,7 @@ const About = () => {
 
         {/* banner 1 section starts from here */}
 
-        <div className='w-full h-[464px] px-[50px] mb-[100px] bg-white'>
+        <div className='w-full h-[464px] px-[50px] 2k:px-[250px] mb-[100px] bg-white'>
           <div className='w-full h-full bg-white flex gap-x-[20px]'>
             {/* left image */}
             <div className='w-[434px] h-[425px] bg-white '>
@@ -97,7 +97,7 @@ const About = () => {
         {/* banner 1 section ends here */}
 
         {/* trend quality and eco section from here */}
-        <div className='w-full h-[201.4px] px-[50px] mb-[100px] flex gap-x-[25px] bg-white'>
+        <div className='w-full h-[201.4px] px-[50px] 2k:px-[250px] mb-[100px] flex gap-x-[25px] bg-white'>
           {/* trend section starts from here */}
           <div className='w-[460px] pr-[20px] h-full '>
             {/* trend section */}
@@ -146,7 +146,7 @@ const About = () => {
         {/* trend quality and eco section from here */}
 
         {/* sports icon section starts from here */}
-        <div className='w-full h-[48px] px-[50px] mb-[100px]'>
+        <div className='w-full h-[48px] px-[50px] 2k:px-[250px] mb-[100px]'>
           <div className='w-full h-full bg-white flex justify-center items-center'>
             <div className='flex items-center justify-center gap-x-[30px]'>
               <div className='w-[150px] h-[0.8px] bg-gray-200'></div>
@@ -170,8 +170,8 @@ const About = () => {
         {/* sports icon section ends here */}
 
         {/* sports banner section from here */}
-        <div className='w-full h-[386px] px-[50px] mb-[100px]'>
-          <div className='w-full h-full bg-white flex flex-col items-center gap-y-[40px] '>
+        <div className='w-full h-[386px] px-[50px] 2k:px-[250px]  mb-[100px]'>
+          <div className='w-full h-full bg-white flex flex-col  items-center gap-y-[40px] '>
             <h2 className='text-[80px] leading-[80px] font-[600] font-oswald'>+50 SPORTS <br /> IN ONE PLACE!</h2>
             <h2 className='text-[40px] leading-[40px] font-[600] font-oswald '>WE PLACE EMPHASIS ON THE FACT THAT THE CLOTHES LAST FOR  <br /> YEARS. WE CHOOSE THE BEST QUALITY MATERIALS.</h2>
             <p className='text-[16px] leading-[28px] font-[400]'> We place emphasis on the fact that the clothes last for years. We choose the best quality materials. Thats why our products are the best</p>
@@ -181,7 +181,7 @@ const About = () => {
 
         {/* post hero section starts from here */}
 
-        <div className='w-full h-[514.025px] bg-white mb-[100px] px-[50px] flex flex-col'>
+        <div className='w-full h-[514.025px] bg-white mb-[100px] px-[50px] 2k:px-[250px] flex flex-col'>
           <div className='w-full h-[257.01px] bg-white flex'>
             <div className='w-[355.2px] h-full bg-white flex justify-center items-center '>
               {/* box 1 */}
@@ -235,17 +235,17 @@ const About = () => {
         {/* post hero section ends here */}
 
         {/* a divider here */}
-        <div className='w-full py-[10px] mb-[100px]'>
+        <div className='w-full py-[10px]  mb-[100px]'>
           <div className='w-full h-[0.8px] bg-gray-300'></div>
         </div>
 
         {/* clothes section starts from here */}
 
-        <div className='w-full h-[40px] px-[50px] mb-[40px]'>
+        <div className='w-full h-[40px] px-[50px] 2k:px-[250px] mb-[40px]'>
           <h3 className='text-[40px] leading-[40px] font-oswald font-[600] text-start'>WE MAKE CLOTHES FOR THE MARKET.</h3>
         </div>
 
-        <div className='w-full h-[801.150px] px-[50px] mb-[100px]'>
+        <div className='w-full h-[801.150px] px-[50px] 2k:px-[250px] mb-[100px]'>
           <div className='w-full h-full bg-white flex justify-between'>
             <div className='w-[680.400px] h-full bg-white'>
               {/* image 1 */}
@@ -296,10 +296,10 @@ const About = () => {
 
         {/* From the blog section starts from here */}
 
-        <div className='w-screen flex  sm:h-[442.487px] mb-[50px] sm:mb-[100px] white  sm:px-[50px] flex-col gap-y-[25px]  '>
+        <div className='w-screen flex  sm:h-[442.487px] mb-[50px] sm:mb-[100px] white  sm:px-[50px] 2k:px-[250px] flex-col gap-y-[25px]  '>
           <h2 className='text-[40px] leading-[40px] font-oswald font-[600] sm:text-start'>FROM THE BLOG</h2>
 
-          <div className='w-full 2xl:h-[442.487px] flex flex-col sm:flex-row gap-y-[20px] sm:overflow-x-auto'>
+          <div className='w-full 2xl:h-[442.487px] flex flex-col sm:flex-row gap-y-[20px] sm:overflow-x-auto 2k:overflow-x-hidden'>
 
             {/* blog 1 from here */}
             <div className='flex'>
@@ -418,13 +418,13 @@ const About = () => {
         {/* video hero section from here */}
 
         <div className='w-full h-[330.600px] md:h-[403.600px] lg:h-[800px]  flex  bg-white   justify-center items-center overflow-hidden relative'>
-          <video src={hero1} className='video h-full scale-300 phone:scale-150 md:scale-150 lg:scale-150  ' loop autoPlay muted>
+          <video src={hero1} className='video h-full scale-300 phone:scale-150 md:scale-150 lg:scale-150 2xl:scale-140 2k:scale-135  ' loop autoPlay muted>
           </video>
           {/* text inside hero section starts from here */}
-          <div className='absolute left-[10px] md:left-[50px] top-[50px] lg:left-[50px] 2k:left-[250px] flex flex-col justify-center   items-start gap-y-[18.5px] lg:gap-y-8'>
+          <div className='absolute left-[10px] md:left-[50px] top-[150px] lg:left-[50px] 2k:left-[250px] flex flex-col justify-center   items-start gap-y-[18.5px] lg:gap-y-8'>
             <h1 className=' text-white font-oswald text-[50px] leading-[50px] md:text-[60px] md:leading-[60px] lg:text-[130px]  lg:leading-[130px] font-[600] text-start '>READY<br />STEADY <br />GO!</h1>
             <h2 className='text-[16px] lg:text-[20px] text-white '>Get eady for the running eason</h2>
-            <a href="" className='text-black bg-white text-[14px] md:text-[18px]  px-[30px] py-[5px] lg:px-[40px] lg:py-[10px] mt-[10px] lg:mt-0 lg:font-semibold hover:bg-transparent hover:text-white border-[1px] border-white duration-200 ease-out ' >Shop now</a>
+            <a href="" className='hidden text-black bg-white text-[14px] md:text-[18px]  px-[30px] py-[5px] lg:px-[40px] lg:py-[10px] mt-[10px] lg:mt-0 lg:font-semibold hover:bg-transparent hover:text-white border-[1px] border-white duration-200 ease-out ' >Shop now</a>
           </div>
           {/* text inside hero section ends here */}
 
@@ -434,7 +434,7 @@ const About = () => {
 
         {/* instagram section from here */}
 
-        <div className='w- hidden 2xl:flex flex-col sm:flex-row h-auto 2xl:h-[464px] bg-[#f1f1f1] 2xl:px-[50px]  justify-center items-center '>
+        <div className='w- hidden 2xl:flex flex-col sm:flex-row h-auto 2xl:h-[464px] bg-[#f1f1f1] 2xl:px-[50px] 2k:px-[250px]  justify-center items-center '>
           <div className='w-full flex flex-col gap-y-[30px]'>
             <h2 className='text-[28px]  2xl:text-[40px] 2xl:leading-[40px] font-[600] font-oswald text-start'>WE ARE ON INSTAGRAM</h2>
             <div className='w-full  flex flex-col  gap-y-[20px]  sm:flex-row gap-x-[5px] justify-center items-center overflow-x-auto'>

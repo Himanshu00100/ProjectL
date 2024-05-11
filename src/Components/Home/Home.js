@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
-import "./main.css"
+import "./home.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+//  hero 1 video here
+
 import hero1 from "../Assets/hero1/h1.mp4"
+
 import sport1 from "../Assets/sports/sport-1-banner-1.jpg"
 import sport2 from "../Assets/sports/sport-1-banner-2.jpg"
 import sport3 from "../Assets/sports/sport-1-banner-3.jpg"
@@ -75,7 +79,7 @@ import blog3 from "../Assets/blog/blog3.jpg"
 
 
 
-const Main = () => {
+const Home = () => {
 
   //  active tabs and its sections from here
 
@@ -122,21 +126,13 @@ const Main = () => {
   }
 
 
-
-
-
-
-
-
-
-
   return (
     <>
 
       <main className=' flex-col w-screen  z-[-10] '>
         {/* hero one section starts from here */}
 
-        <div className='w-full h-[330.600px] md:h-[403.600px] lg:h-[800px]  flex  bg-green-500   justify-center items-center overflow-hidden relative'>
+        <div className='w-full h-[330.600px] md:h-[403.600px] lg:h-[800px]  flex  bg-white   justify-center items-center overflow-hidden relative'>
           <video src={hero1} className='video h-full scale-300 phone:scale-150 md:scale-150 lg:scale-150' loop autoPlay muted>
           </video>
           {/* text inside hero section starts from here */}
@@ -1051,4 +1047,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Home

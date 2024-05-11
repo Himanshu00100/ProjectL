@@ -43,11 +43,12 @@ import acboxing from "../Assets/accessory/boxing.png"
 import acracing from "../Assets/accessory/racing.png"
 import actennis from "../Assets/accessory/tennis.png"
 
-import Main from '../Main/Main'
+// import Main from '../Main/Main'
 import About from '../Pages/About/About'
 import Contact from '../Pages/Contact/Contact'
 import Blog from '../Pages/Blog/Blog'
 import Help from '../Pages/Help/Help'
+import Home from '../Home/Home'
 
 
 
@@ -721,7 +722,7 @@ const Header = () => {
                 </header>
                 <div className=''>
                     <Routes>
-                        <Route exact path='/' element={<Main />} />
+                        <Route exact path='/' element={<Home />} />
                         <Route exact path='/about' element={<About />} />
                         <Route exact path='/contact' element={<Contact />} />
                         <Route exact path='/blog' element={<Blog />} />

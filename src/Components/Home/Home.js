@@ -244,10 +244,10 @@ const Home = () => {
           <div className='w-full h-full bg-white-500 flex flex-col gap-y-[20px]'>
             <div className='w-full 2xl:w-[658.787px] 2xl:h-[44px] bg-white text-[28px] phone:text-[22px] 2xl:text-[40px]  leading-[44px] font-oswald font-[600] '>
               {/* product section tabs */}
-              <ul className='flex phone:justify-center lg:justify-start gap-x-[35px] text-[#808080] flex-col phone:flex-row phone:gap-x-[20px] 2xl:flex-row'>
-                <li className={'cursor-pointer transition-all duration-500 phone:text-nowrap ' + tab1} onClick={tab1active}  >NEW ARRIVALS</li>
-                <li className={'cursor-pointer transition-all duration-500 phone:text-nowrap ' + tab2} onClick={tab2active}>BEST SELLERS</li>
-                <li className={'cursor-pointer transition-all duration-500 phone:text-nowrap ' + tab3} onClick={tab3active} >ON SALE</li>
+              <ul className='flex phone:justify-center lg:justify-start gap-x-[35px] text-[#808080] flex-col phone:flex-row phone:gap-x-[20px] 2xl:gap-x-[35px] 2xl:flex-row'>
+                <li className={'cursor-pointer transition-all duration-500 phone:text-nowrap   ' + tab1} onClick={tab1active}  >NEW ARRIVALS</li>
+                <li className={'cursor-pointer transition-all duration-500 phone:text-nowrap  ' + tab2} onClick={tab2active}>BEST SELLERS</li>
+                <li className={'cursor-pointer transition-all duration-500 phone:text-nowrap  ' + tab3} onClick={tab3active} >ON SALE</li>
               </ul>
               {/* tabs end here */}
             </div>

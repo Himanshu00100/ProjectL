@@ -33,6 +33,7 @@
 /* product tab starts from here */
 .activetab{
     color:black;
+    background-color:white;
     text-decoration: underline;
     text-decoration-thickness:1px ;
 }

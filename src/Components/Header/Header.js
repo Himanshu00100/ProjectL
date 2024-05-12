@@ -52,7 +52,7 @@ import Home from '../Home/Home'
 import Fashion from '../Pages/Blog/Fashion/Fashion'
 import Gallery from "../Pages/Blog/Gallery/Gallery"
 import NewArrival from "../Pages/Blog/New Arrival/NewArrival"
-import Sport from "../Pages/Blog/Sport/Sportgit "
+import Sport from "../Pages/Blog/Sport/Sport"
 import Sportinggoods from "../Pages/Blog/Sporting Goods/Sportingoods"
 import Video from "../Pages/Blog/Video/Video"
 
@@ -737,9 +737,9 @@ const Header = () => {
                         <Route exact path='/blog/blog-fashion'element={<Fashion/>} />
                         <Route path='/blog-gallery' element={<Gallery/>} />
                         <Route path='/blog-new-arrival' element={<NewArrival/>} />
-                        <Route path='blog-sport' element={<Sport/>} />
-                        <Route path='blog-sporting-goods' element={<Sportinggoods/>} />
-                        <Route path='category/video' element={<Video/>} />
+                        <Route path='/blog-sport' element={<Sport/>} />
+                        <Route path='/blog-sporting-goods' element={<Sportinggoods/>} />
+                        <Route path='/blog/video' element={<Video/>} />
 
 
                         

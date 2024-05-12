@@ -183,27 +183,27 @@ const Blog = () => {
         {/* blog tabs */}
         <div className='w-full h-[20px] mb-[50px] '>
           <ul className='flex gap-x-[35px] '>
-            <li onClick={tab1} className=' tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
+            <li onClick={tab1} className=' tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer underline underline-offset-[2px]  duration-300 flex flex-col'>
               <Link to={"/blog"}>ALL BLOG POSTS</Link>
-              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + allblog}></span>
+              <span className={'underline w-[100%] opacity-[1]  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + allblog}></span>
             </li>
             <li onClick={tab2} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
               <Link to={"/blog/blog-fashion"}>FASHION</Link>
-              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out '+ fashion}></span></li>
+              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + fashion}></span></li>
             <li onClick={tab3} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
               <Link to={"/blog-gallery"}>GALLERY</Link>
-              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out '+ gallery}></span></li>
+              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + gallery}></span></li>
             <li onClick={tab4} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
               <Link to={"/blog-new-arrival"}>NEW ARRIVALS</Link>
               <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + arrival}></span></li>
             <li onClick={tab5} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
-              <Link to={"blog-sport"}>SPORT</Link>
+              <Link to={"/blog-sport"}>SPORT</Link>
               <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + sport}></span></li>
             <li onClick={tab6} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
-              <Link to={"blog-sporting-goods"}>SPORTING GOODS</Link>
+              <Link to={"/blog-sporting-goods"}>SPORTING GOODS</Link>
               <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + sporting}></span></li>
             <li onClick={tab7} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
-              <Link to={"category/video"}>VIDEO</Link>
+              <Link to={"/blog/video"}>VIDEO</Link>
               <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + Video}></span></li>
           </ul>
         </div>
@@ -949,7 +949,7 @@ const Blog = () => {
 
         {/* fashion blog page */}
 
-        
+
 
 
 

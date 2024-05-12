@@ -62,19 +62,38 @@ import Video from "../Pages/Blog/Video/Video"
 
 
 
-import { faAngleDown, faBars, faBaseballBatBall, faBasketball, faCartPlus, faDumbbell, faFootball, faFutbol, faGolfBallTee, faHeart, faMagnifyingGlass, faPersonBiking, faPersonHiking, faPersonSkating, faPersonSnowboarding, faPersonSwimming, faSkating, faUserPlus, faVolleyball } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleUp, faBars, faBaseballBatBall, faBasketball, faCartPlus, faCartShopping, faDumbbell, faFootball, faFutbol, faGolfBallTee, faHeart, faMagnifyingGlass, faPersonBiking, faPersonHiking, faPersonSkating, faPersonSnowboarding, faPersonSwimming, faSkating, faUserPlus, faVolleyball, faXmark } from '@fortawesome/free-solid-svg-icons'
 // import { Link } from 'react-router-dom'
 
 
 const Header = () => {
     const [navbarstatus, setnavbarstatus] = useState("")
+    const [backtotop, setbacktotop] = useState("inactivetop")
+
     useEffect(() => {
         window.addEventListener("scroll", () => {
             let yscroll = window.pageYOffset
 
             yscroll > 250 ? setnavbarstatus("activenav") : setnavbarstatus("inactivenav")
+            yscroll > 250 ? setbacktotop("activetop") : setbacktotop("inactivetop")
         }, [])
     })
+
+    // bg overlay from here
+    const [bgoverlay, setbgoverlay] = useState("inactiveoverlay")
+    const [sidebar, setsidebar] = useState("inactivesidebar")
+
+    const activesidebar = () => {
+        setbgoverlay("activeoverlay")
+        setsidebar("activesidebar")
+    }
+
+    const inactivesidebar = () => {
+        setbgoverlay("inactiveoverlay")
+        setsidebar("inactivesidebar")
+    }
+
+
 
 
 
@@ -82,10 +101,39 @@ const Header = () => {
 
         <>
             <BrowserRouter>
-                <header className='shadow-lg z-40 '>
+                <header className='shadow-lg z-40 relative   '>
+                    {/* back to top button */}
+
+                    {/* bg overlay from  here */}
+                    <div onClick={inactivesidebar} className={'w-screen h-screen z-[50]  ' + bgoverlay}></div>
+                    {/* bg overlay ends here */}
+
+                    {/* cart sidebar starts from here */}
+                    <div className={'absolute z-[50] right-0 w-[500px] h-screen bg-white p-[40px] transition-all duration-[400ms] ease-out ' + sidebar}>
+                        <div className='w-full h-full bg-white flex flex-col items-center relative'>
+                            <FontAwesomeIcon icon={faXmark} className='absolute cursor-pointer top-[-25px] right-[-23px] text-[16px] p-[5px]' onClick={inactivesidebar} />
+                            <h2 className='text-[20px] leading-[28px] font-oswald font-[600] text-start self-start '>YOUR CART (0 ITEMS)</h2>
+                            <div className='w-full h-full bg-white flex justify-center items-center'>
+                                <div className='flex flex-col gap-y-[20px]'>
+                                <FontAwesomeIcon icon={faCartShopping} className='text-[50px] text-gray-300' />
+                                <p className=' text-[18px] font-[400]'>Shopping Cart is empty</p>
+                                </div>
+
+                            </div>
+                            <p className='text-[17px] text-white hover:bg-red-500 w-full h-[49px] leading-[30px] font-[500] px-[40px] py-[7px] bg-black cursor-pointer duration-300 '>Continue Shopping</p>
+                        </div>
+                    </div>
+
+
+                    {/* cart sidebar ends here */}
+
+
+                    <div className={'  fixed cursor-pointer bottom-[50px] hover:rotate-[45deg] right-[50px] z-30 w-[35px] h-[35px] bg-white shadow-md shadow-gray-500 flex justify-center items-center transition-all duration-300 ease-out ' + backtotop}>
+                        <FontAwesomeIcon icon={faAngleUp} className='angleup hover:rotate-[-45deg]  duration-300 ease-out  px-[15px] py-[15px]' />
+                    </div>
 
                     {/* header's top section starts here */}
-                    <div className=' top hidden md:flex w-screen h-[40px] py-[8px] px-[10px] sm:px-[50px] lg:px-[50px]    border-b-[1px] border-gray-200  justify-center items-center'>
+                    <div className=' top hidden md:flex w-screen h-[40px] py-[8px] px-[10px] sm:px-[50px] lg:px-[50px]  border-b-[1px] border-gray-200  justify-center items-center'>
                         <div className='w-[1420.8px] h-[24px] bg-white flex justify-between'>
 
                             {/* socialmedia section starts from here */}
@@ -706,9 +754,9 @@ const Header = () => {
                                             </div>
                                         </a>
                                     </div>
-                                    <div className='cart flex justify-center items-center'>
+                                    <div className='cart flex justify-center items-center ' >
                                         <a href=' #' className='cart flex justify-center relative'>
-                                            <FontAwesomeIcon icon={faCartPlus} className="text-[20px] px-[8px] py-[8px] md:px-3 md:py-3 hover:text-red-500 duration-200" />
+                                            <FontAwesomeIcon icon={faCartPlus} onClick={activesidebar} className="text-[20px] px-[8px] py-[8px] md:px-3 md:py-3 hover:text-red-500 duration-200" />
                                             {/* <div className='cartdrop absolute text-white bg-gray-600 text-nowrap text-sm left-[-70px] bottom-[-15px] px-1 py-[2px] border-[2px] border-white opacity-0 invisible none delay-[1s] ease-out duration-[300ms]'>
                                     View your shopping cart
                                 </div> */}
@@ -733,15 +781,15 @@ const Header = () => {
                         <Route exact path='/contact' element={<Contact />} />
                         <Route exact path='/blog' element={<Blog />} />
                         <Route exact path='/help' element={<Help />} />
-                        <Route exact path='/blog/blog-fashion'element={<Fashion/>} />
-                        <Route path='/blog-gallery' element={<Gallery/>} />
-                        <Route path='/blog-new-arrival' element={<NewArrival/>} />
-                        <Route path='/blog-sport' element={<Sport/>} />
-                        <Route path='/blog-sporting-goods' element={<Sportinggoods/>} />
-                        <Route path='/blog/video' element={<Video/>} />
+                        <Route exact path='/blog/blog-fashion' element={<Fashion />} />
+                        <Route path='/blog-gallery' element={<Gallery />} />
+                        <Route path='/blog-new-arrival' element={<NewArrival />} />
+                        <Route path='/blog-sport' element={<Sport />} />
+                        <Route path='/blog-sporting-goods' element={<Sportinggoods />} />
+                        <Route path='/blog/video' element={<Video />} />
 
 
-                        
+
                     </Routes>
                 </div>
 

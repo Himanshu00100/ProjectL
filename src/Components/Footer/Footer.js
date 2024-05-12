@@ -8,9 +8,9 @@ import { faFacebookF, faInstagram, faLinkedinIn, faXTwitter, faYoutube } from "@
 
 const Footer = () => {
     return (
-        <footer className="w-screen 2xl:h-[896.250px] bg-black">
+        <footer className="w-screen 2xl:h-[896.250px] bg-black ">
             {/* footer's newsletter section starts from here */}
-            <div className="w-full 2xl:h-[195.6px] bg-black pt-[50px] pb-[40px] 2xl:pt-[80px] 2xl:pb-[70px] 2xl:px-[50px] 2k:px-[250px] ">
+            <div className="w-full 2xl:h-[195.6px] bg-black pt-[50px] pb-[40px] 2xl:pt-[80px] 2xl:pb-[70px] 2xl:px-[50px] 2k:px-[250px]  ">
                 <div className="w-full h-full bg-black flex flex-col gap-y-[20px] 2xl:flex-row justify-between items-center">
                     <h3 className=" text-[22px] 2xl:text-[30px] leading-[30px] font-[600] text-white font-oswald xl:text-nowrap">JOIN OUR NEWSLETTER AND GET $20 DISCOUNT FOR YOUR FIRST ORDER</h3>
                     <div className=" px-[10px] h-full flex gap-x-[10px] 2xl:pr-[100px] 2k:pr-[0px]  ">

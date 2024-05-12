@@ -8,11 +8,55 @@
     box-sizing: border-box;
 }
 
+/* back to top  */
+.top:hover .angleup{
+    transform:rotateX("45deg");
+}
+
+.activetop{
+    transform:scale(1);
+    opacity:1;
+    visibility:visible;
+}
+.inactivetop{
+    transform:scale(0);
+    opacity:0;
+    visibility:hidden;
+}
+
+/*  bg overlay from here */
+.activeoverlay{
+    display:block;
+    position:fixed;
+    top:0px;
+    /* opacity:1; */
+    background-color:rgba(0, 0, 0, 0.4);
+
+}
+
+.inactiveoverlay{
+    display:none;
+    position:static;
+    
+    background-color:rgba(0, 0, 0, 0.4);
+}
+
+/* cart sidebar from here */
+
+.iactivesidebar{
+    right:0px;
+}
+
+.inactivesidebar{
+    right:-100%;
+}
+
 /* navbar effect from here */
 .activenav {
     
     position: fixed;
     top: 0px;
+    opacity:1;
     z-index: 10;
     box-shadow: 0px 10px 10px rgb(148, 148, 148);
 }

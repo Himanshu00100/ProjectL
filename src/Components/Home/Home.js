@@ -31,7 +31,7 @@ import product3 from "../Assets/leatest products/p3.jpg"
 import product4 from "../Assets/leatest products/p4.jpg"
 import product5 from "../Assets/leatest products/p5.jpg"
 import { faCalendarDays, faChartBar, faHeart, faUser } from '@fortawesome/free-regular-svg-icons'
-import { faChevronLeft, faChevronRight, faMagnifyingGlass, faPersonSkating, faPersonSkiing, faPersonSnowboarding } from '@fortawesome/free-solid-svg-icons'
+import { faAngleUp, faChevronLeft, faChevronRight, faMagnifyingGlass, faPersonSkating, faPersonSkiing, faPersonSnowboarding } from '@fortawesome/free-solid-svg-icons'
 
 // best seller images from here
 
@@ -130,6 +130,9 @@ const Home = () => {
     <>
 
       <main className=' flex-col w-screen  z-[-10] '>
+
+
+
         {/* hero one section starts from here */}
 
         <div className='w-full h-[330.600px] md:h-[403.600px] lg:h-[800px]  flex  bg-white   justify-center items-center overflow-hidden relative'>
@@ -283,7 +286,7 @@ const Home = () => {
                   <img src={product1} alt='Product 1' className='2xl:w-full' />
                 </div>
                 {/* product price */}
-                <div className='w-[268px] 2xl:w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                <div className='w-[268px] 2xl:w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
                   <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Swim shorts in black</a>
                   <p>$40.00</p>
                 </div>
@@ -316,7 +319,7 @@ const Home = () => {
                   <img src={product2} alt='Product 2' className='w-full' />
                 </div>
                 {/* product price */}
-                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
                   <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>High stretch sports shorts</a>
                   <p>$79.00 &#160; - &#160; $110.00</p>
                 </div>
@@ -350,7 +353,7 @@ const Home = () => {
                   <img src={product3} alt='Product 3' className='w-full' />
                 </div>
                 {/* product price */}
-                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px]'>
                   <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Letter sports tank top</a>
                   <p className='text-red-500'>$40.00 &#160;  <span className='text-[#808080] line-through'> $70.00</span></p>
                 </div>
@@ -373,7 +376,7 @@ const Home = () => {
                   <img src={product4} alt='Product 4' className='w-full' />
                 </div>
                 {/* product price */}
-                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
                   <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Colorsports tank top</a>
                   <p>$90.00</p>
                 </div>
@@ -396,7 +399,7 @@ const Home = () => {
                   <img src={product5} alt='Product 5' className='w-full' />
                 </div>
                 {/* product price */}
-                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
+                <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
                   <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Minimalist training bag</a>
                   <p>$80.00</p>
                 </div>
@@ -421,7 +424,7 @@ const Home = () => {
               </span>
 
               {/* product 1  */}
-              <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product'>
+              <div className='w-[80%] 2xl:w-[20%] h-full bg-white product'>
                 {/* product image 1*/}
                 <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center '>
 

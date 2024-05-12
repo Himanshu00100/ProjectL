@@ -50,20 +50,95 @@ const Blog = () => {
 
   // tabs and page switch
 
-  const [allblog,setallblog]=useState("")
-  const [fashion,setfashion]=useState("")
-  const [gallery,setgallery]=useState("")
-  const [arrival,setarrival]=useState("")
-  const [sport,setsport]=useState("")
-  const [sporting,setsporting]=useState("")
-  const [Video,setvideo]=useState("")
+  const [allblog, setallblog] = useState("activetab")
+  const [fashion, setfashion] = useState("inactivetab")
+  const [gallery, setgallery] = useState("inactivetab")
+  const [arrival, setarrival] = useState("inactivetab")
+  const [sport, setsport] = useState("inactivetab")
+  const [sporting, setsporting] = useState("inactivetab")
+  const [Video, setvideo] = useState("inactivetab")
+
+  const tab1 = () => {
+    setallblog("activetab")
+    setfashion("inactivetab")
+    setgallery("inactivetab")
+    setarrival("inactivetab")
+    setsport("inactivetab")
+    setsporting("inactivetab")
+    setvideo("inactivetab")
+
+  }
+
+  const tab2 = () => {
+    setallblog("inactivetab")
+    setfashion("activetab")
+    setgallery("inactivetab")
+    setarrival("inactivetab")
+    setsport("inactivetab")
+    setsporting("inactivetab")
+    setvideo("inactivetab")
+
+  }
+  const tab3 = () => {
+    setallblog("inactivetab")
+    setfashion("inactivetab")
+    setgallery("activetab")
+    setarrival("inactivetab")
+    setsport("inactivetab")
+    setsporting("inactivetab")
+    setvideo("inactivetab")
+
+  }
+  const tab4 = () => {
+    setallblog("inactivetab")
+    setfashion("inactivetab")
+    setgallery("inactivetab")
+    setarrival("activetab")
+    setsport("inactivetab")
+    setsporting("inactivetab")
+    setvideo("inactivetab")
+
+  }
+
+  const tab5 = () => {
+    setallblog("inactivetab")
+    setfashion("inactivetab")
+    setgallery("inactivetab")
+    setarrival("inactivetab")
+    setsport("activetab")
+    setsporting("inactivetab")
+    setvideo("inactivetab")
+
+  }
+
+  const tab6 = () => {
+    setallblog("inactivetab")
+    setfashion("inactivetab")
+    setgallery("inactivetab")
+    setarrival("inactivetab")
+    setsport("inactivetab")
+    setsporting("activetab")
+    setvideo("inactivetab")
+
+  }
+
+  const tab7 = () => {
+    setallblog("inactivetab")
+    setfashion("inactivetab")
+    setgallery("inactivetab")
+    setarrival("inactivetab")
+    setsport("inactivetab")
+    setsporting("inactivetab")
+    setvideo("activetab")
+
+  }
 
 
 
 
 
 
-// all blog posts from here
+  // all blog posts from here
 
   const [page1status, setpage1status] = useState("activepage")
   const [page2status, setpage2status] = useState("inactivepage")
@@ -108,21 +183,28 @@ const Blog = () => {
         {/* blog tabs */}
         <div className='w-full h-[20px] mb-[50px] '>
           <ul className='flex gap-x-[35px] '>
-            <li className=' tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>ALL BLOG POSTS
-              <span className='underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out'></span>
+            <li onClick={tab1} className=' tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
+              <Link to={"/blog"}>ALL BLOG POSTS</Link>
+              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + allblog}></span>
             </li>
-            <li className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>FASHION
-              <span className='underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out'></span></li>
-            <li className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>GALLERY
-              <span className='underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out'></span></li>
-            <li className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>NEW ARRIVALS
-              <span className='underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out'></span></li>
-            <li className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>SPORT
-              <span className='underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out'></span></li>
-            <li className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>SPORTING GOODS
-              <span className='underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out'></span></li>
-            <li className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>VIDEO
-              <span className='underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out'></span></li>
+            <li onClick={tab2} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
+              <Link to={"/blog/blog-fashion"}>FASHION</Link>
+              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out '+ fashion}></span></li>
+            <li onClick={tab3} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
+              <Link to={"/blog-gallery"}>GALLERY</Link>
+              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out '+ gallery}></span></li>
+            <li onClick={tab4} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
+              <Link to={"/blog-new-arrival"}>NEW ARRIVALS</Link>
+              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + arrival}></span></li>
+            <li onClick={tab5} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
+              <Link to={"blog-sport"}>SPORT</Link>
+              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + sport}></span></li>
+            <li onClick={tab6} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
+              <Link to={"blog-sporting-goods"}>SPORTING GOODS</Link>
+              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + sporting}></span></li>
+            <li onClick={tab7} className='tab text-[16px] font-[600] leading-[20px] items-center gap-y-[2px] font-oswald cursor-pointer hover:text-red-500 duration-300 flex flex-col'>
+              <Link to={"category/video"}>VIDEO</Link>
+              <span className={'underline w-[1%] opacity-0  bg-red-500 h-[0.5px] transition-all duration-300 ease-out ' + Video}></span></li>
           </ul>
         </div>
 
@@ -865,9 +947,9 @@ const Blog = () => {
         </div>
         {/* all blog section ends here */}
 
+        {/* fashion blog page */}
 
-
-
+        
 
 
 

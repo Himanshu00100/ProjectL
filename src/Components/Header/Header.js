@@ -160,7 +160,6 @@ const Header = () => {
                     {/* header's bottom section stats from here */}
                     <div className={' bg-white navbar w-screen px-[10px] sm:px-[50px] lg:px-[50px] py-[10px] md:py-[20px] flex justify-center items-center  transition-all duration-500 ' + navbarstatus}>
                         <div className='w-[1420.800px] h-[34px] md:h-[45.600px]  flex justify-between'>
-
                             <div className='flex justify-center items-center gap-x-6 md:hidden'>
                                 <FontAwesomeIcon icon={faBars} className='text-[25px]  hover:text-red-500' />
                                 <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[20px]  hover:text-red-500 sm:hidden' />

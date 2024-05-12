@@ -19,6 +19,17 @@ const Video = () => {
           </div>
         </div>
         {/* Home > Blog section ends here */}
+
+        {/* gallery heading */}
+        <div className='w-full h-[40px] px-[50px] 2k:px-[250px] mb-[50px]'>
+          <h1 className='text-[40px] leading-[40px] font-oswald font-[600] text-start'> CATEGORY: VIDEO</h1>
+        </div>
+
+        {/* section starts from here */}
+
+        <div className='w-full h-[200px] px-[50px] 2k:px-[250px]'>
+          <h1 className='text-[30px] leading-[30px] font-[600] font-oswald text-gray-500'>VIDEO COMING SOON...</h1>
+        </div>
       </main>
     </>
   )

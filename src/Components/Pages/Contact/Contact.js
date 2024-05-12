@@ -41,7 +41,7 @@ const Contact = () => {
                 <p className='text-center '>Monday - Friday:9:00 - 20:00</p>
                 <p className='text-center'>Saturady: 11:00 - 15:00</p>
               </div>
-              <a href='' className='px-[20px] flex justify-center items-center gap-x-[10px]  text-[14px] leading-[32px] font-[500] border-[1px] border-black bg-transparent hover:bg-black hover:text-white duration-200'>
+              <a href='whatsapp:contact=015555555555@s.whatsapp.com&message="I d like to chat with you' className='px-[20px] flex justify-center items-center gap-x-[10px]  text-[14px] leading-[32px] font-[500] border-[1px] border-black bg-transparent hover:bg-black hover:text-white duration-200'>
                 <span className='relative p-[4px] animate-ping rounded-full bg-green-500 flex justify-center items-center'>
                 </span> Live Chat
               </a>
@@ -79,7 +79,7 @@ const Contact = () => {
                 <p className='text-center w-[180px] '>29 SE 2nd Ave, Miami, Florida 33131, United States</p>
                 {/* <p className='text-center'>Saturady: 11:00 - 15:00</p> */}
               </div>
-              <a href='' className='px-[20px] flex justify-center items-center gap-x-[10px]  text-[14px] leading-[32px] font-[500] border-[1px] border-black bg-transparent hover:bg-black hover:text-white duration-200'>Show on map</a>
+              <a href='https://www.google.com/maps/place/Los+Angeles,+CA,+USA/@34.018904,-119.0355977,10z/data=!4m15!1m8!3m7!1s0x80c2c634253dfd01:0x26fe52df19a5a920!2sDowntown+Los+Angeles,+Los+Angeles,+CA,+USA!3b1!8m2!3d34.055691!4d-118.2487702!16zL20vMDI2ejQ1!3m5!1s0x80c2c75ddc27da13:0xe22fdf6f254608f4!8m2!3d34.0549076!4d-118.242643!16s%2Fm%2F030qb3t?entry=ttu' className='px-[20px] flex justify-center items-center gap-x-[10px]  text-[14px] leading-[32px] font-[500] border-[1px] border-black bg-transparent hover:bg-black hover:text-white duration-200'>Show on map</a>
             </div>
           </div>
         </div>

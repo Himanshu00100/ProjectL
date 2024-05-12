@@ -10,6 +10,7 @@
 
 /* navbar effect from here */
 .activenav {
+    
     position: fixed;
     top: 0px;
     z-index: 10;

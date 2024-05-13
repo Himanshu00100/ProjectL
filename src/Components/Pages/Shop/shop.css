@@ -1,104 +1,112 @@
-.tab:hover .underline{
-    opacity:1;
-    width:100%;
+.tab:hover .underline {
+    opacity: 1;
+    width: 100%;
 }
 
- /* leatest product tab from here */
+/* leatest product tab from here */
 
- .product:hover .stats{
-    right:10px;
-}
-.product:hover .stats{
-    right:10px;
+.product:hover .stats {
+    right: 10px;
 }
 
-.product:hover .addtocart{
-    bottom:10px;
+.product:hover .stats {
+    right: 10px;
 }
 
-.product:hover .quickbar{
-    bottom:10px;
+.product:hover .addtocart {
+    bottom: 10px;
 }
 
-.productsection:hover .arrow{
-    visibility:visible;
-    opacity:1;
+.product:hover .quickbar {
+    bottom: 10px;
+}
+
+.productsection:hover .arrow {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* rating dropdown  */
 
-.ratingkey:hover .ratingdown{
-    visibility:visible;
-    opacity:1;
-    padding-top:20px;
+.ratingkey:hover .ratingdown {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 20px;
 }
 
 
 
-.list:hover .checkbox{
-    background-color:black;
-    color:white;
+.list:hover .checkbox {
+    background-color: black;
+    color: white;
 }
-.list:hover .check{
-    visibility:visible;
-    opacity:1;
+
+.list:hover .check {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* pricedown from here */
 
-.pricekey:hover .pricedown{
-    visibility:visible;
-    opacity:1;
-    padding-top:20px;
+.pricekey:hover .pricedown {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 20px;
 }
 
 /* branddown from here */
 
-.brandkey:hover .branddown{
-    visibility:visible;
-    opacity:1;
-    padding-top:20px;
+.brandkey:hover .branddown {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 20px;
 }
 
 /* fabricdown from here */
 
-.fabrickey:hover .fabricdown{
-    visibility:visible;
-    opacity:1;
-    padding-top:20px;
+.fabrickey:hover .fabricdown {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 20px;
 }
 
 /* Sizedown  from here */
 
-.sizekey:hover .sizedown{
-    visibility:visible;
-    opacity:1;
-    padding-top:20px;
+.sizekey:hover .sizedown {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 20px;
 }
 
 /* Colordown from here */
 
-.colorkey:hover .colordown{
-    visibility:visible;
-    opacity:1;
-    padding-top:20px;
+.colorkey:hover .colordown {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 20px;
 }
+
 /* fabricdown from here */
 
-.categorykey:hover .categorydown{
-    visibility:visible;
-    opacity:1;
-    padding-top:20px;
+.categorykey:hover .categorydown {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 20px;
 }
 
-.sortkey:hover .sortdown{
-    visibility:visible;
-    opacity:1;
-    padding-top:20px;
+.sortkey:hover .sortdown {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 20px;
 }
 
-.list:hover{
-    color:red;
+.list:hover {
+    color: red;
 }
 
+/* colordown from here */
 
+.colorbox:hover .color {
+    height: 8px;
+    width:8px;
+}

@@ -98,87 +98,95 @@ const Shop = () => {
                   <span className='underline absolute bottom-[4px] w-[1%] opacity-0  bg-black h-[0.5px] transition-all duration-300 ease-out '></span>
                   {/* colordown */}
                   <div className=' colordown invisible opacity-0 absolute left-[-17px] top-[40px] w-auto  bg-white border-[1px] border-black z-[10] pt-[5px] px-[20px] pb-[20px] cursor-default transition-all duration-300 '>
-                    <div className='w-full h-full flex flex-col gap-y-[15px]'>
-                      {/* list 1 */}
-                      <div className='list w-auto h-[20px] bg-white flex gap-x-[10px] items-center cursor-pointer '>
-                        {/* checkbox */}
-                        <div className='checkbox w-[20px] h-[20px] border-[1px] border-black bg-white flex justify-center items-center duration-100'>
-                          <FontAwesomeIcon icon={faCheck} className='check invisible opacity-0 text-[14px] ' />
+                    <div className='w-full h-full flex flex-col gap-y-[6px]'>
+                      {/* color section 1 from here on*/}
+                      <div className='w-full h-auto flex gap-x-[6px]'>
+                        {/* black */}
+                        <div className='colorbox px-[15px] flex justify-center items-center cursor-pointer gap-x-[10px] border-[1px] border-gray-200 hover:bg-white hover:text-red-500 hover:border-black duration-300 bg-gray-200 ease-out'>
+                          <div className='w-[15px] h-[15px] flex justify-center items-center '>
+                            <span className='color w-[10.5px] h-[10.5px] rounded-full bg-black duration-300 ease-out'></span>
+                          </div>
+                          <span className='leading-[34px] text-[14px] font-[400]'>Black</span>
                         </div>
-                        <h4 className='text-[13px] leading-[20px] font-[400]'>Burberry</h4>
-                      </div>
-                      {/* list 2 */}
-                      <div className='list w-auto h-[20px] bg-white flex gap-x-[10px] items-center cursor-pointer '>
-                        {/* checkbox */}
-                        <div className='checkbox w-[20px] h-[20px] border-[1px] border-black bg-white flex justify-center items-center duration-100'>
-                          <FontAwesomeIcon icon={faCheck} className='check invisible opacity-0 text-[14px] ' />
+
+                        {/* blue */}
+                        <div className='colorbox px-[15px] flex justify-center items-center cursor-pointer gap-x-[10px] border-[1px] border-gray-200 hover:bg-white hover:text-red-500 hover:border-black duration-300 bg-gray-200 ease-out'>
+                          <div className='w-[15px] h-[15px] flex justify-center items-center '>
+                            <span className='color w-[10.5px] h-[10.5px] rounded-full bg-[#4684bd] duration-300 ease-out'></span>
+                          </div>
+                          <span className='leading-[34px] text-[14px] font-[400]'>Blue</span>
                         </div>
-                        <h4 className='text-[13px] leading-[20px] font-[400] text-nowrap'>C&A</h4>
-                      </div>
-                      {/* list 3 */}
-                      <div className='list w-auto h-[20px] bg-white flex gap-x-[10px] items-center cursor-pointer '>
-                        {/* checkbox */}
-                        <div className='checkbox w-[20px] h-[20px] border-[1px] border-black bg-white flex justify-center items-center duration-100'>
-                          <FontAwesomeIcon icon={faCheck} className='check invisible opacity-0 text-[14px] ' />
+
+                        {/* brown */}
+                        <div className='colorbox px-[15px] flex justify-center items-center cursor-pointer gap-x-[10px] border-[1px] border-gray-200 hover:bg-white hover:text-red-500 hover:border-black duration-300 bg-gray-200 ease-out'>
+                          <div className='w-[15px] h-[15px] flex justify-center items-center '>
+                            <span className='color w-[10.5px] h-[10.5px] rounded-full bg-[#be926b] duration-300 ease-out'></span>
+                          </div>
+                          <span className='leading-[34px] text-[14px] font-[400]'>Brown</span>
                         </div>
-                        <h4 className='text-[13px] leading-[20px] font-[400] text-nowrap'>Cartier</h4>
-                      </div>
-                      {/* list 4 */}
-                      <div className='list w-auto h-[20px] bg-white flex gap-x-[10px] items-center cursor-pointer '>
-                        {/* checkbox */}
-                        <div className='checkbox w-[20px] h-[20px] border-[1px] border-black bg-white flex justify-center items-center duration-100'>
-                          <FontAwesomeIcon icon={faCheck} className='check invisible opacity-0 text-[14px] ' />
+
+                        {/* gray */}
+                        <div className='colorbox px-[15px] flex justify-center items-center cursor-pointer gap-x-[10px] border-[1px] border-gray-200 hover:bg-white hover:text-red-500 hover:border-black duration-300 bg-gray-200 ease-out'>
+                          <div className='w-[15px] h-[15px] flex justify-center items-center '>
+                            <span className='color w-[12px] h-[12px] rounded-full bg-[#999999] duration-300 ease-out'></span>
+                          </div>
+                          <span className='leading-[34px] text-[14px] font-[400]'>Gray</span>
                         </div>
-                        <h4 className='text-[13px] leading-[20px] font-[400] text-nowrap'>Chanel</h4>
+
                       </div>
-                      {/* list 5 */}
-                      <div className='list w-auto h-[20px] bg-white flex gap-x-[10px] items-center cursor-pointer '>
-                        {/* checkbox */}
-                        <div className='checkbox w-[20px] h-[20px] border-[1px] border-black bg-white flex justify-center items-center duration-100'>
-                          <FontAwesomeIcon icon={faCheck} className='check invisible opacity-0 text-[14px] ' />
+                      {/* color section 2 from here on */}
+                      <div className='w-full h-auto flex gap-x-[6px]'>
+                        {/* green */}
+                        <div className='colorbox px-[15px] flex justify-center items-center cursor-pointer gap-x-[10px] border-[1px] border-gray-200 hover:bg-white hover:text-red-500 hover:border-black duration-300 bg-gray-200 ease-out'>
+                          <div className='w-[15px] h-[15px] flex justify-center items-center '>
+                            <span className='color w-[10.5px] h-[10.5px] rounded-full bg-[#a7dbc7] duration-300 ease-out'></span>
+                          </div>
+                          <span className='leading-[34px] text-[14px] font-[400]'>Green</span>
                         </div>
-                        <h4 className='text-[13px] leading-[20px] font-[400] text-nowrap'>Chopard</h4>
-                      </div>
-                      {/* list 6 */}
-                      <div className='list w-auto h-[20px] bg-white flex gap-x-[10px] items-center cursor-pointer '>
-                        {/* checkbox */}
-                        <div className='checkbox w-[20px] h-[20px] border-[1px] border-black bg-white flex justify-center items-center duration-100'>
-                          <FontAwesomeIcon icon={faCheck} className='check invisible opacity-0 text-[14px] ' />
+
+                        {/* orange */}
+                        <div className='colorbox px-[15px] flex justify-center items-center cursor-pointer gap-x-[10px] border-[1px] border-gray-200 hover:bg-white hover:text-red-500 hover:border-black duration-300 bg-gray-200 ease-out'>
+                          <div className='w-[15px] h-[15px] flex justify-center items-center '>
+                            <span className='color w-[10.5px] h-[10.5px] rounded-full bg-[#f09000] duration-300 ease-out'></span>
+                          </div>
+                          <span className='leading-[34px] text-[14px] font-[400]'>Orange</span>
                         </div>
-                        <h4 className='text-[13px] leading-[20px] font-[400] text-nowrap'>Chow Tai Fook</h4>
-                      </div>
-                      {/* list 7 */}
-                      <div className='list w-auto h-[20px] bg-white flex gap-x-[10px] items-center cursor-pointer '>
-                        {/* checkbox */}
-                        <div className='checkbox w-[20px] h-[20px] border-[1px] border-black bg-white flex justify-center items-center duration-100'>
-                          <FontAwesomeIcon icon={faCheck} className='check invisible opacity-0 text-[14px] ' />
+
+                        {/* pink */}
+                        <div className='colorbox px-[15px] flex justify-center items-center cursor-pointer gap-x-[10px] border-[1px] border-gray-200 hover:bg-white hover:text-red-500 hover:border-black duration-300 bg-gray-200 ease-out'>
+                          <div className='w-[15px] h-[15px] flex justify-center items-center '>
+                            <span className='color w-[10.5px] h-[10.5px] rounded-full bg-[#e7bdc2] duration-300 ease-out'></span>
+                          </div>
+                          <span className='leading-[34px] text-[14px] font-[400]'>Pink</span>
                         </div>
-                        <h4 className='text-[13px] leading-[20px] font-[400] text-nowrap'>Christian Louboutin</h4>
-                      </div>
-                      {/* list 8 */}
-                      <div className='list w-auto h-[20px] bg-white flex gap-x-[10px] items-center cursor-pointer '>
-                        {/* checkbox */}
-                        <div className='checkbox w-[20px] h-[20px] border-[1px] border-black bg-white flex justify-center items-center duration-100'>
-                          <FontAwesomeIcon icon={faCheck} className='check invisible opacity-0 text-[14px] ' />
+
+                        {/* red */}
+                        <div className='colorbox px-[15px] flex justify-center items-center cursor-pointer gap-x-[10px] border-[1px] border-gray-200 hover:bg-white hover:text-red-500 hover:border-black duration-300 bg-gray-200 ease-out'>
+                          <div className='w-[15px] h-[15px] flex justify-center items-center '>
+                            <span className='color w-[10.5px] h-[10.5px] rounded-full bg-[#c91313] duration-300 ease-out'></span>
+                          </div>
+                          <span className='leading-[34px] text-[14px] font-[400]'>Red</span>
                         </div>
-                        <h4 className='text-[13px] leading-[20px] font-[400] text-nowrap'>Ecco</h4>
                       </div>
-                      {/* list 9 */}
-                      <div className='list w-auto h-[20px] bg-white flex gap-x-[10px] items-center cursor-pointer '>
-                        {/* checkbox */}
-                        <div className='checkbox w-[20px] h-[20px] border-[1px] border-black bg-white flex justify-center items-center duration-100'>
-                          <FontAwesomeIcon icon={faCheck} className='check invisible opacity-0 text-[14px] ' />
+                      {/* color section 3 from here */}
+                      <div className='w-full h-auto flex gap-x-[6px]'>
+                        {/* white */}
+                        <div className='colorbox px-[15px] flex justify-center items-center cursor-pointer gap-x-[10px] border-[1px] border-gray-200 hover:bg-white hover:text-red-500 hover:border-black duration-300 bg-gray-200 ease-out'>
+                          <div className='w-[15px] h-[15px] flex justify-center items-center '>
+                            <span className='color w-[10.5px] h-[10.5px] rounded-full bg-white duration-300 ease-out'></span>
+                          </div>
+                          <span className='leading-[34px] text-[14px] font-[400]'>Blue</span>
                         </div>
-                        <h4 className='text-[13px] leading-[20px] font-[400] text-nowrap'>Supersport</h4>
-                      </div>
-                      {/* list 10 */}
-                      <div className='list w-auto h-[20px] bg-white flex gap-x-[10px] items-center cursor-pointer '>
-                        {/* checkbox */}
-                        <div className='checkbox w-[20px] h-[20px] border-[1px] border-black bg-white flex justify-center items-center duration-100'>
-                          <FontAwesomeIcon icon={faCheck} className='check invisible opacity-0 text-[14px] ' />
+
+                        {/* yellow */}
+                        <div className='colorbox px-[15px] flex justify-center items-center cursor-pointer gap-x-[10px] border-[1px] border-gray-200  hover:text-red-500 hover:border-black duration-300 bg-gray-200 ease-out'>
+                          <div className='w-[15px] h-[15px] flex justify-center items-center '>
+                            <span className='color w-[10.5px] h-[10.5px] rounded-full bg-yellow-500 duration-300 ease-out'></span>
+                          </div>
+                          <span className='leading-[34px] text-[14px] font-[400]'>Blue</span>
                         </div>
-                        <h4 className='text-[13px] leading-[20px] font-[400] text-nowrap'>Topshop</h4>
                       </div>
+
                     </div>
                   </div>
                 </div>

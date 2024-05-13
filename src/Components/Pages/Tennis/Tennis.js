@@ -29,7 +29,7 @@ export default function Tennis() {
                 <div className='w-full h-auto px-[50px] pt-[15px] 2k:px-[250px]  mb-[80px]'>
                     <div className='w-full h-full bg-white flex flex-col'>
                         {/* filter tab  */}
-                        <div className='w-full h-[44px] bg-white flex justify-between mb-[30px]'>
+                        <div className='hidden w-full h-[44px] bg-white  justify-between mb-[30px]'>
                             {/* left filter */}
                             <div className='w-[716.862px] h-[44px] bg-white flex gap-x-[30px] items-center'>
                                 <span className='text-[16px] leading-[24px] font-[400]'>Filter</span>

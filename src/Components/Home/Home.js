@@ -76,6 +76,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import blog1 from "../Assets/blog/blog 1.jpg"
 import blog2 from "../Assets/blog/blog 2.jpg"
 import blog3 from "../Assets/blog/blog3.jpg"
+import { Link } from 'react-router-dom'
 
 
 
@@ -142,7 +143,7 @@ const Home = () => {
           <div className='absolute left-[10px] md:left-[50px] top-[50px] lg:left-[50px] 2xl:top-[135px] 2k:left-[250px] flex flex-col justify-center   items-start gap-y-[18.5px] lg:gap-y-8'>
             <h1 className=' text-white font-oswald text-[50px] leading-[50px] md:text-[60px] md:leading-[60px] lg:text-[130px]  lg:leading-[130px] font-[600] text-start '>READY<br />STEADY <br />GO!</h1>
             <h2 className='text-[16px] lg:text-[20px] text-white '>Get eady for the running eason</h2>
-            <a href="" className='text-black bg-white text-[14px] md:text-[18px]  px-[30px] py-[5px] lg:px-[40px] lg:py-[10px] mt-[10px] lg:mt-0 lg:font-semibold hover:bg-transparent hover:text-white border-[1px] border-white duration-200 ease-out ' >Shop now</a>
+            <Link to={"/category/running"} className='text-black bg-white text-[14px] md:text-[18px]  px-[30px] py-[5px] lg:px-[40px] lg:py-[10px] mt-[10px] lg:mt-0 lg:font-semibold hover:bg-transparent hover:text-white border-[1px] border-white duration-200 ease-out ' >Shop now</Link>
           </div>
           {/* text inside hero section ends here */}
 
@@ -160,7 +161,7 @@ const Home = () => {
             <img src={sport1} alt='' className='w-full   duration-300 ease-out' />
             <div className='absolute bottom-[30px] xl:bottom-[50px] 2xl:bottom-[65px] flex flex-col justify-center items-center xl:gap-y-[20px] gap-y-[26px] sm:gap-y-[16px] '>
               <h1 className=' text-[30px] md:text-[24px] lg:text-[30px] xl-[36px] 2xl:text-[50px] text-white leading-[30px] xl:leading-[50px] font-[oswald] font-[600]'>ALL FOR TENNIS</h1>
-              <a href='' className='px-[20px] xl:px-[30px] py-[3px] xl:py-[5px]  bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</a>
+              <Link to={"/category/tennis"} className='px-[20px] xl:px-[30px] py-[3px] xl:py-[5px]  bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</Link>
             </div>
           </div>
           <div className='w-full md:w-[33.33%] h-[225px] phone:h-[322.8px] sm:h-[480px] md:h-[191.988px] lg:h-[255.988px] xl:h-[319.987px] 2xl:h-full flex justify-center items-center bg-black overflow-hidden relative sp'>

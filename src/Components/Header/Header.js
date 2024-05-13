@@ -68,6 +68,8 @@ import Sale from "../Pages/Sale/Sale"
 
 import { faAngleDown, faAngleUp, faBars, faBaseballBatBall, faBasketball, faCartPlus, faCartShopping, faDumbbell, faFootball, faFutbol, faGolfBallTee, faHeart, faMagnifyingGlass, faPersonBiking, faPersonHiking, faPersonSkating, faPersonSnowboarding, faPersonSwimming, faSkating, faUserPlus, faVolleyball, faXmark } from '@fortawesome/free-solid-svg-icons'
 import Shop from '../Pages/Shop/Shop'
+import Running from '../Pages/Running/Running'
+import Tennis from '../Pages/Tennis/Tennis'
 // import { Link } from 'react-router-dom'
 
 
@@ -832,6 +834,8 @@ const Header = () => {
                         <Route path='/loobek/category/Men-clothes' element={<Men />} />
                         <Route path='/loobek/accessories' element={<Accessories />} />
                         <Route path='/loobek/onsale' element={<Sale />} />
+                        <Route path='/category/running' element={<Running/>}/>
+                        <Route path='/category/tennis' element={<Tennis/>}/>
 
 
 

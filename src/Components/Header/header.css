@@ -37,7 +37,26 @@
 .inactiveoverlay{
     display:none;
     position:static;
+    background-color:rgba(0, 0, 0, 0.4);
+}
+
+/* bg overlay for navigation keys */
+
+.activeforkeys{
+    z-index:-10;
+    display:block;
+    position:absolute;
+    top:0px;
+    /* opacity:1; */
+    background-color:rgba(0, 0, 0, 0.4);
+}
+
+.inactiveforkeys{
     
+    display:none;
+    /* position:static; */
+    top:0px;
+    /* opacity:1; */
     background-color:rgba(0, 0, 0, 0.4);
 }
 
@@ -83,6 +102,18 @@
 .keys:hover .underline {
     opacity: 1;
     width: 100%;
+}
+
+/* login form fropdown */
+
+.user:hover .form {
+    
+    visibility: visible;
+    opacity: 1;
+    padding-top:40px;;
+    top:48px;
+    z-index: 10;
+    height: 380px;
 }
 
 /* wishlist tooltip from here */

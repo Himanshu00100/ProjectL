@@ -139,7 +139,7 @@ const Home = () => {
           <video src={hero1} className='video h-full scale-300 phone:scale-150 md:scale-150 lg:scale-150' loop autoPlay muted>
           </video>
           {/* text inside hero section starts from here */}
-          <div className='absolute left-[10px] md:left-[50px] top-[50px] lg:left-[50px] 2k:left-[250px] flex flex-col justify-center   items-start gap-y-[18.5px] lg:gap-y-8'>
+          <div className='absolute left-[10px] md:left-[50px] top-[50px] lg:left-[50px] 2xl:top-[135px] 2k:left-[250px] flex flex-col justify-center   items-start gap-y-[18.5px] lg:gap-y-8'>
             <h1 className=' text-white font-oswald text-[50px] leading-[50px] md:text-[60px] md:leading-[60px] lg:text-[130px]  lg:leading-[130px] font-[600] text-start '>READY<br />STEADY <br />GO!</h1>
             <h2 className='text-[16px] lg:text-[20px] text-white '>Get eady for the running eason</h2>
             <a href="" className='text-black bg-white text-[14px] md:text-[18px]  px-[30px] py-[5px] lg:px-[40px] lg:py-[10px] mt-[10px] lg:mt-0 lg:font-semibold hover:bg-transparent hover:text-white border-[1px] border-white duration-200 ease-out ' >Shop now</a>

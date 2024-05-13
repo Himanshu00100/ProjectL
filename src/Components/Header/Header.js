@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Form, Link, Route, Routes } from 'react-router-dom'
 
 import "./header.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -93,6 +93,15 @@ const Header = () => {
         setsidebar("inactivesidebar")
     }
 
+    // for nav's dropdown
+
+    const activeoverlay = () => {
+        setbgoverlay("activeforkeys")
+    }
+    const inactiveoverlay = () => {
+        setbgoverlay("inactiveforkeys")
+    }
+
 
 
 
@@ -101,11 +110,11 @@ const Header = () => {
 
         <>
             <BrowserRouter>
-                <header className='shadow-lg z-40 relative   '>
+                <header className='shadow-lg z-40 relative  '>
                     {/* back to top button */}
 
                     {/* bg overlay from  here */}
-                    <div onClick={inactivesidebar} className={'w-screen h-screen z-[50]  ' + bgoverlay}></div>
+                    <div onClick={inactivesidebar} className={'w-screen h-screen z-[40]  ' + bgoverlay}></div>
                     {/* bg overlay ends here */}
 
                     {/* cart sidebar starts from here */}
@@ -115,8 +124,8 @@ const Header = () => {
                             <h2 className='text-[20px] leading-[28px] font-oswald font-[600] text-start self-start '>YOUR CART (0 ITEMS)</h2>
                             <div className='w-full h-full bg-white flex justify-center items-center'>
                                 <div className='flex flex-col gap-y-[20px]'>
-                                <FontAwesomeIcon icon={faCartShopping} className='text-[50px] text-gray-300' />
-                                <p className=' text-[18px] font-[400]'>Shopping Cart is empty</p>
+                                    <FontAwesomeIcon icon={faCartShopping} className='text-[50px] text-gray-300' />
+                                    <p className=' text-[18px] font-[400]'>Shopping Cart is empty</p>
                                 </div>
 
                             </div>
@@ -127,13 +136,12 @@ const Header = () => {
 
                     {/* cart sidebar ends here */}
 
-
                     <div className={'  fixed cursor-pointer bottom-[50px] hover:rotate-[45deg] right-[50px] z-30 w-[35px] h-[35px] bg-white shadow-md shadow-gray-500 flex justify-center items-center transition-all duration-300 ease-out ' + backtotop}>
                         <FontAwesomeIcon icon={faAngleUp} className='angleup hover:rotate-[-45deg]  duration-300 ease-out  px-[15px] py-[15px]' />
                     </div>
 
                     {/* header's top section starts here */}
-                    <div className=' top hidden md:flex w-screen h-[40px] py-[8px] px-[10px] sm:px-[50px] lg:px-[50px]  border-b-[1px] border-gray-200  justify-center items-center'>
+                    <div className=' top hidden md:flex w-screen bg-white h-[40px] py-[8px] px-[10px] sm:px-[50px] lg:px-[50px]  border-b-[1px] border-gray-200  justify-center items-center'>
                         <div className='w-[1420.8px] h-[24px] bg-white flex justify-between'>
 
                             {/* socialmedia section starts from here */}
@@ -226,13 +234,15 @@ const Header = () => {
 
 
                                 <nav className='navbar hidden  w-[470.663px] h-[38px]  ml-[25px] xl:flex justify-center items-center gap-x-[25px] '>
-                                    <div className=" shop relative flex justify-center keys cursor-pointer">
+
+                                    {/* shop key */}
+                                    <div className=" shop relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
                                         <p className="text-lg font-medium py-7">Shop</p>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
 
                                         {/* Shop dropdown starts from here */}
 
-                                        <div className="shopdrop    w-screen h-[460px] bg-white  absolute top-[83px] left-[-269px] border-t-[1px] 2k:left-[-462px] border-gray-300 transition-[height] duration-[300ms] ease-out  opacity-0 invisible shadow-lg shadow-gray-400">
+                                        <div className="shopdrop    w-screen h-[460px] bg-white  absolute top-[83px] left-[-269px] border-t-[1px] 2k:left-[-462px] border-gray-300 transition-[height] duration-[300ms] ease-out  opacity-0 invisible ">
                                             <div className='top w-full h-[40%]  border-b-[1px] border-gray-200 cursor-default flex justify-between items-center px-[100px] 2k:px-[250px]'>
                                                 <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
                                                     <img src={football} alt='' className='w-[40px] h-[40px]' />
@@ -397,12 +407,12 @@ const Header = () => {
                                             <div className=' shopoverlay hidden w-screen h-screen bg-black opacity-50 absolute top-0px]  z-[-20] transition-all duration-200 ease-in-out '></div>
                                         </div>
                                     </div>
-
-                                    <div className="women relative flex justify-center keys cursor-pointer">
+                                    {/* women key */}
+                                    <div className="women relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
                                         <p className="text-lg font-medium py-7">Women</p>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
                                         {/* women's dropdown section starts from here */}
-                                        <div className='womendrop flex w-screen  h-[300px] absolute top-[83px] left-[-336px] 2k:left-[-528px]  bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible shadow-lg shadow-gray-400  '>
+                                        <div className='womendrop flex w-screen  h-[300px] absolute top-[83px] left-[-336px] 2k:left-[-528px]  bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible   '>
                                             <div className='h-full w-full ' >
                                                 <div className='w-full h-full  flex justify-center 2k:justify-between gap-x-[40px] '>
                                                     {/* special section starts from here */}
@@ -520,14 +530,14 @@ const Header = () => {
 
                                         </div>
                                     </div>
-
-                                    <div className="men relative flex justify-center keys cursor-pointer">
+                                    {/* men key */}
+                                    <div className="men relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
                                         <p className="text-lg font-medium py-7">Men</p>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
 
                                         {/* men dropdown section from here on */}
 
-                                        <div className='mendrop flex w-screen  h-[300px] absolute top-[83px] left-[-425px] 2k:left-[-620px] bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible shadow-lg shadow-gray-400  '>
+                                        <div className='mendrop flex w-screen  h-[300px] absolute top-[83px] left-[-425px] 2k:left-[-620px] bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible   '>
                                             <div className='h-full w-full ' >
                                                 <div className='w-full h-full  flex justify-center 2k:justify-between gap-x-[40px] '>
                                                     {/* special section starts from here */}
@@ -645,11 +655,11 @@ const Header = () => {
 
                                         </div>
                                     </div>
-
-                                    <div className="accessory relative flex justify-center keys cursor-pointer">
+                                    {/* accessory key */}
+                                    <div className="accessory relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
                                         <p className="text-lg font-medium py-7">Accessories</p>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
-                                        <div className='accessorydrop flex bg-white w-screen  h-[333px] absolute top-[83px] left-[-486px] 2k:left-[-678px]  border-t-[1px] border-gray-200 pl-[80px] px-[50px] 2xl:px-[240px] py-[50px]  justify-center transition-[padding,height] duration-[300ms] ease-out  opacity-0 invisible shadow-lg shadow-gray-400 '>
+                                        <div className='accessorydrop flex bg-white w-screen  h-[333px] absolute top-[83px] left-[-486px] 2k:left-[-678px]  border-t-[1px] border-gray-200 pl-[80px] px-[50px] 2xl:px-[240px] py-[50px]  justify-center transition-[padding,height] duration-[300ms] ease-out  opacity-0 invisible  '>
                                             <div className=' w-full h-full  flex flex-col gap-y-[10px] '>
                                                 <div className='w-full h-[33.33%]  flex gap-x-[10px]'>
                                                     <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
@@ -708,13 +718,13 @@ const Header = () => {
                                             <div className=' accessoryoverlay hidden w-screen h-screen bg-black opacity-50 absolute top-[0px] left-[0]  z-[-20] transition-all duration-200 ease-in-out '></div>
                                         </div>
                                     </div>
-
-                                    <div className="relative flex justify-center keys cursor-pointer">
+                                    {/* sale key */}
+                                    <div className="relative flex justify-center keys cursor-pointer" >
                                         <p className="text-lg font-medium py-7">Sale</p>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
                                     </div>
-
-                                    <div className="relative flex justify-center keys cursor-pointer">
+                                    {/* page key */}
+                                    <div className="relative flex justify-center keys cursor-pointer" >
                                         <p className="text-lg font-medium py-7">Pages</p>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
                                     </div>
@@ -738,11 +748,36 @@ const Header = () => {
                                 {/* profile section starts from here */}
 
                                 <div className='profile flex md:gap-x-2 sm:ml-[20px] md:ml-10'>
-                                    <div className='user flex justify-center items-center'>
+                                    <div className='user flex justify-center items-center' onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
                                         <a href=' #' className=' relative'>
                                             <FontAwesomeIcon icon={faUserPlus} className="text-[20px] px-[8px] py-[8px] md:px-3 md:py-3 hover:text-red-500 duration-200" />
-                                            <div className='userdrop absolute  bg-red-500'>
+                                            {/* login form here */}
+                                            <div className='form  invisible opacity-0  cursor-default w-[430px] h-[350px] absolute top-[40px] border-[1px] border-black right-0  bg-white px-[30px] pt-[10px] pb-[30px] transition-all duration-500 ease-in-out'>
+                                                <form action='' method='' className='w-full h-full bg-white flex flex-col '>
+                                                    {/* username */}
+                                                    <label for="" className='flex flex-col items-start gap-y-[5px]'>Username or Email Address
+                                                        <input type='email' required name='email' className='w-full text-[14px] leading-[30px] px-[20px] py-[7px] focus:outline-none border-[1px] border-black' placeholder='' />
+                                                    </label>
+                                                    {/* password */}
+                                                    <label for="" className='flex flex-col items-start gap-y-[5px] mt-[10px]'>Password
+                                                        <input type='password' required name='email' className='w-full text-[14px] leading-[30px] px-[20px] py-[7px] focus:outline-none border-[1px] border-black' placeholder='' />
+                                                    </label>
+                                                    <button type='submit' className='text-white bg-black w-full text-[16px]leading-[30px] px-[40px] py-[10px] font-[500] hover:bg-red-500 duration-300 hover:shadow-md hover:shadow-red-500 mt-[20px]'>Log In</button>
+                                                    <div className='flex items-center justify-between my-[10px]'>
+                                                        <label for="" className='flex items-center gap-x-[5px]'>
+                                                            <input type='checkbox' />
+                                                            Remember me
+                                                        </label>
+                                                        <p className='hover:text-red-500 duration-200 underline underline-offset-1 text-[15px] cursor-pointer'>I forget the password</p>
+                                                    </div>
+                                                    {/* divider */}
+                                                    <div className='w-full h-[0.8px] bg-gray-300'></div>
+                                                    <div className='flex justify-center items-center mt-[10px] gap-x-[4px]'>
+                                                        <p className='text-14px'>I'm new client. </p>
+                                                        <p className='cursor-pointer text-red-500 underline underline-offset-2 text-[15px] font-[400]'>Create an account</p>
+                                                    </div>
 
+                                                </form>
                                             </div>
                                         </a>
                                     </div>

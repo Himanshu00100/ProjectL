@@ -1,0 +1,26 @@
+.tab:hover .underline{
+    opacity:1;
+    width:100%;
+}
+
+ /* leatest product tab from here */
+
+ .product:hover .stats{
+    right:10px;
+}
+.product:hover .stats{
+    right:10px;
+}
+
+.product:hover .addtocart{
+    bottom:10px;
+}
+
+.product:hover .quickbar{
+    bottom:10px;
+}
+
+.productsection:hover .arrow{
+    visibility:visible;
+    opacity:1;
+}

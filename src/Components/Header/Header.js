@@ -55,6 +55,10 @@ import NewArrival from "../Pages/Blog/New Arrival/NewArrival"
 import Sport from "../Pages/Blog/Sport/Sport"
 import Sportinggoods from "../Pages/Blog/Sporting Goods/Sportingoods"
 import Video from "../Pages/Blog/Video/Video"
+import Women from "../Pages/Women/Women"
+import Men from "../Pages/Men/Men"
+import Accessories from "../Pages/Accessories/Accessories"
+import Sale from "../Pages/Sale/Sale"
 
 
 
@@ -63,6 +67,7 @@ import Video from "../Pages/Blog/Video/Video"
 
 
 import { faAngleDown, faAngleUp, faBars, faBaseballBatBall, faBasketball, faCartPlus, faCartShopping, faDumbbell, faFootball, faFutbol, faGolfBallTee, faHeart, faMagnifyingGlass, faPersonBiking, faPersonHiking, faPersonSkating, faPersonSnowboarding, faPersonSwimming, faSkating, faUserPlus, faVolleyball, faXmark } from '@fortawesome/free-solid-svg-icons'
+import Shop from '../Pages/Shop/Shop'
 // import { Link } from 'react-router-dom'
 
 
@@ -114,7 +119,7 @@ const Header = () => {
                     {/* back to top button */}
 
                     {/* bg overlay from  here */}
-                    <div onClick={inactivesidebar} className={'w-screen h-screen z-[40]  ' + bgoverlay}></div>
+                    <div onClick={inactivesidebar} className={'w-screen h-screen z-[40]   ' + bgoverlay}></div>
                     {/* bg overlay ends here */}
 
                     {/* cart sidebar starts from here */}
@@ -236,8 +241,8 @@ const Header = () => {
                                 <nav className='navbar hidden  w-[470.663px] h-[38px]  ml-[25px] xl:flex justify-center items-center gap-x-[25px] '>
 
                                     {/* shop key */}
-                                    <div className=" shop relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
-                                        <p className="text-lg font-medium py-7">Shop</p>
+                                    <div className=" shop relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay} >
+                                        <Link to={"/loobek/shop"} className="text-lg font-medium py-7">Shop</Link>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
 
                                         {/* Shop dropdown starts from here */}
@@ -409,7 +414,7 @@ const Header = () => {
                                     </div>
                                     {/* women key */}
                                     <div className="women relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
-                                        <p className="text-lg font-medium py-7">Women</p>
+                                        <Link to={"/loobek/category/Women-clothes"} className="text-lg font-medium py-7">Women</Link>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
                                         {/* women's dropdown section starts from here */}
                                         <div className='womendrop flex w-screen  h-[300px] absolute top-[83px] left-[-336px] 2k:left-[-528px]  bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible   '>
@@ -532,7 +537,7 @@ const Header = () => {
                                     </div>
                                     {/* men key */}
                                     <div className="men relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
-                                        <p className="text-lg font-medium py-7">Men</p>
+                                        <Link to={"/loobek/category/Men-clothes"} className="text-lg font-medium py-7">Men</Link>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
 
                                         {/* men dropdown section from here on */}
@@ -657,7 +662,7 @@ const Header = () => {
                                     </div>
                                     {/* accessory key */}
                                     <div className="accessory relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
-                                        <p className="text-lg font-medium py-7">Accessories</p>
+                                        <Link to={"/loobek/accessories"} className="text-lg font-medium py-7">Accessories</Link>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
                                         <div className='accessorydrop flex bg-white w-screen  h-[333px] absolute top-[83px] left-[-486px] 2k:left-[-678px]  border-t-[1px] border-gray-200 pl-[80px] px-[50px] 2xl:px-[240px] py-[50px]  justify-center transition-[padding,height] duration-[300ms] ease-out  opacity-0 invisible  '>
                                             <div className=' w-full h-full  flex flex-col gap-y-[10px] '>
@@ -720,7 +725,7 @@ const Header = () => {
                                     </div>
                                     {/* sale key */}
                                     <div className="relative flex justify-center keys cursor-pointer" >
-                                        <p className="text-lg font-medium py-7">Sale</p>
+                                        <Link to={"/loobek/onsale"} className="text-lg font-medium py-7">Sale</Link>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
                                     </div>
                                     {/* page key */}
@@ -811,17 +816,24 @@ const Header = () => {
                 </header>
                 <div className=''>
                     <Routes>
-                        <Route exact path='/' element={<Home />} />
-                        <Route exact path='/about' element={<About />} />
-                        <Route exact path='/contact' element={<Contact />} />
-                        <Route exact path='/blog' element={<Blog />} />
-                        <Route exact path='/help' element={<Help />} />
-                        <Route exact path='/blog/blog-fashion' element={<Fashion />} />
+                        <Route path='/' element={<Home />} />
+                        <Route path='/about' element={<About />} />
+                        <Route path='/contact' element={<Contact />} />
+                        <Route path='/blog' element={<Blog />} />
+                        <Route path='/help' element={<Help />} />
+                        <Route path='/blog/blog-fashion' element={<Fashion />} />
                         <Route path='/blog-gallery' element={<Gallery />} />
                         <Route path='/blog-new-arrival' element={<NewArrival />} />
                         <Route path='/blog-sport' element={<Sport />} />
                         <Route path='/blog-sporting-goods' element={<Sportinggoods />} />
                         <Route path='/blog/video' element={<Video />} />
+                        <Route path='/loobek/shop' element={<Shop />} />
+                        <Route path='/loobek/category/Women-clothes' element={<Women />} />
+                        <Route path='/loobek/category/Men-clothes' element={<Men />} />
+                        <Route path='/loobek/accessories' element={<Accessories />} />
+                        <Route path='/loobek/onsale' element={<Sale />} />
+
+
 
 
 

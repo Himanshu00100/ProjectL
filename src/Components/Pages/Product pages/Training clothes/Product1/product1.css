@@ -18,3 +18,7 @@
 .heading:hover .faangle{
     transform:rotate(180deg)
 }
+.key:hover .underline{
+    opacity:1;
+    width:100%;
+}

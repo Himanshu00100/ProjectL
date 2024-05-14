@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./product1.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
-import { faAngleDown, faAngleRight, faChartBar, faEnvelope, faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleRight, faChartBar, faEnvelope, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
 
 // color varient images from here
 import color1 from "../../../../Assets/training product pages/product 1/color1.jpg"
@@ -383,9 +383,10 @@ const Product1 = () => {
             <div className='w-full h-[0.5px] bg-gray-200 '></div>
 
             {/* customer review and rating section from here */}
-            <div className='w-full mt-[90px] h-auto px-[50px] 2k:px-[250px] flex justify-center'>
+            <div className='w-full mt-[90px] h-auto px-[50px] 2k:px-[250px]    '>
+
                 {/* customer review section  */}
-                <div className='w-[1100px] h-[376.400px] mb-[40px] flex flex-col  items-center bg-white'>
+                <div className='w-full  mb-[70px] flex flex-col  items-center  '>
                     <h2 className='text-[40px] font-oswald leading-[40px] font-[600] mb-[30px] text-center  '>CUSTOMER REVIEW</h2>
                     <div className='w-[323.400px] h-[140px] flex flex-col items-center gap-y-[10px]'>
                         <div className='w-full text-[50px] leading-[1em] font-[700] text-red-500'>0.00</div>
@@ -393,14 +394,91 @@ const Product1 = () => {
                         <h4 className='text-[14px] leading-[32px] font-[500] px-[30px] mt-[10px] border-[1px] border-black cursor-pointer hover:bg-black hover:text-white duration-300'>Write a review</h4>
                     </div>
                     {/* rating bar */}
-                    <div className='w-[600px] h-[136px] bg-red-500 mt-[40px] flex flex-col'>
+                    <div className='w-[600px]   mt-[40px] flex flex-col gap-y-[10px]    '>
                         {/* 5 star bar */}
-                        <div className='w-full h-[24px] flex text-[13px]'>
-                            <h4></h4>
+                        <div className='w-full h-[24px] flex text-[13px] items-center'>
+                            <span className='text-[15px] font-[500]'>5</span>
+                            <FontAwesomeIcon icon={faStar} className='mx-[7px]' />
+                            <span className='w-[532px] h-[7px] bg-gray-300 ml-[5px]'></span>
+                            <span className='text-[15px] font-[500] ml-[7px]'>0</span>
+                        </div>
+                        {/* 4 star bar */}
+                        <div className='w-full h-[24px] flex text-[13px] items-center'>
+                            <span className='text-[15px] font-[500]'>4</span>
+                            <FontAwesomeIcon icon={faStar} className='mx-[7px]' />
+                            <span className='w-[532px] h-[7px] bg-gray-300 ml-[5px]'></span>
+                            <span className='text-[15px] font-[500] ml-[7px]'>0</span>
+                        </div>
+                        {/* 3 star bar */}
+                        <div className='w-full h-[24px] flex text-[13px] items-center'>
+                            <span className='text-[15px] font-[500]'>3</span>
+                            <FontAwesomeIcon icon={faStar} className='mx-[7px]' />
+                            <span className='w-[532px] h-[7px] bg-gray-300 ml-[5px]'></span>
+                            <span className='text-[15px] font-[500] ml-[7px]'>0</span>
+                        </div>
+                        {/* 2 star bar */}
+                        <div className='w-full h-[24px] flex text-[13px] items-center'>
+                            <span className='text-[15px] font-[500]'>2</span>
+                            <FontAwesomeIcon icon={faStar} className='mx-[7px]' />
+                            <span className='w-[532px] h-[7px] bg-gray-300 ml-[5px]'></span>
+                            <span className='text-[15px] font-[500] ml-[7px]'>0</span>
+                        </div>
+                        {/* 1 star bar */}
+                        <div className='w-full h-[24px] flex text-[13px] items-center'>
+                            <span className='text-[15px] font-[500]'>1</span>
+                            <FontAwesomeIcon icon={faStar} className='mx-[7px]' />
+                            <span className='w-[532px] h-[7px] bg-gray-300 ml-[5px]'></span>
+                            <span className='text-[15px] font-[500] ml-[7px]'>0</span>
+                        </div>
+                    </div>
 
+                </div>
+
+                {/* review write section from here */}
+                <div className='w-full px-[160.4px] mb-[100px]'>
+                    {/* write your review section from here */}
+
+                    <div className='w-full  mt-[40px] bg-white pb-[25px]  border-b-[1px] border-gray-300 flex gap-x-[25px] px-[50px] 2k:px-[250px] justify-start '>
+                        <div className='key text-[20px] font-oswald font-[600] relative flex flex-col items-center   cursor-pointer'>WITH IMAGES (0)
+                            <span className='underline absolute bottom-0 opacity-0  w-[1%] h-[0.8px] bg-black transition-all duration-300 ease-in-out'></span></div>
+
+                        <div className='key text-[20px] font-oswald font-[600] relative flex flex-col items-center   cursor-pointer'>VARIFIED (0)
+                            <span className='underline absolute bottom-0 opacity-0  w-[1%] h-[0.8px] bg-black transition-all duration-300 ease-in-out'></span></div>
+
+                        <div className='key text-[20px] font-oswald font-[600] relative flex flex-col items-center   cursor-pointer'>ALL STARS (0)
+                            <span className='underline absolute bottom-0 opacity-0  w-[1%] h-[0.8px] bg-black transition-all duration-300 ease-in-out'></span></div>
+                    </div>
+
+                    {/* no revies yet section */}
+
+                    <div className='w-full h-[100px] bg-white flex justify-center items-center border-b-[0.8px] border-gray-300 mb-[50px]'>There is no reviews yet</div>
+                    {/* be the first to review section */}
+                    <div className='w-[1100px] h-[476px] bg-white flex flex-col '>
+
+                        {/* heading */}
+                        <span className='text-[20px] leading-[28px] font-oswald font-[600] text-start mb-[30px]'>BE THE FIRST TO REVIEW </span>
+                        {/* para */}
+                        <p className='text-start mb-[20px]'>Your email address will not be published. Required fields are marked <span className='text-red-500'>*</span> </p>
+                        {/* your rating */}
+                        <div className='flex items-center gap-x-[10px] mb-[15px]'>
+                            Your rating <span className='text-red-500'>*</span>
+                            <div className='flex gap-x-[10px]'>
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                            </div>
+                        </div>
+                        {/* upload image */}
+                        <div className='flex items-center gap-x-[10px] '>
+                            <p>Choose pictures (maxsize: 50kB, max files: 2)</p>
+                            <input type='file' className='h-full' />
                         </div>
                     </div>
                 </div>
+
+
             </div>
 
 

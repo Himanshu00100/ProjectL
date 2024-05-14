@@ -70,6 +70,9 @@ import { faAngleDown, faAngleUp, faBars, faBaseballBatBall, faBasketball, faCart
 import Shop from '../Pages/Shop/Shop'
 import Running from '../Pages/Running/Running'
 import Tennis from '../Pages/Tennis/Tennis'
+import Gym from '../Pages/Gym/Gym'
+import Cycling from '../Pages/Cycling/Cycling'
+import Product1 from '../Pages/Product pages/Training clothes/Product1/Product1'
 // import { Link } from 'react-router-dom'
 
 
@@ -836,6 +839,14 @@ const Header = () => {
                         <Route path='/loobek/onsale' element={<Sale />} />
                         <Route path='/category/running' element={<Running/>}/>
                         <Route path='/category/tennis' element={<Tennis/>}/>
+                        <Route path='/category/gym-accessories' element={<Gym/>}/>
+                        <Route path='/category/cycling' element={<Cycling/>}/>
+
+                        {/* product section Route pages */}
+
+                        {/* training page products */}
+
+                        <Route path='/gym-accessory/color-sports-tank-top' element={<Product1/>}/>
 
 
 

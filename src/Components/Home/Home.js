@@ -168,14 +168,14 @@ const Home = () => {
             <img src={sport2} alt='' className='w-full  duration-300 ease-out' />
             <div className='absolute bottom-[30px] xl:bottom-[50px] 2xl:bottom-[65px] flex flex-col justify-center items-center gap-y-[20px] 2xl:gap-y-[26px]  sm:gap-y-[16px] xl:gap-y-[20px]'>
               <h1 className='text-white text-[30px] md:text-[24px] lg:text-[30px] xl-[36px] 2xl:text-[50px] xl:leading-[50px] font-[oswald] font-[600]  text-center'>GYM <br /> ACCESSORIES</h1>
-              <a href='' className=' px-[20px] xl:px-[30px] py-[3px] xl:py-[5px]  bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</a>
+              <Link to={"/category/gym-accessories"} className=' px-[20px] xl:px-[30px] py-[3px] xl:py-[5px]  bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</Link>
             </div>
           </div>
           <div className='w-full md:w-[33.33%] h-[225px] phone:h-[322.8px] sm:h-[480px] md:h-[191.988px] lg:h-[255.988px] xl:h-[319.987px] 2xl:h-full  flex justify-center items-center bg-black overflow-hidden relative sp'>
             <img src={sport3} alt='' className='w-full  duration-300 ease-out' />
             <div className='absolute bottom-[30px] xl:bottom-[50px] 2xl:bottom-[65px] flex flex-col justify-center items-center gap-y-[26px]  sm:gap-y-[16px] xl:gap-y-[20px]'>
               <h1 className='text-white text-[30px] md:text-[24px] lg:text-[30px] xl-[36px] 2xl:text-[50px] xl:leading-[50px] font-[oswald] font-[600]'>BE SAFE ON BIKE</h1>
-              <a href='' className=' px-[20px] xl:px-[30px] py-[3px] xl:py-[5px]   bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</a>
+              <Link to={"/category/cycling"} className=' px-[20px] xl:px-[30px] py-[3px] xl:py-[5px]   bg-white border-[1px] border-white hover:bg-transparent hover:text-white duration-200 ease-out'>Shop now</Link>
             </div>
           </div>
         </div>

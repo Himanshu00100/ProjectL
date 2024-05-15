@@ -777,7 +777,7 @@ const Gym = () => {
                             {/* product 2  */}
                             <div className='w-[80%] 2xl:w-[20%] h-full bg-white product flex flex-col items-center 2xl:block'>
                                 {/* product image 2 */}
-                                <div className='w-[268px] h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+                                <div className='w-[268px] h-[357.25px] bg-white relative cursor-pointer  overflow-hidden flex justify-center'>
                                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-28%</span>
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -799,7 +799,10 @@ const Gym = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <img src={p2} alt='Product 2' className='w-full' />
+
+                                    <Link to={"/gym-accessory/flamingo-print-tank-top"}>
+                                        <img src={p2} alt='Product 2' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
@@ -810,7 +813,7 @@ const Gym = () => {
                             {/* product 3  */}
                             <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product flex flex-col items-center 2xl:block'>
                                 {/* product image 3*/}
-                                <div className='w-[268px] h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+                                <div className='w-[268px] h-[357.25px] bg-white relative cursor-pointer  overflow-hidden flex justify-center'>
                                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-16%</span>
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -822,8 +825,9 @@ const Gym = () => {
                                     <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
                                         <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                                     </div>
-
-                                    <img src={p3} alt='Product 3' className='w-full' />
+                                    <Link to={"/gym-accessory/leopard-print-sports-shorts"}>
+                                        <img src={p3} alt='Product 3' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px]'>
@@ -834,7 +838,7 @@ const Gym = () => {
                             {/* product 4  */}
                             <div className='w-[80%] 2xl:w-[20%] h-full bg-white product flex flex-col items-center 2xl:block'>
                                 {/* product image 4*/}
-                                <div className='w-[268px] h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                                <div className='w-[268px] h-[357.25px]  cursor-pointer relative  overflow-hidden flex justify-center'>
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
                                         <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -845,8 +849,10 @@ const Gym = () => {
                                     <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
                                         <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                                     </div>
+                                    <Link to={"/gym-accessory/high-crossback-sports-bra"}>
+                                        <img src={p4} alt='Product 4' className='w-full' />
+                                    </Link>
 
-                                    <img src={p4} alt='Product 4' className='w-full' />
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
@@ -857,7 +863,7 @@ const Gym = () => {
                             {/* product 5  */}
                             <div className='w-80%] 2xl:w-[20%] h-full bg-white product flex flex-col items-center 2xl:block'>
                                 {/* product image 5*/}
-                                <div className='w-[268px] h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                                <div className='w-[268px] h-[357.25px]  cursor-pointer relative  overflow-hidden flex justify-center'>
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
                                         <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -868,8 +874,9 @@ const Gym = () => {
                                     <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md '>
                                         <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                                     </div>
-
-                                    <img src={p5} alt='Product 5' className='w-full' />
+                                    <Link to={"/gym-accessory/slim-fit-tshirt"}>
+                                        <img src={p5} alt='Product 5' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
@@ -887,7 +894,7 @@ const Gym = () => {
                             {/* product 1  */}
                             <div className='w-[80%] 2xl:w-[20%] h-full bg-white product'>
                                 {/* product image 1*/}
-                                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center '>
+                                <div className='w-full h-[357.25px]  cursor-pointer relative  overflow-hidden flex justify-center '>
 
                                     {/* stats from here */}
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
@@ -900,8 +907,9 @@ const Gym = () => {
                                     <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
                                         <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                                     </div>
-
-                                    <img src={p6} alt='Product 1' className='w-full' />
+                                    <Link to={"/gym-accessory/solid-crop-slim-sports-tee"}>
+                                        <img src={p6} alt='Product 1' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -912,7 +920,7 @@ const Gym = () => {
                             {/* product 2  */}
                             <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product'>
                                 {/* product image 2 */}
-                                <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+                                <div className='w-full h-[357.25px]  relative cursor-pointer  overflow-hidden flex justify-center'>
 
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -924,8 +932,10 @@ const Gym = () => {
                                     <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
                                         <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                                     </div>
+                                    <Link to={"/gym-accessory/contrast-binding-layered-dress"}>
+                                        <img src={p7} alt='Product 2' className='w-full' />
+                                    </Link>
 
-                                    <img src={p7} alt='Product 2' className='w-full' />
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -936,7 +946,7 @@ const Gym = () => {
                             {/* product 3  */}
                             <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product'>
                                 {/* product image 3*/}
-                                <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+                                <div className='w-full h-[357.25px]  relative cursor-pointer  overflow-hidden flex justify-center'>
 
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -947,8 +957,9 @@ const Gym = () => {
                                     <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
                                         <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                                     </div>
-
-                                    <img src={p8} alt='Product 3' className='w-full' />
+                                    <Link to={"/gym-accessory/topshop-training-tshirt"}>
+                                        <img src={p8} alt='Product 3' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -959,7 +970,7 @@ const Gym = () => {
                             {/* product 4  */}
                             <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product'>
                                 {/* product image 4*/}
-                                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                                <div className='w-full h-[357.25px]  cursor-pointer relative  overflow-hidden flex justify-center'>
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
                                         <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -970,8 +981,10 @@ const Gym = () => {
                                     <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out'>
                                         <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                                     </div>
+                                    <Link to={"/gym-accessory/ombre-sports-tank-top"}>
+                                        <img src={p9} alt='Product 4' className='w-full' />
+                                    </Link>
 
-                                    <img src={p9} alt='Product 4' className='w-full' />
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -982,7 +995,7 @@ const Gym = () => {
                             {/* product 5  */}
                             <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product'>
                                 {/* product image 5*/}
-                                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                                <div className='w-full h-[357.25px]  cursor-pointer relative  overflow-hidden flex justify-center'>
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
                                         <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -996,8 +1009,9 @@ const Gym = () => {
 
 
                                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-22%</span>
-
-                                    <img src={p10} alt='Product 5' className='w-full' />
+                                    <Link to={"/gym-accessory/cropped-tennis-skirt"}>
+                                        <img src={p10} alt='Product 5' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1016,7 +1030,7 @@ const Gym = () => {
                             {/* product 1  */}
                             <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product'>
                                 {/* product image 1*/}
-                                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center '>
+                                <div className='w-full h-[357.25px]  cursor-pointer relative  overflow-hidden flex justify-center '>
 
                                     {/* stats from here */}
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
@@ -1030,8 +1044,9 @@ const Gym = () => {
                                         <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                                     </div>
                                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-28%</span>
-
-                                    <img src={p11} alt='Product 1' className='w-full' />
+                                    <Link to={"/gym-accessory/solid-pocket-sport-shorts"}>
+                                        <img src={p11} alt='Product 1' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1042,7 +1057,7 @@ const Gym = () => {
                             {/* product 2  */}
                             <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product'>
                                 {/* product image 2 */}
-                                <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+                                <div className='w-full h-[357.25px]  relative cursor-pointer  overflow-hidden flex justify-center'>
 
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -1056,7 +1071,9 @@ const Gym = () => {
                                     </div>
                                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-16%</span>
 
-                                    <img src={p12} alt='Product 2' className='w-full' />
+                                    <Link to={"/gym-accessory/high-waisted-leggings"}>
+                                        <img src={p12} alt='Product 1' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1067,7 +1084,7 @@ const Gym = () => {
                             {/* product 3  */}
                             <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product'>
                                 {/* product image 3*/}
-                                <div className='w-full h-[357.25px] bg-green-500 relative cursor-pointer  overflow-hidden flex justify-center'>
+                                <div className='w-full h-[357.25px]  relative cursor-pointer  overflow-hidden flex justify-center'>
 
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -1081,7 +1098,9 @@ const Gym = () => {
                                     </div>
                                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-14%</span>
 
-                                    <img src={p13} alt='Product 3' className='w-full' />
+                                    <Link to={"/gym-accessory/quick-dry-tshirts"}>
+                                        <img src={p13} alt='Product 1' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1092,7 +1111,7 @@ const Gym = () => {
                             {/* product 4  */}
                             <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product'>
                                 {/* product image 4*/}
-                                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                                <div className='w-full h-[357.25px]  cursor-pointer relative  overflow-hidden flex justify-center'>
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
                                         <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -1106,7 +1125,9 @@ const Gym = () => {
                                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-44%</span>
                                     <span className=' absolute top-[28px] left-[10px] px-[10px] py-[1px] text-[12px] font-[400] text-white bg-green-800'>Feature</span>
 
-                                    <img src={p14} alt='Product 4' className='w-full' />
+                                    <Link to={"/gym-accessory/Athletic-tank-top"}>
+                                        <img src={p14} alt='Product 1' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1117,7 +1138,7 @@ const Gym = () => {
                             {/* product 5  */}
                             <div className='w-[80%]] 2xl:w-[20%] h-full bg-white product'>
                                 {/* product image 5*/}
-                                <div className='w-full h-[357.25px] bg-green-500 cursor-pointer relative  overflow-hidden flex justify-center'>
+                                <div className='w-full h-[357.25px]  cursor-pointer relative  overflow-hidden flex justify-center'>
                                     <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                                         <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
                                         <FontAwesomeIcon icon={faMagnifyingGlass} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -1131,7 +1152,9 @@ const Gym = () => {
 
                                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-29%</span>
 
-                                    <img src={p15} alt='Product 5' className='w-full' />
+                                    <Link to={"/gym-accessory/knit-sports-shorts-set"}>
+                                        <img src={p15} alt='Product 1' className='w-full' />
+                                    </Link>
                                 </div>
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>

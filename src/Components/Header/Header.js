@@ -66,6 +66,8 @@ import Sale from "../Pages/Sale/Sale"
 
 
 
+
+
 import { faAngleDown, faAngleUp, faBars, faBaseballBatBall, faBasketball, faCartPlus, faCartShopping, faDumbbell, faFootball, faFutbol, faGolfBallTee, faHeart, faMagnifyingGlass, faPersonBiking, faPersonHiking, faPersonSkating, faPersonSnowboarding, faPersonSwimming, faSkating, faUserPlus, faVolleyball, faXmark } from '@fortawesome/free-solid-svg-icons'
 import Shop from '../Pages/Shop/Shop'
 import Running from '../Pages/Running/Running'
@@ -73,6 +75,20 @@ import Tennis from '../Pages/Tennis/Tennis'
 import Gym from '../Pages/Gym/Gym'
 import Cycling from '../Pages/Cycling/Cycling'
 import Product1 from '../Pages/Product pages/Training clothes/Product1/Product1'
+import Product2 from '../Pages/Product pages/Training clothes/Product2/Product2'
+import Product3 from '../Pages/Product pages/Training clothes/Product 3/Product3'
+import Product4 from '../Pages/Product pages/Training clothes/Product 4/Product4'
+import Product5 from '../Pages/Product pages/Training clothes/Product 5/Product5'
+import Product6 from '../Pages/Product pages/Training clothes/Product 6/Product6'
+import Product8 from '../Pages/Product pages/Training clothes/Product 8/Product8'
+import Product9 from '../Pages/Product pages/Training clothes/Product 9/Product9'
+import Product10 from '../Pages/Product pages/Training clothes/Product 10/Product10'
+import Product11 from '../Pages/Product pages/Training clothes/Product 11/Product11'
+import Product12 from '../Pages/Product pages/Training clothes/Product 12/Product12'
+import Product13 from '../Pages/Product pages/Training clothes/Product 13/Product13'
+import Product14 from '../Pages/Product pages/Training clothes/Product 14/Product14'
+import Product15 from '../Pages/Product pages/Training clothes/Product 15/Product15'
+import Product7 from '../Pages/Product pages/Training clothes/Product 7/Product7'
 // import { Link } from 'react-router-dom'
 
 
@@ -837,16 +853,40 @@ const Header = () => {
                         <Route path='/loobek/category/Men-clothes' element={<Men />} />
                         <Route path='/loobek/accessories' element={<Accessories />} />
                         <Route path='/loobek/onsale' element={<Sale />} />
-                        <Route path='/category/running' element={<Running/>}/>
-                        <Route path='/category/tennis' element={<Tennis/>}/>
-                        <Route path='/category/gym-accessories' element={<Gym/>}/>
-                        <Route path='/category/cycling' element={<Cycling/>}/>
+                        <Route path='/category/running' element={<Running />} />
+                        <Route path='/category/tennis' element={<Tennis />} />
+                        <Route path='/category/gym-accessories' element={<Gym />} />
+                        <Route path='/category/cycling' element={<Cycling />} />
 
                         {/* product section Route pages */}
 
                         {/* training page products */}
 
-                        <Route path='/gym-accessory/color-sports-tank-top' element={<Product1/>}/>
+                        {/* section 1 complete */}
+                        <Route path='/gym-accessory/color-sports-tank-top' element={<Product1 />} />
+                        <Route path='/gym-accessory/flamingo-print-tank-top' element={<Product2 />} />
+                        <Route path='/gym-accessory/leopard-print-sports-shorts' element={<Product3 />} />
+                        <Route path='/gym-accessory/high-crossback-sports-bra' element={<Product4 />} />
+                        <Route path='/gym-accessory/slim-fit-tshirt' element={<Product5 />} />
+
+                        {/* section 2 complete */}
+                        <Route path='/gym-accessory/solid-crop-slim-sports-tee' element={<Product6 />} />
+                        <Route path='/gym-accessory/contrast-binding-layered-dress' element={<Product7/>} />
+                        <Route path='/gym-accessory/topshop-training-tshirt' element={<Product8 />} />
+                        <Route path='/gym-accessory/ombre-sports-tank-top' element={<Product9 />} />
+                        <Route path='/gym-accessory/cropped-tennis-skirt' element={<Product10 />} />
+
+                        {/* section 3 complete */}
+                        <Route path='/gym-accessory/solid-pocket-sport-shorts' element={<Product11 />} />
+                        <Route path='/gym-accessory/high-waisted-leggings' element={<Product12 />} />
+                        <Route path='/gym-accessory/quick-dry-tshirts' element={<Product13 />} />
+                        <Route path='/gym-accessory/Athletic-tank-top' element={<Product14 />} />
+                        <Route path='/gym-accessory/knit-sports-shorts-set' element={<Product15 />} />
+
+
+
+
+
 
 
 

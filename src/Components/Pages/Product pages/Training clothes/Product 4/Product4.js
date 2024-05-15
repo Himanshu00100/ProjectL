@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 import { faAngleDown, faAngleRight, faChartBar, faChevronLeft, faChevronRight, faEnvelope, faHeart, faMagnifyingGlass, faStar } from '@fortawesome/free-solid-svg-icons'
 
 // color varient images from here
-import color1 from "../../../../Assets/training product pages/product 2/color1.jpg"
-import color2 from "../../../../Assets/training product pages/product 2/color2.jpg"
-import color3 from "../../../../Assets/training product pages/product 2/color3.jpg"
-import color4 from "../../../../Assets/training product pages/product 2/color4.jpg"
-import color5 from "../../../../Assets/training product pages/product 2/color5.jpg"
+import color1 from "../../../../Assets/training product pages/product 4/color1.jpg"
+import color2 from "../../../../Assets/training product pages/product 4/color2.jpg"
+import color3 from "../../../../Assets/training product pages/product 4/color3.jpg"
+import color4 from "../../../../Assets/training product pages/product 4/color4.jpg"
+import color5 from "../../../../Assets/training product pages/product 4/color5.jpg"
 import { faFacebookF, faInstagram, faLinkedinIn, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 
@@ -81,7 +81,7 @@ const Product4 = () => {
                     <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
                     <Link to={"/category/gym-accessories"} className='hover:text-red-500 duration-200 leading-[24px]' >Training Clothes</Link>
                     <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
-                    <p className='font-[400]'>Color sports tank top</p>
+                    <p className='font-[400]'>High crossback sports bra</p>
                 </div>
             </div>
             {/* home > Training > color sports tank top section ends here */}
@@ -125,8 +125,8 @@ const Product4 = () => {
 
                     {/* details section */}
                     <div className='w-[529.350px] h-[690.6px] font-[500] flex flex-col'>
-                        <h4 className='text-[14px]  text-start mb-[7px]'>Men</h4>
-                        <h1 className='font-oswald font-[600] text-[40px] leading-[40px] text-start mb-[10px]'>FLAMINGO PRINT TANK TOP</h1>
+                        <h4 className='text-[14px]  text-start mb-[7px]'>Women</h4>
+                        <h1 className='font-oswald font-[600] text-[40px] leading-[40px] text-start mb-[10px]'>HIGH CROSSBACK SPORTS BRA</h1>
                         {/* review */}
                         <div className='flex gap-x-[10px] mb-[25px]'>
                             <span className='text-[14px] font-[400]'>0 Reviews</span>
@@ -153,8 +153,22 @@ const Product4 = () => {
                         </div>
 
                         {/* price */}
-                        <h1 className='text-[32px] leading-[1em] font-[700] text-start mb-[35px] text-red-500 flex gap-x-[10px]'>$69.00 <span className='line-through text-gray-400 font-[400]'>$80.00</span> <span className='text-red-500 px-[15px] font-[400] text-[20px] bg-red-100'>-28%</span></h1>
+                        <h1 className='text-[32px] leading-[1em] font-[700] text-start mb-[35px]  flex gap-x-[10px]'>$99.00  </h1>
                         {/* divider */}
+
+                        {/* size section  */}
+                        <div className='flex flex-col items-start font-[400] gap-y-[10px]'>
+                            <p>Size clothes</p>
+                            <div className='flex gap-x-[5px]'>
+                                <span className='leading-[32px] px-[15px] bg-gray-200 border-[0.8px] border-gray-200 hover:border-black hover:bg-white duration-300 ease-out'>XS</span>
+                                <span className='leading-[32px] px-[15px] bg-gray-200 border-[0.8px] border-gray-200 hover:border-black hover:bg-white duration-300 ease-out'>S</span>
+                                <span className='leading-[32px] px-[15px] bg-gray-200 border-[0.8px] border-gray-200 hover:border-black hover:bg-white duration-300 ease-out'>M</span>
+                                <span className='leading-[32px] px-[15px] bg-gray-200 border-[0.8px] border-gray-200 hover:border-black hover:bg-white duration-300 ease-out'>L</span>
+                                <span className='leading-[32px] px-[15px] bg-gray-200 border-[0.8px] border-gray-200 hover:border-black hover:bg-white duration-300 ease-out'>XXL</span>
+
+                            </div>
+                        </div>
+
                         <div className='w-full h-[0.5px] bg-gray-200'></div>
                         {/* add to cart section here */}
                         <div className='w-full h-[75.6px] bg-white mt-[30px] flex flex-col mb-[20px]'>

@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 import { faAngleDown, faAngleRight, faChartBar, faChevronLeft, faChevronRight, faEnvelope, faHeart, faMagnifyingGlass, faStar } from '@fortawesome/free-solid-svg-icons'
 
 // color varient images from here
-import color1 from "../../../../Assets/training product pages/product 2/color1.jpg"
-import color2 from "../../../../Assets/training product pages/product 2/color2.jpg"
-import color3 from "../../../../Assets/training product pages/product 2/color3.jpg"
-import color4 from "../../../../Assets/training product pages/product 2/color4.jpg"
-import color5 from "../../../../Assets/training product pages/product 2/color5.jpg"
+import color1 from "../../../../Assets/training product pages/product 3/color1.jpg"
+import color2 from "../../../../Assets/training product pages/product 3/color2.jpg"
+import color3 from "../../../../Assets/training product pages/product 3/color3.jpg"
+import color4 from "../../../../Assets/training product pages/product 3/color4.jpg"
+import color5 from "../../../../Assets/training product pages/product 3/color1.jpg"
 import { faFacebookF, faInstagram, faLinkedinIn, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 
@@ -81,7 +81,7 @@ const Product3 = () => {
                     <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
                     <Link to={"/category/gym-accessories"} className='hover:text-red-500 duration-200 leading-[24px]' >Training Clothes</Link>
                     <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
-                    <p className='font-[400]'>Color sports tank top</p>
+                    <p className='font-[400]'>Leopard print sports shorts</p>
                 </div>
             </div>
             {/* home > Training > color sports tank top section ends here */}
@@ -125,8 +125,8 @@ const Product3 = () => {
 
                     {/* details section */}
                     <div className='w-[529.350px] h-[690.6px] font-[500] flex flex-col'>
-                        <h4 className='text-[14px]  text-start mb-[7px]'>Men</h4>
-                        <h1 className='font-oswald font-[600] text-[40px] leading-[40px] text-start mb-[10px]'>FLAMINGO PRINT TANK TOP</h1>
+                        <h4 className='text-[14px]  text-start mb-[7px]'>Women</h4>
+                        <h1 className='font-oswald font-[600] text-[40px] leading-[40px] text-start mb-[10px]'>LEOPARD PRINT SPORTS SHORTS</h1>
                         {/* review */}
                         <div className='flex gap-x-[10px] mb-[25px]'>
                             <span className='text-[14px] font-[400]'>0 Reviews</span>
@@ -138,22 +138,22 @@ const Product3 = () => {
                             {/* brand */}
                             <div className='w-full flex gap-x-[60px] text-start'>
                                 <span className='text-[14px] font-[400] text-start'>Brand</span>
-                                <span className=' text-[14px] font-[500] '>Christian Louboutin</span>
+                                <span className=' text-[14px] font-[500] '>C&A</span>
                             </div>
                             {/* product code */}
                             <div className='w-full flex gap-x-[15px] '>
                                 <span className='text-[14px] font-[400] text-start'>Product code</span>
-                                <span className=' text-[14px] font-[500] '>0051</span>
+                                <span className=' text-[14px] font-[500] '>0002</span>
                             </div>
                             {/* In stock */}
                             <div className='w-full flex gap-x-[35px]'>
                                 <span className='text-[14px] font-[400] text-start'>Availablity</span>
-                                <span className=' text-[14px] font-[500] text-start'>50 in stock</span>
+                                <span className=' text-[14px] font-[500] text-start'>10 in stock</span>
                             </div>
                         </div>
 
                         {/* price */}
-                        <h1 className='text-[32px] leading-[1em] font-[700] text-start mb-[35px] text-red-500 flex gap-x-[10px]'>$69.00 <span className='line-through text-gray-400 font-[400]'>$80.00</span> <span className='text-red-500 px-[15px] font-[400] text-[20px] bg-red-100'>-28%</span></h1>
+                        <h1 className='text-[32px] leading-[1em] font-[700] text-start mb-[35px] text-red-500 flex gap-x-[10px]'>$80.00 <span className='line-through text-gray-400 font-[400]'>$110.00</span> <span className='text-red-500 px-[15px] font-[400] text-[20px] bg-red-100'>-16%</span></h1>
                         {/* divider */}
                         <div className='w-full h-[0.5px] bg-gray-200'></div>
                         {/* add to cart section here */}

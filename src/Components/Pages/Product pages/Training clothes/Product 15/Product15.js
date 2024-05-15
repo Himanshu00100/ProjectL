@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 import { faAngleDown, faAngleRight, faChartBar, faChevronLeft, faChevronRight, faEnvelope, faHeart, faMagnifyingGlass, faStar } from '@fortawesome/free-solid-svg-icons'
 
 // color varient images from here
-import color1 from "../../../../Assets/training product pages/product 1/color1.jpg"
-import color2 from "../../../../Assets/training product pages/product 1/color2.jpg"
-import color3 from "../../../../Assets/training product pages/product 1/color3.jpg"
-import color4 from "../../../../Assets/training product pages/product 1/color4.jpg"
-import color5 from "../../../../Assets/training product pages/product 1/color5.jpg"
+import color1 from "../../../../Assets/training product pages/product 15/color1.jpg"
+import color2 from "../../../../Assets/training product pages/product 15/color2.jpg"
+import color3 from "../../../../Assets/training product pages/product 15/color3.jpg"
+import color4 from "../../../../Assets/training product pages/product 15/color4.jpg"
+import color5 from "../../../../Assets/training product pages/product 15/color5.jpg"
 import { faFacebookF, faInstagram, faLinkedinIn, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 
@@ -38,7 +38,7 @@ const Product15 = () => {
     // quality counter  
 
 
-    let [count, setcount] = useState(0)
+    let [count, setcount] = useState(1)
 
     const increment = () => {
         setcount(count + 1)
@@ -50,7 +50,7 @@ const Product15 = () => {
     const decrement = () => {
         setcount(count - 1)
         if (count == 0) {
-            setcount(0)
+            setcount(1)
         }
     }
 
@@ -90,7 +90,7 @@ const Product15 = () => {
                     <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
                     <Link to={"/category/gym-accessories"} className='hover:text-red-500 duration-200 leading-[24px]' >Training Clothes</Link>
                     <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
-                    <p className='font-[400]'>Color sports tank top</p>
+                    <p className='font-[400]'>Knit sports shorts set</p>
                 </div>
             </div>
             {/* home > Training > color sports tank top section ends here */}
@@ -135,7 +135,7 @@ const Product15 = () => {
                     {/* details section */}
                     <div className='w-[529.350px] h-[690.6px] font-[500] flex flex-col'>
                         <h4 className='text-[14px]  text-start mb-[7px]'>Men</h4>
-                        <h1 className='font-oswald font-[600] text-[40px] leading-[40px] text-start mb-[10px]'>COLOR SPORTS TANK TOP</h1>
+                        <h1 className='font-oswald font-[600] text-[40px] leading-[40px] text-start mb-[10px]'>KNIT SPORTS SHORTS SET</h1>
                         {/* review */}
                         <div className='flex gap-x-[10px] mb-[25px]'>
                             <span className='text-[14px] font-[400]'>0 Reviews</span>
@@ -147,22 +147,22 @@ const Product15 = () => {
                             {/* brand */}
                             <div className='w-full flex gap-x-[60px] text-start'>
                                 <span className='text-[14px] font-[400] text-start'>Brand</span>
-                                <span className=' text-[14px] font-[500] '>Christian Louboutin</span>
+                                <span className=' text-[14px] font-[500] '>Chow Tai Fook</span>
                             </div>
                             {/* product code */}
                             <div className='w-full flex gap-x-[15px] '>
                                 <span className='text-[14px] font-[400] text-start'>Product code</span>
-                                <span className=' text-[14px] font-[500] '>0051</span>
+                                <span className=' text-[14px] font-[500] '>0053</span>
                             </div>
                             {/* In stock */}
                             <div className='w-full flex gap-x-[35px]'>
                                 <span className='text-[14px] font-[400] text-start'>Availablity</span>
-                                <span className=' text-[14px] font-[500] text-start'>50 in stock</span>
+                                <span className=' text-[14px] font-[500] text-start'>In stock</span>
                             </div>
                         </div>
 
                         {/* price */}
-                        <h1 className='text-[32px] leading-[1em] font-[700] text-start mb-[35px]'>$90.00</h1>
+                        <h1 className='text-[32px] leading-[1em] font-[700] text-start mb-[35px]'>$19.00</h1>
                         {/* divider */}
                         <div className='w-full h-[0.5px] bg-gray-200'></div>
                         {/* add to cart section here */}

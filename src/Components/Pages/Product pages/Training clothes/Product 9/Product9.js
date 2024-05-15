@@ -90,7 +90,7 @@ const Product9 = () => {
                     <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
                     <Link to={"/category/gym-accessories"} className='hover:text-red-500 duration-200 leading-[24px]' >Training Clothes</Link>
                     <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
-                    <p className='font-[400]'>Color sports tank top</p>
+                    <p className='font-[400]'>Ombre sports tank top</p>
                 </div>
             </div>
             {/* home > Training > color sports tank top section ends here */}
@@ -125,7 +125,7 @@ const Product9 = () => {
 
                     {/* product image */}
                     <div className='w-[691.438px] h-[920.975px] bg-white overflow-hidden cursor-pointer mr-[50px]'>
-                        <img src={color1} alt='' className='h-full hover:scale-125 duration-500 ease-out' />
+                        <img src={color3} alt='' className='h-full hover:scale-125 duration-500 ease-out' />
                         <img src={color2} alt='' className='hidden h-full' />
                         <img src={color3} alt='' className='hidden h-full' />
                         <img src={color4} alt='' className='hidden h-full' />
@@ -135,7 +135,7 @@ const Product9 = () => {
                     {/* details section */}
                     <div className='w-[529.350px] h-[690.6px] font-[500] flex flex-col'>
                         <h4 className='text-[14px]  text-start mb-[7px]'>Men</h4>
-                        <h1 className='font-oswald font-[600] text-[40px] leading-[40px] text-start mb-[10px]'>COLOR SPORTS TANK TOP</h1>
+                        <h1 className='font-oswald font-[600] text-[40px] leading-[40px] text-start mb-[10px]'>OMBRE SPORTS TANK TOP</h1>
                         {/* review */}
                         <div className='flex gap-x-[10px] mb-[25px]'>
                             <span className='text-[14px] font-[400]'>0 Reviews</span>
@@ -147,22 +147,22 @@ const Product9 = () => {
                             {/* brand */}
                             <div className='w-full flex gap-x-[60px] text-start'>
                                 <span className='text-[14px] font-[400] text-start'>Brand</span>
-                                <span className=' text-[14px] font-[500] '>Christian Louboutin</span>
+                                <span className=' text-[14px] font-[500] '>Ecco</span>
                             </div>
                             {/* product code */}
                             <div className='w-full flex gap-x-[15px] '>
                                 <span className='text-[14px] font-[400] text-start'>Product code</span>
-                                <span className=' text-[14px] font-[500] '>0051</span>
+                                <span className=' text-[14px] font-[500] '>0036</span>
                             </div>
                             {/* In stock */}
                             <div className='w-full flex gap-x-[35px]'>
                                 <span className='text-[14px] font-[400] text-start'>Availablity</span>
-                                <span className=' text-[14px] font-[500] text-start'>50 in stock</span>
+                                <span className=' text-[14px] font-[500] text-start'>35 in stock</span>
                             </div>
                         </div>
 
                         {/* price */}
-                        <h1 className='text-[32px] leading-[1em] font-[700] text-start mb-[35px]'>$90.00</h1>
+                        <h1 className='text-[32px] leading-[1em] font-[700] text-start mb-[35px]'>$50.00</h1>
                         {/* divider */}
                         <div className='w-full h-[0.5px] bg-gray-200'></div>
                         {/* add to cart section here */}

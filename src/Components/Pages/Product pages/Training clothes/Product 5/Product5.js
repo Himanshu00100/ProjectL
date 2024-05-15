@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 import { faAngleDown, faAngleRight, faChartBar, faChevronLeft, faChevronRight, faEnvelope, faHeart, faMagnifyingGlass, faStar } from '@fortawesome/free-solid-svg-icons'
 
 // color varient images from here
-import color1 from "../../../../Assets/training product pages/product 2/color1.jpg"
-import color2 from "../../../../Assets/training product pages/product 2/color2.jpg"
-import color3 from "../../../../Assets/training product pages/product 2/color3.jpg"
-import color4 from "../../../../Assets/training product pages/product 2/color4.jpg"
-import color5 from "../../../../Assets/training product pages/product 2/color5.jpg"
+import color1 from "../../../../Assets/training product pages/product 5/color1.jpg"
+import color2 from "../../../../Assets/training product pages/product 5/color2.jpg"
+import color3 from "../../../../Assets/training product pages/product 5/color3.jpg"
+import color4 from "../../../../Assets/training product pages/product 5/color4.jpg"
+import color5 from "../../../../Assets/training product pages/product 5/color5.jpg"
 import { faFacebookF, faInstagram, faLinkedinIn, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 
@@ -81,7 +81,7 @@ const Product5 = () => {
                     <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
                     <Link to={"/category/gym-accessories"} className='hover:text-red-500 duration-200 leading-[24px]' >Training Clothes</Link>
                     <span className='text-[13px]  pt-[4px]'><FontAwesomeIcon icon={faAngleRight} /></span>
-                    <p className='font-[400]'>Color sports tank top</p>
+                    <p className='font-[400]'>Slim fit T-shirt</p>
                 </div>
             </div>
             {/* home > Training > color sports tank top section ends here */}
@@ -138,22 +138,22 @@ const Product5 = () => {
                             {/* brand */}
                             <div className='w-full flex gap-x-[60px] text-start'>
                                 <span className='text-[14px] font-[400] text-start'>Brand</span>
-                                <span className=' text-[14px] font-[500] '>Christian Louboutin</span>
+                                <span className=' text-[14px] font-[500] '>Chow Tai Fook</span>
                             </div>
                             {/* product code */}
                             <div className='w-full flex gap-x-[15px] '>
                                 <span className='text-[14px] font-[400] text-start'>Product code</span>
-                                <span className=' text-[14px] font-[500] '>0051</span>
+                                <span className=' text-[14px] font-[500] '>0073</span>
                             </div>
                             {/* In stock */}
                             <div className='w-full flex gap-x-[35px]'>
                                 <span className='text-[14px] font-[400] text-start'>Availablity</span>
-                                <span className=' text-[14px] font-[500] text-start'>50 in stock</span>
+                                <span className=' text-[14px] font-[500] text-start'>In stock</span>
                             </div>
                         </div>
 
                         {/* price */}
-                        <h1 className='text-[32px] leading-[1em] font-[700] text-start mb-[35px] text-red-500 flex gap-x-[10px]'>$69.00 <span className='line-through text-gray-400 font-[400]'>$80.00</span> <span className='text-red-500 px-[15px] font-[400] text-[20px] bg-red-100'>-28%</span></h1>
+                        <h1 className='text-[32px] leading-[1em] font-[700] text-start mb-[35px]  flex gap-x-[10px]'>$97.00 </h1>
                         {/* divider */}
                         <div className='w-full h-[0.5px] bg-gray-200'></div>
                         {/* add to cart section here */}

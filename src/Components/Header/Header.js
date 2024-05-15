@@ -120,7 +120,7 @@ const Header = () => {
 
         <>
             <BrowserRouter>
-                <header className='shadow-lg z-40 relative  '>
+                <header className='shadow-lg z-40 relative  overflow-x-hidden overflow-y-hidden'>
                     {/* back to top button */}
 
                     {/* bg overlay from  here */}

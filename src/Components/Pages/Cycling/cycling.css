@@ -1,0 +1,14 @@
+
+
+/* added to cart product 1 from here on */
+
+.addedactive{
+    display:flex;
+     visibility:visible;
+     opacity:1;
+}
+.addedinactive{
+    display:none;
+     visibility:hidden;
+     opacity:0;
+}

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./cycling.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
-import { faAngleDown, faAngleRight, faStar, faCheck, faHeart, faMagnifyingGlass, faChartBar } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleRight, faStar, faCheck, faHeart, faMagnifyingGlass, faChartBar, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 import p1 from "../../Assets/cycling/product 1/p1.jpg"
 import p2 from "../../Assets/cycling/product 2/p2.jpg"
@@ -12,6 +12,57 @@ import p4 from "../../Assets/cycling/product 4/p4.jpg"
 
 
 export default function Cycling() {
+
+  // added to your cart product 1
+
+  const [added1,setadded1]=useState("addedinactive")
+
+  const cartbox1active=()=>{
+    setadded1(".addedactive")
+  }
+
+  const cartbox1inactive=()=>{
+    setadded1("addedinactive")
+  }
+
+  // added to your cart product 2
+
+  const [added2,setadded2]=useState("addedinactive")
+
+  const cartbox2active=()=>{
+    setadded2(".addedactive")
+  }
+
+  const cartbox2inactive=()=>{
+    setadded2("addedinactive")
+  }
+
+   // added to your cart product 3
+
+   const [added3,setadded3]=useState("addedinactive")
+
+   const cartbox3active=()=>{
+     setadded2(".addedactive")
+   }
+ 
+   const cartbox3inactive=()=>{
+     setadded2("addedinactive")
+   }
+
+    // added to your cart product 4
+
+  const [added4,setadded4]=useState("addedinactive")
+
+  const cartbox4active=()=>{
+    setadded2(".addedactive")
+  }
+
+  const cartbox4inactive=()=>{
+    setadded2("addedinactive")
+  }
+
+
+
   return (
     <main className='w-screen h-auto'>
       {/* home > Sale section from here */}
@@ -722,7 +773,10 @@ export default function Cycling() {
             2k:px-[250px] flex  justify-start '>
             {/* product 1  */}
             <div className='w-80%] 2xl:w-[20%] h-full bg-white product flex flex-col items-center 2xl:block'>
-              {/* product image 5*/}
+
+
+
+              {/* product image 1*/}
               <div className='w-[268px] h-[357.25px]  cursor-pointer relative  overflow-hidden flex justify-center'>
                 <div className='flex flex-col absolute top-[10px] gap-y-[6px] right-[-100%] stats transition-[right] duration-500 ease-out'>
                   <FontAwesomeIcon icon={faHeart} className='bg-white px-[10px] py-[10px] shadow-md hover:bg-black hover:text-white duration-200' />
@@ -731,9 +785,10 @@ export default function Cycling() {
                 </div>
 
                 {/* add to cart from here */}
-                <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md '>
+                <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md ' onClick={cartbox1active}>
                   <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                 </div>
+
                 <Link to={"/cycling-accessory/minimalist-backpack-sports"}>
                   <img src={p1} alt='Product 5' className='w-full' />
                 </Link>
@@ -755,7 +810,7 @@ export default function Cycling() {
                 </div>
 
                 {/* add to cart from here */}
-                <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md '>
+                <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md ' onClick={cartbox2active}>
                   <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                 </div>
                 <Link to={"/cycling-accessory/wristband-cycling-gloves"}>
@@ -779,7 +834,7 @@ export default function Cycling() {
                 </div>
 
                 {/* add to cart from here */}
-                <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md '>
+                <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md ' onClick={cartbox3active}>
                   <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                 </div>
                 <Link to={"/cycling-accessory/cycling-kit-in-black"}>
@@ -803,7 +858,7 @@ export default function Cycling() {
                 </div>
 
                 {/* add to cart from here */}
-                <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md '>
+                <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md ' onClick={cartbox4active}>
                   <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                 </div>
                 <Link to={"/cycling-accessory/women-cycling-clothing"}>
@@ -834,6 +889,245 @@ export default function Cycling() {
 
         </div>
       </div>
+
+      {/* added to cart successfull boxes from here */}
+
+
+      {/* product 1 successfully added to cart box from here */}
+
+      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center '+ added1} >
+        {/* center box from here */}
+        <div className='w-[680px] h-[551.750px] p-[40px] bg-white relative flex flex-col'>
+
+          {/* cancel btn here on */}
+          <span className='cancel w-[40px] h-[40px] bg-black absolute right-0 top-0 cursor-pointer hover:bg-red-500 hover flex justify-center items-center duration-200 ' onClick={cartbox1inactive}>
+            <FontAwesomeIcon icon={faXmark} className='text-white' />
+          </span>
+
+          {/* added to cart successfully message here */}
+          <div className=' flex items-center gap-x-[10px] justify-center mb-[20px] '>
+            <FontAwesomeIcon icon={faCheck} />
+            <h4 className='text-[14px] font-[400]'>Succesfully added to cart</h4>
+          </div>
+
+          {/* content box here */}
+          <div className='w-[600px] h-[426.950px] flex gap-x-[40px]  bg-white'>
+            <div className='w-[280px] h-[426.950px] flex flex-col'>
+              {/* image box */}
+              <div className='w-[280px] h-[372.950px] bg-white'>
+                <img src={p1} alt='' className='' />
+              </div>
+
+              <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
+                <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Minimalist backpack sports</h4>
+                <h4 className='text-[14px] font-[500] text-start '>$90.00</h4>
+
+              </div>
+            </div>
+
+            {/* checkout box section */}
+            <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
+              <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
+                <h4 className='text-[14px] font-[400] mb-[5px]'>There is 1 item in your cart</h4>
+                {/* total amount  */}
+                <div className=' flex items-center justify-center gap-x-[10px] '>
+                  <span>Total</span>
+                  <h1 className='text-[20px] leading-[28px] font-[600]'>$90.00</h1>
+                </div>
+
+                {/* checkout btn */}
+                <button className='mt-[10px] mb-[10px] w-full bg-black px-[40px] py-[7px] text-[16px] leading-[30px] font-[500] text-white hover:bg-red-500 duration-300'>Checkout</button>
+
+                {/* view my cart */}
+                <span className='mx-[100.550px] cursor-pointer hover:text-red-500 duration-200 text-[15px] leading-[20px] font-[500] underline underline-offset-2 decoration-1 text-nowrap'>View my cart</span>
+
+                {/* continue shopping */}
+                <span className='mx-[81..575px] cursor-pointer hover:text-red-500 duration-200  text-[15px] leading-[20px] font-[500] underline underline-offset-2 decoration-1 text-nowrap '>Continue shopping</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* product 1 successfully added to cart box ends here */}
+
+      {/* product 2 successfully added to cart box from here */}
+
+      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center ' +added2} >
+        {/* center box from here */}
+        <div className='w-[680px] h-[551.750px] p-[40px] bg-white relative flex flex-col'>
+
+          {/* cancel btn here on */}
+          <span className='cancel w-[40px] h-[40px] bg-black absolute right-0 top-0 cursor-pointer hover:bg-red-500 hover flex justify-center items-center duration-200 ' onClick={cartbox2inactive}>
+            <FontAwesomeIcon icon={faXmark} className='text-white' />
+          </span>
+
+          {/* added to cart successfully message here */}
+          <div className=' flex items-center gap-x-[10px] justify-center mb-[20px] '>
+            <FontAwesomeIcon icon={faCheck} />
+            <h4 className='text-[14px] font-[400]'>Succesfully added to cart</h4>
+          </div>
+
+          {/* content box here */}
+          <div className='w-[600px] h-[426.950px] flex gap-x-[40px]  bg-white'>
+            <div className='w-[280px] h-[426.950px] flex flex-col'>
+              {/* image box */}
+              <div className='w-[280px] h-[372.950px] bg-white'>
+                <img src={p2} alt='' className='' />
+              </div>
+
+              <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
+                <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Minimalist backpack sports</h4>
+                <h4 className='text-[14px] font-[500] text-start '>$90.00</h4>
+
+              </div>
+            </div>
+
+            {/* checkout box section */}
+            <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
+              <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
+                <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                {/* total amount  */}
+                <div className=' flex items-center justify-center gap-x-[10px] '>
+                  <span>Total</span>
+                  <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                </div>
+
+                {/* checkout btn */}
+                <button className='mt-[10px] mb-[10px] w-full bg-black px-[40px] py-[7px] text-[16px] leading-[30px] font-[500] text-white hover:bg-red-500 duration-300'>Checkout</button>
+
+                {/* view my cart */}
+                <span className='mx-[100.550px] cursor-pointer hover:text-red-500 duration-200 text-[15px] leading-[20px] font-[500] underline underline-offset-2 decoration-1 text-nowrap'>View my cart</span>
+
+                {/* continue shopping */}
+                <span className='mx-[81..575px] cursor-pointer hover:text-red-500 duration-200  text-[15px] leading-[20px] font-[500] underline underline-offset-2 decoration-1 text-nowrap '>Continue shopping</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* product 2 successfully added to cart box ends here */}
+
+      {/* product 3 successfully added to cart box from here */}
+
+      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center ' +added3} >
+        {/* center box from here */}
+        <div className='w-[680px] h-[551.750px] p-[40px] bg-white relative flex flex-col'>
+
+          {/* cancel btn here on */}
+          <span className='cancel w-[40px] h-[40px] bg-black absolute right-0 top-0 cursor-pointer hover:bg-red-500 hover flex justify-center items-center duration-200 ' onClick={cartbox3inactive}>
+            <FontAwesomeIcon icon={faXmark} className='text-white' />
+          </span>
+
+          {/* added to cart successfully message here */}
+          <div className=' flex items-center gap-x-[10px] justify-center mb-[20px] '>
+            <FontAwesomeIcon icon={faCheck} />
+            <h4 className='text-[14px] font-[400]'>Succesfully added to cart</h4>
+          </div>
+
+          {/* content box here */}
+          <div className='w-[600px] h-[426.950px] flex gap-x-[40px]  bg-white'>
+            <div className='w-[280px] h-[426.950px] flex flex-col'>
+              {/* image box */}
+              <div className='w-[280px] h-[372.950px] bg-white'>
+                <img src={p3} alt='' className='' />
+              </div>
+
+              <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
+                <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Cycling kit in black</h4>
+                <h4 className='text-[14px] font-[500] text-start '>$240.00</h4>
+
+              </div>
+            </div>
+
+            {/* checkout box section */}
+            <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
+              <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
+                <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                {/* total amount  */}
+                <div className=' flex items-center justify-center gap-x-[10px] '>
+                  <span>Total</span>
+                  <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                </div>
+
+                {/* checkout btn */}
+                <button className='mt-[10px] mb-[10px] w-full bg-black px-[40px] py-[7px] text-[16px] leading-[30px] font-[500] text-white hover:bg-red-500 duration-300'>Checkout</button>
+
+                {/* view my cart */}
+                <span className='mx-[100.550px] cursor-pointer hover:text-red-500 duration-200 text-[15px] leading-[20px] font-[500] underline underline-offset-2 decoration-1 text-nowrap'>View my cart</span>
+
+                {/* continue shopping */}
+                <span className='mx-[81..575px] cursor-pointer hover:text-red-500 duration-200  text-[15px] leading-[20px] font-[500] underline underline-offset-2 decoration-1 text-nowrap '>Continue shopping</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* product 3 successfully added to cart box ends here */}
+
+      {/* product 4 successfully added to cart box from here */}
+
+      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center ' +added4} >
+        {/* center box from here */}
+        <div className='w-[680px] h-[551.750px] p-[40px] bg-white relative flex flex-col'>
+
+          {/* cancel btn here on */}
+          <span className='cancel w-[40px] h-[40px] bg-black absolute right-0 top-0 cursor-pointer hover:bg-red-500 hover flex justify-center items-center duration-200 ' onClick={cartbox4inactive}>
+            <FontAwesomeIcon icon={faXmark} className='text-white' />
+          </span>
+
+          {/* added to cart successfully message here */}
+          <div className=' flex items-center gap-x-[10px] justify-center mb-[20px] '>
+            <FontAwesomeIcon icon={faCheck} />
+            <h4 className='text-[14px] font-[400]'>Succesfully added to cart</h4>
+          </div>
+
+          {/* content box here */}
+          <div className='w-[600px] h-[426.950px] flex gap-x-[40px]  bg-white'>
+            <div className='w-[280px] h-[426.950px] flex flex-col'>
+              {/* image box */}
+              <div className='w-[280px] h-[372.950px] bg-white'>
+                <img src={p4} alt='' className='' />
+              </div>
+
+              <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
+                <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Women cycling clothing</h4>
+                <h4 className='text-[14px] font-[500] text-start '>$75.00</h4>
+
+              </div>
+            </div>
+
+            {/* checkout box section */}
+            <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
+              <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
+                <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                {/* total amount  */}
+                <div className=' flex items-center justify-center gap-x-[10px] '>
+                  <span>Total</span>
+                  <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                </div>
+
+                {/* checkout btn */}
+                <button className='mt-[10px] mb-[10px] w-full bg-black px-[40px] py-[7px] text-[16px] leading-[30px] font-[500] text-white hover:bg-red-500 duration-300'>Checkout</button>
+
+                {/* view my cart */}
+                <span className='mx-[100.550px] cursor-pointer hover:text-red-500 duration-200 text-[15px] leading-[20px] font-[500] underline underline-offset-2 decoration-1 text-nowrap'>View my cart</span>
+
+                {/* continue shopping */}
+                <span className='mx-[81..575px] cursor-pointer hover:text-red-500 duration-200  text-[15px] leading-[20px] font-[500] underline underline-offset-2 decoration-1 text-nowrap '>Continue shopping</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* product 4 successfully added to cart box ends here */}
 
 
 

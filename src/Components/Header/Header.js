@@ -92,6 +92,12 @@ import Product7 from '../Pages/Product pages/Training clothes/Product 7/Product7
 // import { Link } from 'react-router-dom'
 
 
+// cycling page product pages
+import Cyclingproduct1 from '../Pages/Product pages/Cycling products/Product 1/CyclingProduct1'
+import CyclingProduct2 from "../Pages/Product pages/Cycling products/Product 2/CyclingProduct2"
+import CyclingProduct3 from "../Pages/Product pages/Cycling products/Product 3/Cyclingproduct3"
+import CyclingProduct4 from "../Pages/Product pages/Cycling products/Product 4/CyclingProduct4"
+
 const Header = () => {
     const [navbarstatus, setnavbarstatus] = useState("")
     const [backtotop, setbacktotop] = useState("inactivetop")
@@ -871,7 +877,7 @@ const Header = () => {
 
                         {/* section 2 complete */}
                         <Route path='/gym-accessory/solid-crop-slim-sports-tee' element={<Product6 />} />
-                        <Route path='/gym-accessory/contrast-binding-layered-dress' element={<Product7/>} />
+                        <Route path='/gym-accessory/contrast-binding-layered-dress' element={<Product7 />} />
                         <Route path='/gym-accessory/topshop-training-tshirt' element={<Product8 />} />
                         <Route path='/gym-accessory/ombre-sports-tank-top' element={<Product9 />} />
                         <Route path='/gym-accessory/cropped-tennis-skirt' element={<Product10 />} />
@@ -882,6 +888,14 @@ const Header = () => {
                         <Route path='/gym-accessory/quick-dry-tshirts' element={<Product13 />} />
                         <Route path='/gym-accessory/Athletic-tank-top' element={<Product14 />} />
                         <Route path='/gym-accessory/knit-sports-shorts-set' element={<Product15 />} />
+
+
+                        {/* cycling product pages page products */}
+
+                        <Route path='/cycling-accessory/minimalist-backpack-sports' element={<Cyclingproduct1 />} />
+                        <Route path='/cycling-accessory/wristband-cycling-gloves' element={<CyclingProduct2 />} />
+                        <Route path='/cycling-accessory/cycling-kit-in-black' element={<CyclingProduct3 />} />
+                        <Route path='/cycling-accessory/women-cycling-clothing' element={<CyclingProduct4 />} />
 
 
 

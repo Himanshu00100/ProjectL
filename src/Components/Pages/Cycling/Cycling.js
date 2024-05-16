@@ -42,11 +42,11 @@ export default function Cycling() {
    const [added3,setadded3]=useState("addedinactive")
 
    const cartbox3active=()=>{
-     setadded2(".addedactive")
+     setadded3(".addedactive")
    }
  
    const cartbox3inactive=()=>{
-     setadded2("addedinactive")
+     setadded3("addedinactive")
    }
 
     // added to your cart product 4
@@ -54,11 +54,11 @@ export default function Cycling() {
   const [added4,setadded4]=useState("addedinactive")
 
   const cartbox4active=()=>{
-    setadded2(".addedactive")
+    setadded4(".addedactive")
   }
 
   const cartbox4inactive=()=>{
-    setadded2("addedinactive")
+    setadded4("addedinactive")
   }
 
 
@@ -978,8 +978,8 @@ export default function Cycling() {
               </div>
 
               <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
-                <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Minimalist backpack sports</h4>
-                <h4 className='text-[14px] font-[500] text-start '>$90.00</h4>
+                <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Wristband cycling gloves</h4>
+                <h4 className='text-[14px] font-[500] text-start '>$80.00</h4>
 
               </div>
             </div>
@@ -1013,7 +1013,7 @@ export default function Cycling() {
 
       {/* product 3 successfully added to cart box from here */}
 
-      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center ' +added3} >
+      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center ' + added3} >
         {/* center box from here */}
         <div className='w-[680px] h-[551.750px] p-[40px] bg-white relative flex flex-col'>
 
@@ -1046,11 +1046,11 @@ export default function Cycling() {
             {/* checkout box section */}
             <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
               <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                <h4 className='text-[14px] font-[400] mb-[5px]'>Cycling kit in black</h4>
                 {/* total amount  */}
                 <div className=' flex items-center justify-center gap-x-[10px] '>
                   <span>Total</span>
-                  <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                  <h1 className='text-[20px] leading-[28px] font-[600]'>$240.00</h1>
                 </div>
 
                 {/* checkout btn */}
@@ -1072,7 +1072,7 @@ export default function Cycling() {
 
       {/* product 4 successfully added to cart box from here */}
 
-      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center ' +added4} >
+      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center ' + added4} >
         {/* center box from here */}
         <div className='w-[680px] h-[551.750px] p-[40px] bg-white relative flex flex-col'>
 
@@ -1105,11 +1105,11 @@ export default function Cycling() {
             {/* checkout box section */}
             <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
               <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                <h4 className='text-[14px] font-[400] mb-[5px]'>Women cycling clothing</h4>
                 {/* total amount  */}
                 <div className=' flex items-center justify-center gap-x-[10px] '>
                   <span>Total</span>
-                  <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                  <h1 className='text-[20px] leading-[28px] font-[600]'>$75.00</h1>
                 </div>
 
                 {/* checkout btn */}

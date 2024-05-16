@@ -98,6 +98,30 @@ import CyclingProduct2 from "../Pages/Product pages/Cycling products/Product 2/C
 import CyclingProduct3 from "../Pages/Product pages/Cycling products/Product 3/Cyclingproduct3"
 import CyclingProduct4 from "../Pages/Product pages/Cycling products/Product 4/CyclingProduct4"
 
+
+// shop page product's pages 
+
+import Shopproduct1 from '../Pages/Product pages/Shop products/shopproduct 1/Shopproduct1'
+import Shopproduct2 from '../Pages/Product pages/Shop products/shopproduct 2/Shopproduct2'
+import Shopproduct3 from "../Pages/Product pages/Shop products/shopproduct 3/Shopproduct3"
+import Shopproduct4 from "../Pages/Product pages/Shop products/shopproduct 4/Shopproduct4"
+import Shopproduct5 from "../Pages/Product pages/Shop products/shopproduct 5/Shopproduct5"
+import Shopproduct6 from "../Pages/Product pages/Shop products/shopproduct 6/Shopproduct6"
+import Shopproduct7 from "../Pages/Product pages/Shop products/shopproduct 7/Shopproduct7"
+import Shopproduct8 from "../Pages/Product pages/Shop products/shopproduct 8/Shopproduct8"
+import Shopproduct9 from "../Pages/Product pages/Shop products/shopproduct 9/Shopproduct9"
+import Shopproduct10 from "../Pages/Product pages/Shop products/shopproduct 10/Shopproduct10"
+import Shopproduct11 from "../Pages/Product pages/Shop products/shopproduct 11/Shopproduct11"
+import Shopproduct12 from "../Pages/Product pages/Shop products/shopproduct 12/Shopproduct12"
+import Shopproduct13 from "../Pages/Product pages/Shop products/shoproduct 13/Shopproduct13"
+import Shopproduct14 from "../Pages/Product pages/Shop products/Shopproduct 14/Shopproduct14"
+import Shopproduct15 from "../Pages/Product pages/Shop products/shopproduct 15/Shopproduct15"
+
+
+
+
+
+
 const Header = () => {
     const [navbarstatus, setnavbarstatus] = useState("")
     const [backtotop, setbacktotop] = useState("inactivetop")
@@ -142,7 +166,7 @@ const Header = () => {
 
         <>
             <BrowserRouter>
-                <header className='shadow-lg z-40 relative  '>
+                <header className='shadow-lg z-40 relative '>
                     {/* back to top button */}
 
                     {/* bg overlay from  here */}
@@ -896,6 +920,26 @@ const Header = () => {
                         <Route path='/cycling-accessory/wristband-cycling-gloves' element={<CyclingProduct2 />} />
                         <Route path='/cycling-accessory/cycling-kit-in-black' element={<CyclingProduct3 />} />
                         <Route path='/cycling-accessory/women-cycling-clothing' element={<CyclingProduct4 />} />
+
+                        {/* shop product's pages */}
+
+                        <Route path='/shop/swim-shorts-in-black' element={<Shopproduct1 />} />
+                        <Route path='/shop/high-stretch-sports-shorts' element={<Shopproduct2 />} />
+                        <Route path='/shop/letter-sports-tank-top' element={<Shopproduct3 />} />
+                        <Route path='/shop/color-sports-tank-top' element={< Shopproduct4 />} />
+                        <Route path='/shop/minimalist-training-bag' element={<Shopproduct5 />} />
+                        <Route path='/shop/flamingo-print-tank-top' element={<Shopproduct6 />} />
+                        <Route path='/shop/leopard-print-sports-shorts' element={<Shopproduct7 />} />
+                        <Route path='/shop/minimalist-oxford-duffle-bag' element={<Shopproduct8 />} />
+                        <Route path='/shop/high-crossback-sports-bra' element={<Shopproduct9 />} />
+                        <Route path='/shop/slim-fit-t-shirt' element={<Shopproduct10 />} />
+                        <Route path='/shop/waist-twisting-board' element={<Shopproduct11 />} />
+                        <Route path='/shop/sport-mini-skirt-basic' element={<Shopproduct12 />} />
+                        <Route path='/shop/solid-crop-slim-sports-tee' element={<Shopproduct13 />} />
+                        <Route path='/shop/minimalist-backpack-sports' element={<Shopproduct14 />} />
+                        <Route path='/shop/woven-training-shorts' element={<Shopproduct15 />} />
+
+
 
 
 

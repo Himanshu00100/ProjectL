@@ -937,8 +937,9 @@ const Shop = () => {
                     <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out' onClick={cartbox1active}>
                       <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                     </div>
-
-                    <img src={product1} alt='Product 1' className='2xl:w-full' />
+                    <Link to={"/shop/swim-shorts-in-black"}>
+                      <img src={product1} alt='Product 1' className='2xl:w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-[268px] 2xl:w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
@@ -971,7 +972,9 @@ const Shop = () => {
                         </div>
                       </div>
                     </div>
-                    <img src={product2} alt='Product 2' className='w-full' />
+                    <Link to={"/shop/high-stretch-sports-shorts"}>
+                      <img src={product2} alt='Product 2' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
@@ -1004,8 +1007,10 @@ const Shop = () => {
                         </div>
                       </div>
                     </div>
+                    <Link to={"/shop/letter-sports-tank-top"}>
+                      <img src={product3} alt='Product 3' className='w-full' />
+                    </Link>
 
-                    <img src={product3} alt='Product 3' className='w-full' />
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px]'>
@@ -1027,8 +1032,9 @@ const Shop = () => {
                     <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 shadow-md hover:shadow-red-500 duration-[400ms] addtocart ease-out' onClick={cartbox4active}>
                       <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                     </div>
-
-                    <img src={product4} alt='Product 4' className='w-full' />
+                    <Link to={"/shop/color-sports-tank-top"}>
+                      <img src={product4} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
@@ -1051,7 +1057,9 @@ const Shop = () => {
                       <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                     </div>
 
-                    <img src={product5} alt='Product 5' className='w-full' />
+                    <Link to={"/shop/minimalist-training-bag"}>
+                      <img src={product5} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
@@ -1083,7 +1091,9 @@ const Shop = () => {
                       <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                     </div>
 
-                    <img src={bestproduct1} alt='Product 1' className='w-full' />
+                    <Link to={"/shop/flamingo-print-tank-top"}>
+                      <img src={bestproduct1} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1107,7 +1117,9 @@ const Shop = () => {
                       <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                     </div>
 
-                    <img src={bestproduct2} alt='Product 2' className='w-full' />
+                    <Link to={"/shop/leopard-print-sports-shorts"}>
+                      <img src={bestproduct2} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1141,7 +1153,9 @@ const Shop = () => {
                       </div>
                     </div>
 
-                    <img src={bestproduct3} alt='Product 3' className='w-full' />
+                    <Link to={"/shop/minimalist-oxford-duffle-bag"}>
+                      <img src={bestproduct3} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1164,7 +1178,9 @@ const Shop = () => {
                       <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                     </div>
 
-                    <img src={bestproduct4} alt='Product 4' className='w-full' />
+                    <Link to={"/shop/high-crossback-sports-bra"}>
+                      <img src={bestproduct4} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1198,7 +1214,9 @@ const Shop = () => {
                     </div>
                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-22%</span>
 
-                    <img src={bestproduct5} alt='Product 5' className='w-full' />
+                    <Link to={"/shop/slim-fit-t-shirt"}>
+                      <img src={bestproduct5} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1248,7 +1266,9 @@ const Shop = () => {
                     </div>
                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-28%</span>
 
-                    <img src={saleproduct1} alt='Product 1' className='w-full' />
+                    <Link to={"/shop/waist-twisting-board"}>
+                      <img src={saleproduct1} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1282,7 +1302,9 @@ const Shop = () => {
                     </div>
                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-16%</span>
 
-                    <img src={saleproduct2} alt='Product 2' className='w-full' />
+                    <Link to={"/shop/sport-mini-skirt-basic"}>
+                      <img src={saleproduct2} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1317,7 +1339,9 @@ const Shop = () => {
                     </div>
                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-14%</span>
 
-                    <img src={saleproduct3} alt='Product 3' className='w-full' />
+                    <Link to={"/shop/solid-crop-slim-sports-tee"}>
+                      <img src={saleproduct3} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1342,7 +1366,9 @@ const Shop = () => {
                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-44%</span>
                     <span className=' absolute top-[28px] left-[10px] px-[10px] py-[1px] text-[12px] font-[400] text-white bg-green-800'>Feature</span>
 
-                    <img src={saleproduct4} alt='Product 4' className='w-full' />
+                    <Link to={"/shop/minimalist-backpack-sports"}>
+                      <img src={saleproduct4} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1376,7 +1402,9 @@ const Shop = () => {
                     </div>
                     <span className=' absolute top-[10px] left-[10px] px-[10px] text-[12px] font-[400] text-white bg-red-500'>-29%</span>
 
-                    <img src={saleproduct5} alt='Product 5' className='w-full' />
+                    <Link to={"/shop/woven-training-shorts"}>
+                      <img src={saleproduct5} alt='Product 4' className='w-full' />
+                    </Link>
                   </div>
                   {/* product price */}
                   <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
@@ -1384,12 +1412,6 @@ const Shop = () => {
                     <p className='text-red-500'>$99.00 &#160;  <span className='text-[#808080] line-through'> $140.00</span></p>
                   </div>
                 </div>
-
-                {/* right arrow */}
-
-                <span className='absolute right-0 flex justify-center items-center bg-white arrow z-10 shadow-md cursor-pointer shadow-red-500 hover:shadow-red-500 inviaible opacity-0 transition-all duration-500 ease-out'>
-                  <FontAwesomeIcon icon={faChevronRight} className='bg-white px-[10px] py-[10px] hover:bg-black hover:text-white  duration-300' />
-                </span>
 
 
 

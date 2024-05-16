@@ -947,7 +947,7 @@ const Gym = () => {
                                 {/* product price */}
                                 <div className='w-[268px] 2xl:w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] 2xl:gap-y-[0px] '>
                                     <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Color sports tank top</a>
-                                    <p>$40.00</p>
+                                    <p>$90.00</p>
                                 </div>
                             </div>
                             {/* product 2  */}
@@ -1115,7 +1115,7 @@ const Gym = () => {
                                 {/* product price */}
                                 <div className='w-full h-[50px] mt-[10px]  flex flex-col items-start gap-y-[5px] '>
                                     <a href='' className='hover:text-red-500 duration-200 text-[14px] font-[500]'>Contrast binding layered dress</a>
-                                    <p>$79.00 &#160; - &#160; $88.00</p>
+                                    <p>$80.88</p>
                                 </div>
                             </div>
                             {/* product 3  */}
@@ -1387,7 +1387,7 @@ const Gym = () => {
                                     </div>
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
-                                        <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Minimalist backpack sports</h4>
+                                        <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Color sports tank top</h4>
                                         <h4 className='text-[14px] font-[500] text-start '>$90.00</h4>
 
                                     </div>
@@ -1396,7 +1396,7 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>There is 1 item in your cart</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'></h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
@@ -1446,8 +1446,8 @@ const Gym = () => {
                                     </div>
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
-                                        <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Minimalist backpack sports</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$90.00</h4>
+                                        <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Flamingo print tank top</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '><p>$79.00 &#160; - &#160; $110.00</p></h4>
 
                                     </div>
                                 </div>
@@ -1455,11 +1455,11 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Flamingo print tank top</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
-                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                                            <h1 className='text-[20px] leading-[28px] font-[600]'><p>$79.00 &#160; - &#160; $110.00</p></h1>
                                         </div>
 
                                         {/* checkout btn */}
@@ -1505,8 +1505,8 @@ const Gym = () => {
                                     </div>
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
-                                        <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Cycling kit in black</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$240.00</h4>
+                                        <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Leopard print sports shorts</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$40.00 - 70.00</h4>
 
                                     </div>
                                 </div>
@@ -1514,7 +1514,7 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Leopard print sports shorts</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
@@ -1564,8 +1564,8 @@ const Gym = () => {
                                     </div>
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
-                                        <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Women cycling clothing</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$75.00</h4>
+                                        <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>High crossback sports bra</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$90.00</h4>
 
                                     </div>
                                 </div>
@@ -1573,11 +1573,11 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>High crossback sports bra</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
-                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$90.00</h1>
                                         </div>
 
                                         {/* checkout btn */}
@@ -1624,7 +1624,7 @@ const Gym = () => {
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
                                         <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Slim fit T-shirt</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$99.00</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$80.00</h4>
 
                                     </div>
                                 </div>
@@ -1632,7 +1632,7 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Slim fit T-shirt</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
@@ -1683,7 +1683,7 @@ const Gym = () => {
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
                                         <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Solid crop slim sports tee</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$40.00</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$60.00</h4>
 
                                     </div>
                                 </div>
@@ -1691,11 +1691,11 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Solid crop slim sports tee</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
-                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$60.00</h1>
                                         </div>
 
                                         {/* checkout btn */}
@@ -1742,7 +1742,7 @@ const Gym = () => {
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
                                         <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Contrast binding layered dress</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$70.00</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$80.00</h4>
 
                                     </div>
                                 </div>
@@ -1750,7 +1750,7 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Contrast binding layered dress</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
@@ -1801,7 +1801,7 @@ const Gym = () => {
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
                                         <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Topshop training t-shirt</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$90.00</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$60.00</h4>
 
                                     </div>
                                 </div>
@@ -1809,11 +1809,11 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Topshop training t-shirt</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
-                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$60.00</h1>
                                         </div>
 
                                         {/* checkout btn */}
@@ -1859,8 +1859,8 @@ const Gym = () => {
                                     </div>
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
-                                        <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Women cycling clothing</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$50.00</h4>
+                                        <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Ombre sports tank top</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$70.00</h4>
 
                                     </div>
                                 </div>
@@ -1868,7 +1868,7 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Ombre sports tank top</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
@@ -1919,7 +1919,7 @@ const Gym = () => {
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
                                         <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Cropped tennis skirt</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$40.00</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$109.00</h4>
 
                                     </div>
                                 </div>
@@ -1927,11 +1927,11 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Cropped tennis skirt</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
-                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$109.00</h1>
                                         </div>
 
                                         {/* checkout btn */}
@@ -1978,7 +1978,7 @@ const Gym = () => {
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
                                         <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Solid pocket sport shorts</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$80.00</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$70.00 - $110.00</h4>
 
                                     </div>
                                 </div>
@@ -1986,11 +1986,11 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Solid pocket sport shorts</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
-                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$70.00 -$110.00</h1>
                                         </div>
 
                                         {/* checkout btn */}
@@ -2037,7 +2037,7 @@ const Gym = () => {
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
                                         <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>High waisted leggings</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$50.00</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$59.00</h4>
 
                                     </div>
                                 </div>
@@ -2045,11 +2045,11 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>High waisted leggings</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
-                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$59.00</h1>
                                         </div>
 
                                         {/* checkout btn */}
@@ -2096,7 +2096,7 @@ const Gym = () => {
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
                                         <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Quick dry T-shirts</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$90.00</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$69.00</h4>
 
                                     </div>
                                 </div>
@@ -2104,11 +2104,11 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Quick dry T-shirts</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
-                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$69.00</h1>
                                         </div>
 
                                         {/* checkout btn */}
@@ -2155,7 +2155,7 @@ const Gym = () => {
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
                                         <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Athletic tank top</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$88.00</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$.00</h4>
 
                                     </div>
                                 </div>
@@ -2163,11 +2163,11 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Athletic tank top</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
-                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$39.00</h1>
                                         </div>
 
                                         {/* checkout btn */}
@@ -2214,7 +2214,7 @@ const Gym = () => {
 
                                     <div className='w-[280px] h-[54px] pt-[10px] flex flex-col items-start gap-y-[5px]'>
                                         <h4 className='text-[14px] font-[500] hover:text-red-500 duration-200 text-start cursor-pointer'>Knit sports shorts set</h4>
-                                        <h4 className='text-[14px] font-[500] text-start '>$19.00</h4>
+                                        <h4 className='text-[14px] font-[500] text-start '>$99.00</h4>
 
                                     </div>
                                 </div>
@@ -2222,11 +2222,11 @@ const Gym = () => {
                                 {/* checkout box section */}
                                 <div className='w-[280px] h-[426.950px]  flex flex-col justify-center'>
                                     <div className='w-[280px] h-[233.600px] bg-white flex flex-col gap-y-[20px]'>
-                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Wristband cycling gloves</h4>
+                                        <h4 className='text-[14px] font-[400] mb-[5px]'>Knit sports shorts set</h4>
                                         {/* total amount  */}
                                         <div className=' flex items-center justify-center gap-x-[10px] '>
                                             <span>Total</span>
-                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$80.00</h1>
+                                            <h1 className='text-[20px] leading-[28px] font-[600]'>$99.00</h1>
                                         </div>
 
                                         {/* checkout btn */}

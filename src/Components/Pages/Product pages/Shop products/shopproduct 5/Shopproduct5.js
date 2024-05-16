@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 import { faAngleDown, faAngleRight, faChartBar, faChevronLeft, faChevronRight, faEnvelope, faHeart, faMagnifyingGlass, faStar } from '@fortawesome/free-solid-svg-icons'
 
 // color varient images from here
-import color1 from "../../../../Assets/cycling/product 1/color1.jpg"
-import color2 from "../../../../Assets/cycling/product 1/color2.jpg"
-import color3 from "../../../../Assets/cycling/product 1/color3.jpg"
-import color4 from "../../../../Assets/cycling/product 1/color4.jpg"
-import color5 from "../../../../Assets/cycling/product 1/color5.jpg"
+import color1 from "../../../../Assets/Shop/p 5/color1.jpg"
+import color2 from "../../../../Assets/Shop/p 5/color2.jpg"
+import color3 from "../../../../Assets/Shop/p 5/color3.jpg"
+import color4 from "../../../../Assets/Shop/p 5/color4.jpg"
+import color5 from "../../../../Assets/Shop/p 5/color5.jpg"
 import { faFacebookF, faInstagram, faLinkedinIn, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 

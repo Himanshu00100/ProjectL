@@ -189,7 +189,9 @@ const Home = () => {
             <div className='flex  w-full justify-around lg:justify-between'>
               <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
                 <img src={football} alt='' className='w-[40px] h-[40px]' />
-                <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Football</h3>
+                <Link to={"/category/football"} >
+                  <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Football</h3>
+                </Link>
               </div>
               <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
                 <img src={basketball} alt='' className='w-[40px] h-[40px]' />

@@ -116,6 +116,12 @@ import Shopproduct12 from "../Pages/Product pages/Shop products/shopproduct 12/S
 import Shopproduct13 from "../Pages/Product pages/Shop products/shoproduct 13/Shopproduct13"
 import Shopproduct14 from "../Pages/Product pages/Shop products/Shopproduct 14/Shopproduct14"
 import Shopproduct15 from "../Pages/Product pages/Shop products/shopproduct 15/Shopproduct15"
+import Football from '../Pages/Football/Football'
+import Footballp1 from '../Pages/Product pages/football/P1/Footballp1'
+import Footballp2 from '../Pages/Product pages/football/P2/Footballp2'
+
+
+// shop by category
 
 
 
@@ -938,6 +944,13 @@ const Header = () => {
                         <Route path='/shop/solid-crop-slim-sports-tee' element={<Shopproduct13 />} />
                         <Route path='/shop/minimalist-backpack-sports' element={<Shopproduct14 />} />
                         <Route path='/shop/woven-training-shorts' element={<Shopproduct15 />} />
+
+
+                        {/* shop by category  */}
+
+                        <Route path='/category/football' element={<Football/>}/>
+                        <Route path='/football/cycling-shorts-green' element={<Footballp1/>} />
+                        <Route path='/football/drawing-waist-shorts' element={<Footballp2/>} />
 
 
 

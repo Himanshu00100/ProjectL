@@ -38,7 +38,7 @@ const Product1 = () => {
     // quality counter  
 
 
-    let [count, setcount] = useState(0)
+    let [count, setcount] = useState(1)
 
     const increment = () => {
         setcount(count + 1)
@@ -50,7 +50,7 @@ const Product1 = () => {
     const decrement = () => {
         setcount(count - 1)
         if (count == 0) {
-            setcount(0)
+            setcount(1)
         }
     }
 

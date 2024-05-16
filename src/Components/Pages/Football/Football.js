@@ -11,6 +11,9 @@ import p2 from "../../Assets/football/p1/color2.jpg"
 
 export default function Football() {
 
+    
+    
+
     // added to your cart product 1
 
     const [added1, setadded1] = useState("addedinactive")
@@ -764,8 +767,8 @@ export default function Football() {
                                     <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                                 </div>
 
-                                <Link to={"/football/drawing-waist-shorts"}>
-                                    <img src={p1} alt='Product 5' className='w-full' />
+                                <Link to={"/football/cycling-shorts-green"}>
+                                    <img src={p1} alt='Product 1' className='w-full' />
                                 </Link>
                             </div>
                             {/* product price */}
@@ -788,7 +791,7 @@ export default function Football() {
                                 <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md ' onClick={cartbox2active}>
                                     <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
                                 </div>
-                                <Link to={"/cycling-accessory/wristband-cycling-gloves"}>
+                                <Link to={"/football/drawing-waist-shorts"}>
                                     <img src={p2} alt='Product 5' className='w-full' />
                                 </Link>
                             </div>

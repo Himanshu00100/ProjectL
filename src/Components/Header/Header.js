@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Form, Link, Route, Routes } from 'react-router-dom'
 
+
+
+
 import "./header.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faInstagram, faLinkedinIn, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
@@ -129,6 +132,8 @@ import Footballp2 from '../Pages/Product pages/football/P2/Footballp2'
 
 
 const Header = () => {
+
+
     const [navbarstatus, setnavbarstatus] = useState("")
     const [backtotop, setbacktotop] = useState("inactivetop")
 
@@ -163,6 +168,7 @@ const Header = () => {
     const inactiveoverlay = () => {
         setbgoverlay("inactiveforkeys")
     }
+
 
 
 
@@ -594,7 +600,7 @@ const Header = () => {
                                     </div>
                                     {/* men key */}
                                     <div className="men relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
-                                        <Link to={"/loobek/category/Men-clothes"} className="text-lg font-medium py-7">Men</Link>
+                                        <Link to={"/category/men"} className="text-lg font-medium py-7">Men</Link>
                                         <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
 
                                         {/* men dropdown section from here on */}
@@ -725,8 +731,10 @@ const Header = () => {
                                             <div className=' w-full h-full  flex flex-col gap-y-[10px] '>
                                                 <div className='w-full h-[33.33%]  flex gap-x-[10px]'>
                                                     <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={acfootball} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Football</h6>
+                                                        <Link to={"/category/football"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={acfootball} alt='' className='w-[46px] h-[46px] ' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Football</h6>
+                                                        </Link>
                                                     </div>
                                                     <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
                                                         <img src={acbasketball} alt='' className='w-[46px] h-[46px]' />
@@ -737,8 +745,10 @@ const Header = () => {
                                                         <h6 className='hover:text-red-500 duration-200 font-[500]'>Volleyball</h6>
                                                     </div>
                                                     <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={actennis} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Tennis</h6>
+                                                        <Link to={"/category/tennis"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={actennis} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Tennis</h6>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                                 <div className='w-full h-[33.33%]   flex gap-x-[10px]'>
@@ -761,8 +771,10 @@ const Header = () => {
                                                 </div>
                                                 <div className='w-full h-[33.33%]  flex gap-x-[10px]'>
                                                     <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={accycling} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Cycling</h6>
+                                                        <Link to={"/category/cycling"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={accycling} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Cycling</h6>
+                                                        </Link>
                                                     </div>
                                                     <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
                                                         <img src={acbadminton} alt='' className='w-[46px] h-[46px]' />
@@ -772,8 +784,10 @@ const Header = () => {
                                                         <h6 className='hover:text-red-500 duration-200 font-[500]'>Boxing</h6>
                                                     </div>
                                                     <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={acracing} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Racing</h6>
+                                                        <Link to={"/category/cycling"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={acracing} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Racing</h6>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             </div>
@@ -854,9 +868,8 @@ const Header = () => {
                                     <div className='cart flex justify-center items-center ' >
                                         <a href=' #' className='cart flex justify-center relative'>
                                             <FontAwesomeIcon icon={faCartPlus} onClick={activesidebar} className="text-[20px] px-[8px] py-[8px] md:px-3 md:py-3 hover:text-red-500 duration-200" />
-                                            {/* <div className='cartdrop absolute text-white bg-gray-600 text-nowrap text-sm left-[-70px] bottom-[-15px] px-1 py-[2px] border-[2px] border-white opacity-0 invisible none delay-[1s] ease-out duration-[300ms]'>
-                                    View your shopping cart
-                                </div> */}
+                                            <span className='absolute rounded-full top-[4px] right-[4px] px-[5px] py-[1px]  bg-black text-[10px]  text-white'>0</span>
+
                                         </a>
                                     </div>
 
@@ -893,6 +906,8 @@ const Header = () => {
                         <Route path='/category/tennis' element={<Tennis />} />
                         <Route path='/category/gym-accessories' element={<Gym />} />
                         <Route path='/category/cycling' element={<Cycling />} />
+
+                        <Route path='/category/men' element={<Gym />} />
 
                         {/* product section Route pages */}
 
@@ -948,20 +963,9 @@ const Header = () => {
 
                         {/* shop by category  */}
 
-                        <Route path='/category/football' element={<Football/>}/>
-                        <Route path='/football/cycling-shorts-green' element={<Footballp1/>} />
-                        <Route path='/football/drawing-waist-shorts' element={<Footballp2/>} />
-
-
-
-
-
-
-
-
-
-
-
+                        <Route path='/category/football' element={<Football />} />
+                        <Route path='/football/cycling-shorts-green' element={<Footballp1 />} />
+                        <Route path='/football/drawing-waist-shorts' element={<Footballp2 />} />
 
                     </Routes>
                 </div>

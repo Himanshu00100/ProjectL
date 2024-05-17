@@ -17,6 +17,11 @@ const Women = () => {
           </div>
         </div>
         {/* home > Women section ends here */}
+
+        {/* Shop heading  */}
+        <div className='px-[50px] 2k:px-[250px]'>
+          <h1 className='text-[40px] leading-[40px] font-oswald font-[600] text-start mb-[20px]'>Women</h1>
+        </div>
       </main>
     </>
   )

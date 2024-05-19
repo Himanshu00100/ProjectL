@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./cycling.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
@@ -8,6 +8,7 @@ import p1 from "../../Assets/cycling/product 1/p1.jpg"
 import p2 from "../../Assets/cycling/product 2/p2.jpg"
 import p3 from "../../Assets/cycling/product 3/p3.jpg"
 import p4 from "../../Assets/cycling/product 4/p4.jpg"
+import { counterContext } from '../../context'
 
 
 
@@ -15,51 +16,55 @@ export default function Cycling() {
 
   // added to your cart product 1
 
-  const [added1,setadded1]=useState("addedinactive")
+  const [added1, setadded1] = useState("addedinactive")
 
-  const cartbox1active=()=>{
+  const cartbox1active = () => {
+
     setadded1(".addedactive")
+
   }
 
-  const cartbox1inactive=()=>{
+  const cartbox1inactive = () => {
     setadded1("addedinactive")
   }
 
   // added to your cart product 2
 
-  const [added2,setadded2]=useState("addedinactive")
+  const [added2, setadded2] = useState("addedinactive")
 
-  const cartbox2active=()=>{
+  const cartbox2active = () => {
     setadded2(".addedactive")
   }
 
-  const cartbox2inactive=()=>{
+  const cartbox2inactive = () => {
     setadded2("addedinactive")
   }
 
-   // added to your cart product 3
+  // added to your cart product 3
 
-   const [added3,setadded3]=useState("addedinactive")
+  const [added3, setadded3] = useState("addedinactive")
 
-   const cartbox3active=()=>{
-     setadded3(".addedactive")
-   }
- 
-   const cartbox3inactive=()=>{
-     setadded3("addedinactive")
-   }
+  const cartbox3active = () => {
+    setadded3(".addedactive")
+  }
 
-    // added to your cart product 4
+  const cartbox3inactive = () => {
+    setadded3("addedinactive")
+  }
 
-  const [added4,setadded4]=useState("addedinactive")
+  // added to your cart product 4
 
-  const cartbox4active=()=>{
+  const [added4, setadded4] = useState("addedinactive")
+
+  const cartbox4active = () => {
     setadded4(".addedactive")
   }
 
-  const cartbox4inactive=()=>{
+  const cartbox4inactive = () => {
     setadded4("addedinactive")
   }
+
+  const value = useContext(counterContext)
 
 
 
@@ -785,9 +790,12 @@ export default function Cycling() {
                 </div>
 
                 {/* add to cart from here */}
-                <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md ' onClick={cartbox1active}>
-                  <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
-                </div>
+                <span >
+
+                  <div className='w-[250px]  bg-black absolute bottom-[-100%] cursor-pointer text-white hover:bg-red-500 hover:shadow-red-500 duration-[400ms] addtocart ease-out shadow-md ' onClick={cartbox1active}>
+                    <h2 className='py-[8px] font-semibold'>+ Add to cart</h2>
+                  </div>
+                </span>
 
                 <Link to={"/cycling-accessory/minimalist-backpack-sports"}>
                   <img src={p1} alt='Product 5' className='w-full' />
@@ -895,7 +903,7 @@ export default function Cycling() {
 
       {/* product 1 successfully added to cart box from here */}
 
-      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center '+ added1} >
+      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center ' + added1} >
         {/* center box from here */}
         <div className='w-[680px] h-[551.750px] p-[40px] bg-white relative flex flex-col'>
 
@@ -954,7 +962,7 @@ export default function Cycling() {
 
       {/* product 2 successfully added to cart box from here */}
 
-      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center ' +added2} >
+      <div className={'productbox w-screen h-screen  z-[40] fixed top-0 left-0 bg-[#00000066] flex justify-center items-center ' + added2} >
         {/* center box from here */}
         <div className='w-[680px] h-[551.750px] p-[40px] bg-white relative flex flex-col'>
 

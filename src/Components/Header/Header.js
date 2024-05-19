@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Form, Link, Route, Routes } from 'react-router-dom'
+import { useContext } from 'react'
+
+
 
 
 
@@ -122,6 +125,7 @@ import Shopproduct15 from "../Pages/Product pages/Shop products/shopproduct 15/S
 import Football from '../Pages/Football/Football'
 import Footballp1 from '../Pages/Product pages/football/P1/Footballp1'
 import Footballp2 from '../Pages/Product pages/football/P2/Footballp2'
+import { counterContext } from '../context'
 
 
 // shop by category
@@ -170,807 +174,810 @@ const Header = () => {
     }
 
 
-
+    const value = useContext(counterContext)
 
 
 
     return (
 
         <>
-            <BrowserRouter>
-                <header className='shadow-lg z-40 relative '>
-                    {/* back to top button */}
+            <counterContext.Provider >
 
-                    {/* bg overlay from  here */}
-                    <div onClick={inactivesidebar} className={'w-screen h-screen z-[40]   ' + bgoverlay}></div>
-                    {/* bg overlay ends here */}
+                <BrowserRouter>
+                    <header className='shadow-lg z-40 relative  '>
+                        {/* back to top button */}
 
-                    {/* cart sidebar starts from here */}
-                    <div className={'absolute z-[50] right-0 w-[500px] h-screen bg-white p-[40px] transition-all duration-[400ms] ease-out ' + sidebar}>
-                        <div className='w-full h-full bg-white flex flex-col items-center relative'>
-                            <FontAwesomeIcon icon={faXmark} className='absolute cursor-pointer top-[-25px] right-[-23px] text-[16px] p-[5px]' onClick={inactivesidebar} />
-                            <h2 className='text-[20px] leading-[28px] font-oswald font-[600] text-start self-start '>YOUR CART (0 ITEMS)</h2>
-                            <div className='w-full h-full bg-white flex justify-center items-center'>
-                                <div className='flex flex-col gap-y-[20px]'>
-                                    <FontAwesomeIcon icon={faCartShopping} className='text-[50px] text-gray-300' />
-                                    <p className=' text-[18px] font-[400]'>Shopping Cart is empty</p>
-                                </div>
+                        {/* bg overlay from  here */}
+                        <div onClick={inactivesidebar} className={'w-screen h-screen z-[40]   ' + bgoverlay}></div>
+                        {/* bg overlay ends here */}
 
-                            </div>
-                            <p className='text-[17px] text-white hover:bg-red-500 w-full h-[49px] leading-[30px] font-[500] px-[40px] py-[7px] bg-black cursor-pointer duration-300 '>Continue Shopping</p>
-                        </div>
-                    </div>
-
-
-                    {/* cart sidebar ends here */}
-
-                    <div className={'  fixed cursor-pointer bottom-[50px] hover:rotate-[45deg] right-[50px] z-30 w-[35px] h-[35px] bg-white shadow-md shadow-gray-500 flex justify-center items-center transition-all duration-300 ease-out ' + backtotop}>
-                        <FontAwesomeIcon icon={faAngleUp} className='angleup hover:rotate-[-45deg]  duration-300 ease-out  px-[15px] py-[15px]' />
-                    </div>
-
-                    {/* header's top section starts here */}
-                    <div className=' top hidden md:flex w-screen bg-white h-[40px] py-[8px] px-[10px] sm:px-[50px] lg:px-[50px]  border-b-[1px] border-gray-200  justify-center items-center'>
-                        <div className='w-[1420.8px] h-[24px] bg-white flex justify-between'>
-
-                            {/* socialmedia section starts from here */}
-                            <div className="socialmedia flex  gap-x-[15px] text-gray-700">
-                                <a href=' #' >
-                                    <FontAwesomeIcon icon={faInstagram} className="w-[18px] h-[18px] hover:text-red-500 duration-200" />
-                                </a>
-                                <a href=' #' >
-                                    <FontAwesomeIcon icon={faYoutube} className="w-[18px] h-[18px] hover:text-red-500 duration-200" />
-                                </a>
-                                <a href=' #'>
-                                    <FontAwesomeIcon icon={faXTwitter} className="w-[18px] h-[18px] hover:text-red-500 duration-200" />
-                                </a>
-                                <a href=' #' >
-                                    <FontAwesomeIcon icon={faFacebookF} className="w-[18px] h-[18px] hover:text-red-500 duration-200" />
-                                </a>
-                            </div>
-                            {/* socialmedia section ends  here */}
-                            <div className='flex justify-center items-center gap-x-5'>
-
-                                {/* about, help, contact and blog section starts  here */}
-                                <div className="flex gap-x-[23px] text-[13px] font-semibold">
-                                    {/* <Link to={"/home"} className="hover:text-red-500 duration-200 " >Home</Link> */}
-                                    <Link to={"/about"} className="hover:text-red-500 duration-200 " >About</Link>
-                                    <Link to={"/contact"} className="hover:text-red-500 duration-200 " >Contact</Link>
-                                    <Link to={"/blog"} className="hover:text-red-500 duration-200 " >Blog</Link>
-                                    <Link to={"/help"} className="hover:text-red-500 duration-200 " >Help</Link>
-                                </div>
-                                {/* about, help, contact and blog section ends  here */}
-
-                                {/* lang and currency section starts from here */}
-                                <div className="flex gap-x-[20px] ">
-                                    <div className='lang flex  justify-center items-center relative  '>
-                                        <a href='' className=" text-sm hover:text-red-500 duration-200 flex justify-center items-center">
-                                            <img src={english} alt='' className="mr-[8px] w-[18px] h-[12px]" />
-                                            <p>English</p>
-                                            <FontAwesomeIcon icon={faAngleDown} className="ml-[3px] text-[11px]" />
-                                            <div className='langdrop z-10 bg-white hover:text-black w-[145px] h-[80px]  absolute  top-[150%] border-[1px] border-black py-[10px] flex flex-col justify-center items-center gap-y-2 invisible none opacity-0 transition-all duration-[400ms]'>
-                                                <a href=' #' className="flex justify-center items-center hover:text-red-500 duration-200 w-full" >
-                                                    <img src={espenol} alt='' className="mr-[8px] w-[18px] h-[12px]" />
-                                                    <p>English</p>
-                                                </a>
-                                                <a href=' #' className="flex justify-center items-center hover:text-red-500 duration-200 w-full" >
-                                                    <img src={duestch} alt='' className="mr-[8px] w-[18px] h-[12px]" />
-                                                    <p>English</p>
-                                                </a>
-                                            </div>
-                                        </a>
+                        {/* cart sidebar starts from here */}
+                        <div className={'absolute z-[50] right-0 w-[500px] h-screen bg-white p-[40px] transition-all duration-[400ms] ease-out ' + sidebar}>
+                            <div className='w-full h-full bg-white flex flex-col items-center relative'>
+                                <FontAwesomeIcon icon={faXmark} className='absolute cursor-pointer top-[-25px] right-[-23px] text-[16px] p-[5px]' onClick={inactivesidebar} />
+                                <h2 className='text-[20px] leading-[28px] font-oswald font-[600] text-start self-start '>YOUR CART (0 ITEMS)</h2>
+                                <div className='w-full h-full bg-white flex justify-center items-center'>
+                                    <div className='flex flex-col gap-y-[20px]'>
+                                        <FontAwesomeIcon icon={faCartShopping} className='text-[50px] text-gray-300' />
+                                        <p className=' text-[18px] font-[400]'>Shopping Cart is empty</p>
                                     </div>
-                                    <div className='currency flex justify-center items-center hover:text-red-500 duration-200 '>
-                                        {/* <img src={english} alt='' className="mr-[8px]" /> */}
-                                        <a href='' className=" text-sm hover:text-red-500 duration-200 relative">$ USD
-                                            <FontAwesomeIcon icon={faAngleDown} className="ml-[3px] text-[11px]" />
-                                            <div className="currencydrop z-10 bg-white hover:text-black w-[145px] h-[80px]  absolute right-0  top-[150%] border-[1px] border-black py-[10px] flex flex-col justify-center items-center gap-y-2 invisible none opacity-0 transition-all duration-[400ms]">
-                                                <a href=' #' className="flex justify-center items-center hover:text-red-500 duration-200 w-full" >
-                                                    <p>€ EUR</p>
-                                                </a>
-                                                <a href=' #' className="flex justify-center items-center hover:text-red-500 duration-200 w-full" >
-                                                    <p>€ GBP</p>
-                                                </a>
 
-                                            </div>
-                                        </a>
-                                    </div>
                                 </div>
-                                {/* lang and currency section ends here */}
+                                <p className='text-[17px] text-white hover:bg-red-500 w-full h-[49px] leading-[30px] font-[500] px-[40px] py-[7px] bg-black cursor-pointer duration-300 '>Continue Shopping</p>
                             </div>
                         </div>
-                    </div>
-                    {/* header's top section ends here */}
-
-                    {/* header's bottom section stats from here */}
-                    <div className={' bg-white navbar w-screen px-[10px] sm:px-[50px] lg:px-[50px] py-[10px] md:py-[20px] flex justify-center items-center  transition-all duration-500 ' + navbarstatus}>
-                        <div className='w-[1420.800px] h-[34px] md:h-[45.600px]  flex justify-between'>
-                            <div className='flex justify-center items-center gap-x-6 md:hidden'>
-                                <FontAwesomeIcon icon={faBars} className='text-[25px]  hover:text-red-500' />
-                                <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[20px]  hover:text-red-500 sm:hidden' />
-                            </div>
-                            {/* logo and navbar from here */}
-
-                            <div className='flex justify-center items-center'>
 
 
-                                <div className='logo '>
-                                    <img src={logo} alt="" className="w-[110px]  md:w-[172px]" />
+                        {/* cart sidebar ends here */}
+
+                        <div className={'  fixed cursor-pointer bottom-[50px] hover:rotate-[45deg] right-[50px] z-30 w-[35px] h-[35px] bg-white shadow-md shadow-gray-500 flex justify-center items-center transition-all duration-300 ease-out ' + backtotop}>
+                            <FontAwesomeIcon icon={faAngleUp} className='angleup hover:rotate-[-45deg]  duration-300 ease-out  px-[15px] py-[15px]' />
+                        </div>
+
+                        {/* header's top section starts here */}
+                        <div className=' top hidden md:flex w-screen bg-white h-[40px] py-[8px] px-[10px] sm:px-[50px] lg:px-[50px]  border-b-[1px] border-gray-200  justify-center items-center'>
+                            <div className='w-[1420.8px] h-[24px] bg-white flex justify-between'>
+
+                                {/* socialmedia section starts from here */}
+                                <div className="socialmedia flex  gap-x-[15px] text-gray-700">
+                                    <a href=' #' >
+                                        <FontAwesomeIcon icon={faInstagram} className="w-[18px] h-[18px] hover:text-red-500 duration-200" />
+                                    </a>
+                                    <a href=' #' >
+                                        <FontAwesomeIcon icon={faYoutube} className="w-[18px] h-[18px] hover:text-red-500 duration-200" />
+                                    </a>
+                                    <a href=' #'>
+                                        <FontAwesomeIcon icon={faXTwitter} className="w-[18px] h-[18px] hover:text-red-500 duration-200" />
+                                    </a>
+                                    <a href=' #' >
+                                        <FontAwesomeIcon icon={faFacebookF} className="w-[18px] h-[18px] hover:text-red-500 duration-200" />
+                                    </a>
                                 </div>
+                                {/* socialmedia section ends  here */}
+                                <div className='flex justify-center items-center gap-x-5'>
+
+                                    {/* about, help, contact and blog section starts  here */}
+                                    <div className="flex gap-x-[23px] text-[13px] font-semibold">
+                                        {/* <Link to={"/home"} className="hover:text-red-500 duration-200 " >Home</Link> */}
+                                        <Link to={"/about"} className="hover:text-red-500 duration-200 " >About</Link>
+                                        <Link to={"/contact"} className="hover:text-red-500 duration-200 " >Contact</Link>
+                                        <Link to={"/blog"} className="hover:text-red-500 duration-200 " >Blog</Link>
+                                        <Link to={"/help"} className="hover:text-red-500 duration-200 " >Help</Link>
+                                    </div>
+                                    {/* about, help, contact and blog section ends  here */}
+
+                                    {/* lang and currency section starts from here */}
+                                    <div className="flex gap-x-[20px] ">
+                                        <div className='lang flex  justify-center items-center relative  '>
+                                            <a href='' className=" text-sm hover:text-red-500 duration-200 flex justify-center items-center">
+                                                <img src={english} alt='' className="mr-[8px] w-[18px] h-[12px]" />
+                                                <p>English</p>
+                                                <FontAwesomeIcon icon={faAngleDown} className="ml-[3px] text-[11px]" />
+                                                <div className='langdrop z-10 bg-white hover:text-black w-[145px] h-[80px]  absolute  top-[150%] border-[1px] border-black py-[10px] flex flex-col justify-center items-center gap-y-2 invisible none opacity-0 transition-all duration-[400ms]'>
+                                                    <a href=' #' className="flex justify-center items-center hover:text-red-500 duration-200 w-full" >
+                                                        <img src={espenol} alt='' className="mr-[8px] w-[18px] h-[12px]" />
+                                                        <p>English</p>
+                                                    </a>
+                                                    <a href=' #' className="flex justify-center items-center hover:text-red-500 duration-200 w-full" >
+                                                        <img src={duestch} alt='' className="mr-[8px] w-[18px] h-[12px]" />
+                                                        <p>English</p>
+                                                    </a>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='currency flex justify-center items-center hover:text-red-500 duration-200 '>
+                                            {/* <img src={english} alt='' className="mr-[8px]" /> */}
+                                            <a href='' className=" text-sm hover:text-red-500 duration-200 relative">$ USD
+                                                <FontAwesomeIcon icon={faAngleDown} className="ml-[3px] text-[11px]" />
+                                                <div className="currencydrop z-10 bg-white hover:text-black w-[145px] h-[80px]  absolute right-0  top-[150%] border-[1px] border-black py-[10px] flex flex-col justify-center items-center gap-y-2 invisible none opacity-0 transition-all duration-[400ms]">
+                                                    <a href=' #' className="flex justify-center items-center hover:text-red-500 duration-200 w-full" >
+                                                        <p>€ EUR</p>
+                                                    </a>
+                                                    <a href=' #' className="flex justify-center items-center hover:text-red-500 duration-200 w-full" >
+                                                        <p>€ GBP</p>
+                                                    </a>
+
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {/* lang and currency section ends here */}
+                                </div>
+                            </div>
+                        </div>
+                        {/* header's top section ends here */}
+
+                        {/* header's bottom section stats from here */}
+                        <div className={' bg-white navbar w-screen px-[10px] sm:px-[50px] lg:px-[50px] py-[10px] md:py-[20px] flex justify-center items-center  transition-all duration-500 ' + navbarstatus}>
+                            <div className='w-[1420.800px] h-[34px] md:h-[45.600px]  flex justify-between'>
+                                <div className='flex justify-center items-center gap-x-6 md:hidden'>
+                                    <FontAwesomeIcon icon={faBars} className='text-[25px]  hover:text-red-500' />
+                                    <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[20px]  hover:text-red-500 sm:hidden' />
+                                </div>
+                                {/* logo and navbar from here */}
+
+                                <div className='flex justify-center items-center'>
 
 
-                                {/* navbar from here  */}
+                                    <div className='logo '>
+                                        <img src={logo} alt="" className="w-[110px]  md:w-[172px]" />
+                                    </div>
 
 
-                                <nav className='navbar hidden  w-[470.663px] h-[38px]  ml-[25px] xl:flex justify-center items-center gap-x-[25px] '>
+                                    {/* navbar from here  */}
 
-                                    {/* shop key */}
-                                    <div className=" shop relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay} >
-                                        <Link to={"/loobek/shop"} className="text-lg font-medium py-7">Shop</Link>
-                                        <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
 
-                                        {/* Shop dropdown starts from here */}
+                                    <nav className='navbar hidden  w-[470.663px] h-[38px]  ml-[25px] xl:flex justify-center items-center gap-x-[25px] '>
 
-                                        <div className="shopdrop    w-screen h-[460px] bg-white  absolute top-[83px] left-[-269px] border-t-[1px] 2k:left-[-462px] border-gray-300 transition-[height] duration-[300ms] ease-out  opacity-0 invisible ">
-                                            <div className='top w-full h-[40%]  border-b-[1px] border-gray-200 cursor-default flex justify-between items-center px-[100px] 2k:px-[250px]'>
-                                                <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
-                                                    <img src={football} alt='' className='w-[40px] h-[40px]' />
-                                                    <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Football</h3>
-                                                </div>
-                                                <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
-                                                    <img src={basketball} alt='' className='w-[40px] h-[40px]' />
-                                                    <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Baskeball</h3>
-                                                </div>
-                                                <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
-                                                    <img src={volleyball} alt='' className='w-[40px] h-[40px]' />
-                                                    <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Volleyball</h3>
-                                                </div>
-                                                <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
-                                                    <img src={rugby} alt='' className='w-[40px] h-[40px]' />
-                                                    <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Football</h3>
-                                                </div>
-                                                <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
-                                                    <img src={swimming} alt='' className='w-[40px] h-[40px]' />
-                                                    <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Swimming</h3>
-                                                </div>
-                                                <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
-                                                    <img src={icesketing} alt='' className='w-[40px] h-[40px]' />
-                                                    <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Ice-skating</h3>
-                                                </div>
-                                                <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
-                                                    <img src={golf} alt='' className='w-[40px] h-[40px]' />
-                                                    <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Golf</h3>
-                                                </div>
-                                                <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
-                                                    <img src={skate} alt='' className='w-[40px] h-[40px]' />
-                                                    <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Skateboard</h3>
-                                                </div>
-                                                <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
-                                                    <img src={snowboard} alt='' className='w-[40px] h-[40px]' />
-                                                    <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Snowboard</h3>
-                                                </div>
-                                                <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
-                                                    <img src={hiking} alt='' className='w-[40px] h-[40px]' />
-                                                    <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Hiking</h3>
-                                                </div>
-                                            </div>
-                                            <div className='bottom w-full h-[60%]   cursor-default  px-[60px] 2k:px-[200px] pt-[50px]'>
-                                                <div className='w-full flex'>
-                                                    {/* special section starts from here */}
-                                                    <div className='w-[200px]  flex flex-col items-start'>
-                                                        <h3 className='font-semibold'>Special</h3>
-                                                        <div className='flex flex-col gap-y-[10px] mt-[15px] items-start'>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Leatest products </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Sale </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Bestsellers </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Top rated </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Popularity </a>
-                                                        </div>
+                                        {/* shop key */}
+                                        <div className=" shop relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay} >
+                                            <Link to={"/loobek/shop"} className="text-lg font-medium py-7">Shop</Link>
+                                            <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
+
+                                            {/* Shop dropdown starts from here */}
+
+                                            <div className="shopdrop    w-screen h-[460px] bg-white  absolute top-[83px] left-[-269px] border-t-[1px] 2k:left-[-462px] border-gray-300 transition-[height] duration-[300ms] ease-out  opacity-0 invisible ">
+                                                <div className='top w-full h-[40%]  border-b-[1px] border-gray-200 cursor-default flex justify-between items-center px-[100px] 2k:px-[250px]'>
+                                                    <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
+                                                        <img src={football} alt='' className='w-[40px] h-[40px]' />
+                                                        <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Football</h3>
                                                     </div>
-
-                                                    {/* shop by sports section starts from  here */}
-
-                                                    <div className='w-[165px]'>
-                                                        <h3 className='font-semibold'>Shop by sport</h3>
-                                                        <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faFutbol} />
-                                                                Football
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faBasketball} />
-                                                                BasketBall
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faPersonBiking} />
-                                                                Cycling
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faGolfBallTee} />
-                                                                Golf
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faDumbbell} />
-                                                                Gym
-                                                            </a>
-
-                                                        </div>
+                                                    <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
+                                                        <img src={basketball} alt='' className='w-[40px] h-[40px]' />
+                                                        <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Baskeball</h3>
                                                     </div>
-                                                    <div className='w-[165px]  flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonHiking} />
-                                                            Hiking
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonSkating} />
-                                                            Ice-skating
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faFootball} />
-                                                            Rugby
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faSkating} />
-                                                            Skateboard
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonSnowboarding} />
-                                                            Snowboard
-                                                        </a>
-
+                                                    <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
+                                                        <img src={volleyball} alt='' className='w-[40px] h-[40px]' />
+                                                        <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Volleyball</h3>
                                                     </div>
-                                                    <div className='w-[165px]  flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonSwimming} />
-                                                            Swimming
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faBaseballBatBall} />
-                                                            Baseball
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faVolleyball} />
-                                                            Volleyball
-                                                        </a>
+                                                    <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
+                                                        <img src={rugby} alt='' className='w-[40px] h-[40px]' />
+                                                        <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Football</h3>
                                                     </div>
-
-                                                    <div className='w-[165px] ml-1 mr-14'>
-                                                        <h3 className='font-semibold'>Follow Us</h3>
-                                                        <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faInstagram} />
-                                                                Instgram
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faXTwitter} />
-                                                                Twitter
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faFacebookF} />
-                                                                CycFacebookling
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faYoutube} />
-                                                                Youtube
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faLinkedinIn} />
-                                                                Linkedin
-                                                            </a>
-
-                                                        </div>
+                                                    <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
+                                                        <img src={swimming} alt='' className='w-[40px] h-[40px]' />
+                                                        <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Swimming</h3>
                                                     </div>
-                                                    <div className='flex justify-center items-center  relative w-[424.457px] h-auto  overflow-hidden '>
-                                                        <a href=' #'>
-                                                            <img src={yoga} alt='' className='h-[100%] hover:scale-110 duration-300' />
-                                                            <div className='absolute left-[50px] top-[15px]'>
-                                                                <h1 className=' font-[600] font-oswald text-white text-[50px] leading-[50px]'>YES FOR <br /> YOGA!</h1>
-                                                                <p className=' mt-[15px] text-white text-lg font-semibold mb-[25px]'>Check out!</p>
-                                                                <a href=' #' className=' cta1 w-[76.362px] h-[30px]  px-[40px] py-[10px] bg-white text-black font-semibold duration-300'>Shop now</a>
+                                                    <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
+                                                        <img src={icesketing} alt='' className='w-[40px] h-[40px]' />
+                                                        <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Ice-skating</h3>
+                                                    </div>
+                                                    <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
+                                                        <img src={golf} alt='' className='w-[40px] h-[40px]' />
+                                                        <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Golf</h3>
+                                                    </div>
+                                                    <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
+                                                        <img src={skate} alt='' className='w-[40px] h-[40px]' />
+                                                        <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Skateboard</h3>
+                                                    </div>
+                                                    <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
+                                                        <img src={snowboard} alt='' className='w-[40px] h-[40px]' />
+                                                        <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Snowboard</h3>
+                                                    </div>
+                                                    <div className='football flex flex-col  items-center cursor-pointer hover:text-red-500 duration-200'>
+                                                        <img src={hiking} alt='' className='w-[40px] h-[40px]' />
+                                                        <h3 className='mt-[16px] font-semibold hover:text-red-500 duration-200'>Hiking</h3>
+                                                    </div>
+                                                </div>
+                                                <div className='bottom w-full h-[60%]   cursor-default  px-[60px] 2k:px-[200px] pt-[50px]'>
+                                                    <div className='w-full flex'>
+                                                        {/* special section starts from here */}
+                                                        <div className='w-[200px]  flex flex-col items-start'>
+                                                            <h3 className='font-semibold'>Special</h3>
+                                                            <div className='flex flex-col gap-y-[10px] mt-[15px] items-start'>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Leatest products </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Sale </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Bestsellers </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Top rated </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Popularity </a>
                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div className=' shopoverlay hidden w-screen h-screen bg-black opacity-50 absolute top-0px]  z-[-20] transition-all duration-200 ease-in-out '></div>
-                                        </div>
-                                    </div>
-                                    {/* women key */}
-                                    <div className="women relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
-                                        <Link to={"/loobek/category/Women-clothes"} className="text-lg font-medium py-7">Women</Link>
-                                        <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
-                                        {/* women's dropdown section starts from here */}
-                                        <div className='womendrop flex w-screen  h-[300px] absolute top-[83px] left-[-336px] 2k:left-[-528px]  bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible   '>
-                                            <div className='h-full w-full ' >
-                                                <div className='w-full h-full  flex justify-center 2k:justify-between gap-x-[40px] '>
-                                                    {/* special section starts from here */}
-                                                    <div className='w-[200px] h-[90%] flex flex-col'>
-                                                        <h3 className='font-semibold'>Special</h3>
-                                                        <div className='flex flex-col gap-y-[10px] mt-[15px]'>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Leatest products </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Sale </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Bestsellers </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Top rated </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Popularity </a>
                                                         </div>
-                                                    </div>
 
-                                                    {/* shop by sports section starts from  here */}
+                                                        {/* shop by sports section starts from  here */}
 
-                                                    <div className='w-[165px] h-[90%]'>
-                                                        <h3 className='font-semibold'>Shop by sport</h3>
-                                                        <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
+                                                        <div className='w-[165px]'>
+                                                            <h3 className='font-semibold'>Shop by sport</h3>
+                                                            <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faFutbol} />
+                                                                    Football
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faBasketball} />
+                                                                    BasketBall
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faPersonBiking} />
+                                                                    Cycling
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faGolfBallTee} />
+                                                                    Golf
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faDumbbell} />
+                                                                    Gym
+                                                                </a>
+
+                                                            </div>
+                                                        </div>
+                                                        <div className='w-[165px]  flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
                                                             <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faFutbol} />
-                                                                Football
+                                                                <FontAwesomeIcon icon={faPersonHiking} />
+                                                                Hiking
                                                             </a>
                                                             <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faBasketball} />
-                                                                BasketBall
+                                                                <FontAwesomeIcon icon={faPersonSkating} />
+                                                                Ice-skating
                                                             </a>
                                                             <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faPersonBiking} />
-                                                                Cycling
+                                                                <FontAwesomeIcon icon={faFootball} />
+                                                                Rugby
                                                             </a>
                                                             <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faGolfBallTee} />
-                                                                Golf
+                                                                <FontAwesomeIcon icon={faSkating} />
+                                                                Skateboard
                                                             </a>
                                                             <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faDumbbell} />
-                                                                Gym
+                                                                <FontAwesomeIcon icon={faPersonSnowboarding} />
+                                                                Snowboard
                                                             </a>
 
                                                         </div>
-                                                    </div>
-                                                    <div className='w-[165px] h-[90%] flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonHiking} />
-                                                            Hiking
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonSkating} />
-                                                            Ice-skating
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faFootball} />
-                                                            Rugby
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faSkating} />
-                                                            Skateboard
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonSnowboarding} />
-                                                            Snowboard
-                                                        </a>
+                                                        <div className='w-[165px]  flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faPersonSwimming} />
+                                                                Swimming
+                                                            </a>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faBaseballBatBall} />
+                                                                Baseball
+                                                            </a>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faVolleyball} />
+                                                                Volleyball
+                                                            </a>
+                                                        </div>
 
-                                                    </div>
-                                                    <div className='w-[165px] h-[90%]  flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonSwimming} />
-                                                            Swimming
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faBaseballBatBall} />
-                                                            Baseball
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faVolleyball} />
-                                                            Volleyball
-                                                        </a>
-                                                    </div>
+                                                        <div className='w-[165px] ml-1 mr-14'>
+                                                            <h3 className='font-semibold'>Follow Us</h3>
+                                                            <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faInstagram} />
+                                                                    Instgram
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faXTwitter} />
+                                                                    Twitter
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faFacebookF} />
+                                                                    CycFacebookling
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faYoutube} />
+                                                                    Youtube
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faLinkedinIn} />
+                                                                    Linkedin
+                                                                </a>
 
-                                                    <div className='w-[165px] h-[90%] ml-1 mr-14'>
-                                                        <h3 className='font-semibold'>Follow Us</h3>
-                                                        <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faInstagram} />
-                                                                Instgram
+                                                            </div>
+                                                        </div>
+                                                        <div className='flex justify-center items-center  relative w-[424.457px] h-auto  overflow-hidden '>
+                                                            <a href=' #'>
+                                                                <img src={yoga} alt='' className='h-[100%] hover:scale-110 duration-300' />
+                                                                <div className='absolute left-[50px] top-[15px]'>
+                                                                    <h1 className=' font-[600] font-oswald text-white text-[50px] leading-[50px]'>YES FOR <br /> YOGA!</h1>
+                                                                    <p className=' mt-[15px] text-white text-lg font-semibold mb-[25px]'>Check out!</p>
+                                                                    <a href=' #' className=' cta1 w-[76.362px] h-[30px]  px-[40px] py-[10px] bg-white text-black font-semibold duration-300'>Shop now</a>
+                                                                </div>
                                                             </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faXTwitter} />
-                                                                Twitter
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faFacebookF} />
-                                                                CycFacebookling
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faYoutube} />
-                                                                Youtube
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faLinkedinIn} />
-                                                                Linkedin
-                                                            </a>
-
                                                         </div>
                                                     </div>
-
-                                                    {/* women's overlay from here */}
-
-                                                    <div className=' womenoverlay hidden w-screen h-screen bg-black opacity-50 absolute top-0px]  z-[-20] transition-all duration-200 ease-in-out '></div>
 
                                                 </div>
-
+                                                <div className=' shopoverlay hidden w-screen h-screen bg-black opacity-50 absolute top-0px]  z-[-20] transition-all duration-200 ease-in-out '></div>
                                             </div>
-
                                         </div>
-                                    </div>
-                                    {/* men key */}
-                                    <div className="men relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
-                                        <Link to={"/category/men"} className="text-lg font-medium py-7">Men</Link>
-                                        <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
-
-                                        {/* men dropdown section from here on */}
-
-                                        <div className='mendrop flex w-screen  h-[300px] absolute top-[83px] left-[-425px] 2k:left-[-620px] bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible   '>
-                                            <div className='h-full w-full ' >
-                                                <div className='w-full h-full  flex justify-center 2k:justify-between gap-x-[40px] '>
-                                                    {/* special section starts from here */}
-                                                    <div className='w-[200px] h-[90%] flex flex-col'>
-                                                        <h3 className='font-semibold'>Special</h3>
-                                                        <div className='flex flex-col gap-y-[10px] mt-[15px]'>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Leatest products </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Sale </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Bestsellers </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Top rated </a>
-                                                            <a href=' #' className='w-full hover:text-red-500 duration-200'>Popularity </a>
+                                        {/* women key */}
+                                        <div className="women relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
+                                            <Link to={"/loobek/category/Women-clothes"} className="text-lg font-medium py-7">Women</Link>
+                                            <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
+                                            {/* women's dropdown section starts from here */}
+                                            <div className='womendrop flex w-screen  h-[300px] absolute top-[83px] left-[-336px] 2k:left-[-528px]  bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible   '>
+                                                <div className='h-full w-full ' >
+                                                    <div className='w-full h-full  flex justify-center 2k:justify-between gap-x-[40px] '>
+                                                        {/* special section starts from here */}
+                                                        <div className='w-[200px] h-[90%] flex flex-col'>
+                                                            <h3 className='font-semibold'>Special</h3>
+                                                            <div className='flex flex-col gap-y-[10px] mt-[15px]'>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Leatest products </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Sale </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Bestsellers </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Top rated </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Popularity </a>
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    {/* shop by sports section starts from  here */}
+                                                        {/* shop by sports section starts from  here */}
 
-                                                    <div className='w-[165px] h-[90%]'>
-                                                        <h3 className='font-semibold'>Shop by sport</h3>
-                                                        <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faFutbol} />
-                                                                Football
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faBasketball} />
-                                                                BasketBall
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faPersonBiking} />
-                                                                Cycling
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faGolfBallTee} />
-                                                                Golf
-                                                            </a>
-                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faDumbbell} />
-                                                                Gym
-                                                            </a>
+                                                        <div className='w-[165px] h-[90%]'>
+                                                            <h3 className='font-semibold'>Shop by sport</h3>
+                                                            <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faFutbol} />
+                                                                    Football
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faBasketball} />
+                                                                    BasketBall
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faPersonBiking} />
+                                                                    Cycling
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faGolfBallTee} />
+                                                                    Golf
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faDumbbell} />
+                                                                    Gym
+                                                                </a>
 
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className='w-[165px] h-[90%] flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonHiking} />
-                                                            Hiking
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonSkating} />
-                                                            Ice-skating
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faFootball} />
-                                                            Rugby
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faSkating} />
-                                                            Skateboard
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonSnowboarding} />
-                                                            Snowboard
-                                                        </a>
-
-                                                    </div>
-                                                    <div className='w-[165px] h-[90%]  flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faPersonSwimming} />
-                                                            Swimming
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faBaseballBatBall} />
-                                                            Baseball
-                                                        </a>
-                                                        <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                            <FontAwesomeIcon icon={faVolleyball} />
-                                                            Volleyball
-                                                        </a>
-                                                    </div>
-
-                                                    <div className='w-[165px] h-[90%] ml-1 mr-14'>
-                                                        <h3 className='font-semibold'>Follow Us</h3>
-                                                        <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
+                                                        <div className='w-[165px] h-[90%] flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
                                                             <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faInstagram} />
-                                                                Instgram
+                                                                <FontAwesomeIcon icon={faPersonHiking} />
+                                                                Hiking
                                                             </a>
                                                             <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faXTwitter} />
-                                                                Twitter
+                                                                <FontAwesomeIcon icon={faPersonSkating} />
+                                                                Ice-skating
                                                             </a>
                                                             <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faFacebookF} />
-                                                                CycFacebookling
+                                                                <FontAwesomeIcon icon={faFootball} />
+                                                                Rugby
                                                             </a>
                                                             <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faYoutube} />
-                                                                Youtube
+                                                                <FontAwesomeIcon icon={faSkating} />
+                                                                Skateboard
                                                             </a>
                                                             <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
-                                                                <FontAwesomeIcon icon={faLinkedinIn} />
-                                                                Linkedin
+                                                                <FontAwesomeIcon icon={faPersonSnowboarding} />
+                                                                Snowboard
                                                             </a>
 
                                                         </div>
+                                                        <div className='w-[165px] h-[90%]  flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faPersonSwimming} />
+                                                                Swimming
+                                                            </a>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faBaseballBatBall} />
+                                                                Baseball
+                                                            </a>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faVolleyball} />
+                                                                Volleyball
+                                                            </a>
+                                                        </div>
+
+                                                        <div className='w-[165px] h-[90%] ml-1 mr-14'>
+                                                            <h3 className='font-semibold'>Follow Us</h3>
+                                                            <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faInstagram} />
+                                                                    Instgram
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faXTwitter} />
+                                                                    Twitter
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faFacebookF} />
+                                                                    CycFacebookling
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faYoutube} />
+                                                                    Youtube
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faLinkedinIn} />
+                                                                    Linkedin
+                                                                </a>
+
+                                                            </div>
+                                                        </div>
+
+                                                        {/* women's overlay from here */}
+
+                                                        <div className=' womenoverlay hidden w-screen h-screen bg-black opacity-50 absolute top-0px]  z-[-20] transition-all duration-200 ease-in-out '></div>
+
                                                     </div>
-
-                                                    {/* women's overlay from here */}
-
-                                                    <div className=' menoverlay hidden w-screen h-screen bg-black opacity-50 absolute top-0px]  z-[-20] transition-all duration-200 ease-in-out '></div>
 
                                                 </div>
 
                                             </div>
-
                                         </div>
-                                    </div>
-                                    {/* accessory key */}
-                                    <div className="accessory relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
-                                        <Link to={"/loobek/accessories"} className="text-lg font-medium py-7">Accessories</Link>
-                                        <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
-                                        <div className='accessorydrop flex bg-white w-screen  h-[333px] absolute top-[83px] left-[-486px] 2k:left-[-678px]  border-t-[1px] border-gray-200 pl-[80px] px-[50px] 2xl:px-[240px] py-[50px]  justify-center transition-[padding,height] duration-[300ms] ease-out  opacity-0 invisible  '>
-                                            <div className=' w-full h-full  flex flex-col gap-y-[10px] '>
-                                                <div className='w-full h-[33.33%]  flex gap-x-[10px]'>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <Link to={"/category/football"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                            <img src={acfootball} alt='' className='w-[46px] h-[46px] ' />
-                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Football</h6>
-                                                        </Link>
+                                        {/* men key */}
+                                        <div className="men relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
+                                            <Link to={"/category/men"} className="text-lg font-medium py-7">Men</Link>
+                                            <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
+
+                                            {/* men dropdown section from here on */}
+
+                                            <div className='mendrop flex w-screen  h-[300px] absolute top-[83px] left-[-425px] 2k:left-[-620px] bg-white border-t-[1px] border-gray-200 px-[60px] 2k:px-[210px] pt-[50px] p-[40px]  justify-center transition-[padding,height] duration-[300ms] ease-out opacity-0 invisible   '>
+                                                <div className='h-full w-full ' >
+                                                    <div className='w-full h-full  flex justify-center 2k:justify-between gap-x-[40px] '>
+                                                        {/* special section starts from here */}
+                                                        <div className='w-[200px] h-[90%] flex flex-col'>
+                                                            <h3 className='font-semibold'>Special</h3>
+                                                            <div className='flex flex-col gap-y-[10px] mt-[15px]'>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Leatest products </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Sale </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Bestsellers </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Top rated </a>
+                                                                <a href=' #' className='w-full hover:text-red-500 duration-200'>Popularity </a>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* shop by sports section starts from  here */}
+
+                                                        <div className='w-[165px] h-[90%]'>
+                                                            <h3 className='font-semibold'>Shop by sport</h3>
+                                                            <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faFutbol} />
+                                                                    Football
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faBasketball} />
+                                                                    BasketBall
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faPersonBiking} />
+                                                                    Cycling
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faGolfBallTee} />
+                                                                    Golf
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faDumbbell} />
+                                                                    Gym
+                                                                </a>
+
+                                                            </div>
+                                                        </div>
+                                                        <div className='w-[165px] h-[90%] flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faPersonHiking} />
+                                                                Hiking
+                                                            </a>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faPersonSkating} />
+                                                                Ice-skating
+                                                            </a>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faFootball} />
+                                                                Rugby
+                                                            </a>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faSkating} />
+                                                                Skateboard
+                                                            </a>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faPersonSnowboarding} />
+                                                                Snowboard
+                                                            </a>
+
+                                                        </div>
+                                                        <div className='w-[165px] h-[90%]  flex flex-col gap-y-[15px] mt-[40px] ml-[50px]'>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faPersonSwimming} />
+                                                                Swimming
+                                                            </a>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faBaseballBatBall} />
+                                                                Baseball
+                                                            </a>
+                                                            <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                <FontAwesomeIcon icon={faVolleyball} />
+                                                                Volleyball
+                                                            </a>
+                                                        </div>
+
+                                                        <div className='w-[165px] h-[90%] ml-1 mr-14'>
+                                                            <h3 className='font-semibold'>Follow Us</h3>
+                                                            <div className='w-full mt-[15px] flex flex-col gap-y-[15px]'>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faInstagram} />
+                                                                    Instgram
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faXTwitter} />
+                                                                    Twitter
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faFacebookF} />
+                                                                    CycFacebookling
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faYoutube} />
+                                                                    Youtube
+                                                                </a>
+                                                                <a href=' #' className=' hover:text-red-500 duration-200 flex justify-start items-center gap-x-[15px]'>
+                                                                    <FontAwesomeIcon icon={faLinkedinIn} />
+                                                                    Linkedin
+                                                                </a>
+
+                                                            </div>
+                                                        </div>
+
+                                                        {/* women's overlay from here */}
+
+                                                        <div className=' menoverlay hidden w-screen h-screen bg-black opacity-50 absolute top-0px]  z-[-20] transition-all duration-200 ease-in-out '></div>
+
                                                     </div>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={acbasketball} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Basketball</h6>
-                                                    </div>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={acvolleyball} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Volleyball</h6>
-                                                    </div>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <Link to={"/category/tennis"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                            <img src={actennis} alt='' className='w-[46px] h-[46px]' />
-                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Tennis</h6>
-                                                        </Link>
-                                                    </div>
+
                                                 </div>
-                                                <div className='w-full h-[33.33%]   flex gap-x-[10px]'>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={acswimming} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Swimming</h6>
-                                                    </div>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={acrugby} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Rugby</h6>
-                                                    </div>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={acgolf} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Golf</h6>
-                                                    </div>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={acsurfing} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Surfing</h6>
-                                                    </div>
-                                                </div>
-                                                <div className='w-full h-[33.33%]  flex gap-x-[10px]'>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <Link to={"/category/cycling"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                            <img src={accycling} alt='' className='w-[46px] h-[46px]' />
-                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Cycling</h6>
-                                                        </Link>
-                                                    </div>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={acbadminton} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Badminton</h6></div>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <img src={acboxing} alt='' className='w-[46px] h-[46px]' />
-                                                        <h6 className='hover:text-red-500 duration-200 font-[500]'>Boxing</h6>
-                                                    </div>
-                                                    <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                        <Link to={"/category/cycling"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
-                                                            <img src={acracing} alt='' className='w-[46px] h-[46px]' />
-                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Racing</h6>
-                                                        </Link>
-                                                    </div>
-                                                </div>
+
                                             </div>
-                                            <div className=' accessoryoverlay hidden w-screen h-screen bg-black opacity-50 absolute top-[0px] left-[0]  z-[-20] transition-all duration-200 ease-in-out '></div>
                                         </div>
-                                    </div>
-                                    {/* sale key */}
-                                    <div className="relative flex justify-center keys cursor-pointer" >
-                                        <Link to={"/loobek/onsale"} className="text-lg font-medium py-7">Sale</Link>
-                                        <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
-                                    </div>
-                                    {/* page key */}
-                                    <div className="relative flex justify-center keys cursor-pointer" >
-                                        <p className="text-lg font-medium py-7">Pages</p>
-                                        <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
-                                    </div>
+                                        {/* accessory key */}
+                                        <div className="accessory relative flex justify-center keys cursor-pointer" onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
+                                            <Link to={"/loobek/accessories"} className="text-lg font-medium py-7">Accessories</Link>
+                                            <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
+                                            <div className='accessorydrop flex bg-white w-screen  h-[333px] absolute top-[83px] left-[-486px] 2k:left-[-678px]  border-t-[1px] border-gray-200 pl-[80px] px-[50px] 2xl:px-[240px] py-[50px]  justify-center transition-[padding,height] duration-[300ms] ease-out  opacity-0 invisible  '>
+                                                <div className=' w-full h-full  flex flex-col gap-y-[10px] '>
+                                                    <div className='w-full h-[33.33%]  flex gap-x-[10px]'>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <Link to={"/category/football"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                                <img src={acfootball} alt='' className='w-[46px] h-[46px] ' />
+                                                                <h6 className='hover:text-red-500 duration-200 font-[500]'>Football</h6>
+                                                            </Link>
+                                                        </div>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={acbasketball} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Basketball</h6>
+                                                        </div>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={acvolleyball} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Volleyball</h6>
+                                                        </div>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <Link to={"/category/tennis"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                                <img src={actennis} alt='' className='w-[46px] h-[46px]' />
+                                                                <h6 className='hover:text-red-500 duration-200 font-[500]'>Tennis</h6>
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                    <div className='w-full h-[33.33%]   flex gap-x-[10px]'>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={acswimming} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Swimming</h6>
+                                                        </div>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={acrugby} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Rugby</h6>
+                                                        </div>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={acgolf} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Golf</h6>
+                                                        </div>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={acsurfing} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Surfing</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div className='w-full h-[33.33%]  flex gap-x-[10px]'>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <Link to={"/category/cycling"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                                <img src={accycling} alt='' className='w-[46px] h-[46px]' />
+                                                                <h6 className='hover:text-red-500 duration-200 font-[500]'>Cycling</h6>
+                                                            </Link>
+                                                        </div>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={acbadminton} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Badminton</h6></div>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <img src={acboxing} alt='' className='w-[46px] h-[46px]' />
+                                                            <h6 className='hover:text-red-500 duration-200 font-[500]'>Boxing</h6>
+                                                        </div>
+                                                        <div className='w-[25%] h-full bg-gray-100 flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                            <Link to={"/category/cycling"} className='flex items-center pl-[20px] pr-[10px] py-[15px] gap-x-[20px]'>
+                                                                <img src={acracing} alt='' className='w-[46px] h-[46px]' />
+                                                                <h6 className='hover:text-red-500 duration-200 font-[500]'>Racing</h6>
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className=' accessoryoverlay hidden w-screen h-screen bg-black opacity-50 absolute top-[0px] left-[0]  z-[-20] transition-all duration-200 ease-in-out '></div>
+                                            </div>
+                                        </div>
+                                        {/* sale key */}
+                                        <div className="relative flex justify-center keys cursor-pointer" >
+                                            <Link to={"/loobek/onsale"} className="text-lg font-medium py-7">Sale</Link>
+                                            <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
+                                        </div>
+                                        {/* page key */}
+                                        <div className="relative flex justify-center keys cursor-pointer" >
+                                            <p className="text-lg font-medium py-7">Pages</p>
+                                            <span className=" underline w-[1px] h-[0.7px] bg-black absolute bottom-[30px] transition-all duration-300 ease-in-out opacity-0   "></span>
+                                        </div>
 
-                                </nav>
+                                    </nav>
 
-                            </div>
-                            {/* logo and navbar ends here */}
-
-                            {/* searchbar and profile combined from here */}
-                            <div className='flex '>
-                                {/* searchbar from here */}
-
-                                <div className=' hidden   pl-[20px] pr-[50px] py-[7px] bg-gray-100  relative sm:flex justify-center items-center'>
-                                    <input type="text" className="w-[158.400px] h-[30px] focus:outline-none bg-gray-100 text-sm flex justify-center items-center" placeholder='Search for products' />
-                                    <FontAwesomeIcon icon={faMagnifyingGlass} className='absolute right-[14px] text-lg' />
                                 </div>
+                                {/* logo and navbar ends here */}
 
-                                {/* searchbar ends here */}
+                                {/* searchbar and profile combined from here */}
+                                <div className='flex '>
+                                    {/* searchbar from here */}
 
-                                {/* profile section starts from here */}
+                                    <div className=' hidden   pl-[20px] pr-[50px] py-[7px] bg-gray-100  relative sm:flex justify-center items-center'>
+                                        <input type="text" className="w-[158.400px] h-[30px] focus:outline-none bg-gray-100 text-sm flex justify-center items-center" placeholder='Search for products' />
+                                        <FontAwesomeIcon icon={faMagnifyingGlass} className='absolute right-[14px] text-lg' />
+                                    </div>
 
-                                <div className='profile flex md:gap-x-2 sm:ml-[20px] md:ml-10'>
-                                    <div className='user flex justify-center items-center' onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
-                                        <a href=' #' className=' relative'>
-                                            <FontAwesomeIcon icon={faUserPlus} className="text-[20px] px-[8px] py-[8px] md:px-3 md:py-3 hover:text-red-500 duration-200" />
-                                            {/* login form here */}
-                                            <div className='form  invisible opacity-0  cursor-default w-[430px] h-[350px] absolute top-[40px] border-[1px] border-black right-0  bg-white px-[30px] pt-[10px] pb-[30px] transition-all duration-500 ease-in-out'>
-                                                <form action='' method='' className='w-full h-full bg-white flex flex-col '>
-                                                    {/* username */}
-                                                    <label for="" className='flex flex-col items-start gap-y-[5px]'>Username or Email Address
-                                                        <input type='email' required name='email' className='w-full text-[14px] leading-[30px] px-[20px] py-[7px] focus:outline-none border-[1px] border-black' placeholder='' />
-                                                    </label>
-                                                    {/* password */}
-                                                    <label for="" className='flex flex-col items-start gap-y-[5px] mt-[10px]'>Password
-                                                        <input type='password' required name='email' className='w-full text-[14px] leading-[30px] px-[20px] py-[7px] focus:outline-none border-[1px] border-black' placeholder='' />
-                                                    </label>
-                                                    <button type='submit' className='text-white bg-black w-full text-[16px]leading-[30px] px-[40px] py-[10px] font-[500] hover:bg-red-500 duration-300 hover:shadow-md hover:shadow-red-500 mt-[20px]'>Log In</button>
-                                                    <div className='flex items-center justify-between my-[10px]'>
-                                                        <label for="" className='flex items-center gap-x-[5px]'>
-                                                            <input type='checkbox' />
-                                                            Remember me
+                                    {/* searchbar ends here */}
+
+                                    {/* profile section starts from here */}
+
+                                    <div className='profile flex md:gap-x-2 sm:ml-[20px] md:ml-10'>
+                                        <div className='user flex justify-center items-center' onMouseEnter={activeoverlay} onMouseLeave={inactiveoverlay}>
+                                            <a href=' #' className=' relative'>
+                                                <FontAwesomeIcon icon={faUserPlus} className="text-[20px] px-[8px] py-[8px] md:px-3 md:py-3 hover:text-red-500 duration-200" />
+                                                {/* login form here */}
+                                                <div className='form  invisible opacity-0  cursor-default w-[430px] h-[350px] absolute top-[40px] border-[1px] border-black right-0  bg-white px-[30px] pt-[10px] pb-[30px] transition-all duration-500 ease-in-out'>
+                                                    <form action='' method='' className='w-full h-full bg-white flex flex-col '>
+                                                        {/* username */}
+                                                        <label for="" className='flex flex-col items-start gap-y-[5px]'>Username or Email Address
+                                                            <input type='email' required name='email' className='w-full text-[14px] leading-[30px] px-[20px] py-[7px] focus:outline-none border-[1px] border-black' placeholder='' />
                                                         </label>
-                                                        <p className='hover:text-red-500 duration-200 underline underline-offset-1 text-[15px] cursor-pointer'>I forget the password</p>
-                                                    </div>
-                                                    {/* divider */}
-                                                    <div className='w-full h-[0.8px] bg-gray-300'></div>
-                                                    <div className='flex justify-center items-center mt-[10px] gap-x-[4px]'>
-                                                        <p className='text-14px'>I'm new client. </p>
-                                                        <p className='cursor-pointer text-red-500 underline underline-offset-2 text-[15px] font-[400]'>Create an account</p>
-                                                    </div>
+                                                        {/* password */}
+                                                        <label for="" className='flex flex-col items-start gap-y-[5px] mt-[10px]'>Password
+                                                            <input type='password' required name='email' className='w-full text-[14px] leading-[30px] px-[20px] py-[7px] focus:outline-none border-[1px] border-black' placeholder='' />
+                                                        </label>
+                                                        <button type='submit' className='text-white bg-black w-full text-[16px]leading-[30px] px-[40px] py-[10px] font-[500] hover:bg-red-500 duration-300 hover:shadow-md hover:shadow-red-500 mt-[20px]'>Log In</button>
+                                                        <div className='flex items-center justify-between my-[10px]'>
+                                                            <label for="" className='flex items-center gap-x-[5px]'>
+                                                                <input type='checkbox' />
+                                                                Remember me
+                                                            </label>
+                                                            <p className='hover:text-red-500 duration-200 underline underline-offset-1 text-[15px] cursor-pointer'>I forget the password</p>
+                                                        </div>
+                                                        {/* divider */}
+                                                        <div className='w-full h-[0.8px] bg-gray-300'></div>
+                                                        <div className='flex justify-center items-center mt-[10px] gap-x-[4px]'>
+                                                            <p className='text-14px'>I'm new client. </p>
+                                                            <p className='cursor-pointer text-red-500 underline underline-offset-2 text-[15px] font-[400]'>Create an account</p>
+                                                        </div>
 
-                                                </form>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div className='wishlist hidden md:block'>
-                                        <a href=' #' className="  duration-200 relative">
-                                            <FontAwesomeIcon icon={faHeart} className="text-[20px]:px-3 py-3 hover:text-red-500 duration-200" />
-                                            <div className='wishlistdrop absolute left-[65%] bottom-[-15px] text-white bg-gray-600 px-1 py-[2px] border-[2px] border-white text-sm invisible opacity-0 none  delay-[500ms] ease-out'>
-                                                Wishlist
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div className='cart flex justify-center items-center ' >
-                                        <a href=' #' className='cart flex justify-center relative'>
-                                            <FontAwesomeIcon icon={faCartPlus} onClick={activesidebar} className="text-[20px] px-[8px] py-[8px] md:px-3 md:py-3 hover:text-red-500 duration-200" />
-                                            <span className='absolute rounded-full top-[4px] right-[4px] px-[5px] py-[1px]  bg-black text-[10px]  text-white'>0</span>
+                                                    </form>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='wishlist hidden md:block'>
+                                            <a href=' #' className="  duration-200 relative">
+                                                <FontAwesomeIcon icon={faHeart} className="text-[20px]:px-3 py-3 hover:text-red-500 duration-200" />
+                                                <div className='wishlistdrop absolute left-[65%] bottom-[-15px] text-white bg-gray-600 px-1 py-[2px] border-[2px] border-white text-sm invisible opacity-0 none  delay-[500ms] ease-out'>
+                                                    Wishlist
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='cart flex justify-center items-center ' >
+                                            <a href=' #' className='cart flex justify-center relative'>
+                                                <FontAwesomeIcon icon={faCartPlus} onClick={activesidebar} className="text-[20px] px-[8px] py-[8px] md:px-3 md:py-3 hover:text-red-500 duration-200" />
+                                                <span className='absolute rounded-full top-[4px] right-[4px] px-[5px] py-[1px]  bg-black text-[10px]  text-white' >{value.count}</span>
 
-                                        </a>
+                                            </a>
+                                        </div>
+
                                     </div>
 
+                                    {/* profile section ends here */}
                                 </div>
-
-                                {/* profile section ends here */}
+                                {/* searchbar and profile combined ends here */}
                             </div>
-                            {/* searchbar and profile combined ends here */}
                         </div>
+
+                        {/* header's bottom section ends here */}
+
+                    </header>
+                    <div className=''>
+                        <Routes>
+                            <Route path='/' element={<Home />} />
+                            <Route path='/about' element={<About />} />
+                            <Route path='/contact' element={<Contact />} />
+                            <Route path='/blog' element={<Blog />} />
+                            <Route path='/help' element={<Help />} />
+                            <Route path='/blog/blog-fashion' element={<Fashion />} />
+                            <Route path='/blog-gallery' element={<Gallery />} />
+                            <Route path='/blog-new-arrival' element={<NewArrival />} />
+                            <Route path='/blog-sport' element={<Sport />} />
+                            <Route path='/blog-sporting-goods' element={<Sportinggoods />} />
+                            <Route path='/blog/video' element={<Video />} />
+                            <Route path='/loobek/shop' element={<Shop />} />
+                            <Route path='/loobek/category/Women-clothes' element={<Women />} />
+                            <Route path='/loobek/category/Men-clothes' element={<Men />} />
+                            <Route path='/loobek/accessories' element={<Accessories />} />
+                            <Route path='/loobek/onsale' element={<Sale />} />
+                            <Route path='/category/running' element={<Running />} />
+                            <Route path='/category/tennis' element={<Tennis />} />
+                            <Route path='/category/gym-accessories' element={<Gym />} />
+                            <Route path='/category/cycling' element={<Cycling />} />
+
+                            <Route path='/category/men' element={<Gym />} />
+
+                            {/* product section Route pages */}
+
+                            {/* training page products */}
+
+                            {/* section 1 complete */}
+                            <Route path='/gym-accessory/color-sports-tank-top' element={<Product1 />} />
+                            <Route path='/gym-accessory/flamingo-print-tank-top' element={<Product2 />} />
+                            <Route path='/gym-accessory/leopard-print-sports-shorts' element={<Product3 />} />
+                            <Route path='/gym-accessory/high-crossback-sports-bra' element={<Product4 />} />
+                            <Route path='/gym-accessory/slim-fit-tshirt' element={<Product5 />} />
+
+                            {/* section 2 complete */}
+                            <Route path='/gym-accessory/solid-crop-slim-sports-tee' element={<Product6 />} />
+                            <Route path='/gym-accessory/contrast-binding-layered-dress' element={<Product7 />} />
+                            <Route path='/gym-accessory/topshop-training-tshirt' element={<Product8 />} />
+                            <Route path='/gym-accessory/ombre-sports-tank-top' element={<Product9 />} />
+                            <Route path='/gym-accessory/cropped-tennis-skirt' element={<Product10 />} />
+
+                            {/* section 3 complete */}
+                            <Route path='/gym-accessory/solid-pocket-sport-shorts' element={<Product11 />} />
+                            <Route path='/gym-accessory/high-waisted-leggings' element={<Product12 />} />
+                            <Route path='/gym-accessory/quick-dry-tshirts' element={<Product13 />} />
+                            <Route path='/gym-accessory/Athletic-tank-top' element={<Product14 />} />
+                            <Route path='/gym-accessory/knit-sports-shorts-set' element={<Product15 />} />
+
+
+                            {/* cycling product pages page products */}
+
+                            <Route path='/cycling-accessory/minimalist-backpack-sports' element={<Cyclingproduct1 />} />
+                            <Route path='/cycling-accessory/wristband-cycling-gloves' element={<CyclingProduct2 />} />
+                            <Route path='/cycling-accessory/cycling-kit-in-black' element={<CyclingProduct3 />} />
+                            <Route path='/cycling-accessory/women-cycling-clothing' element={<CyclingProduct4 />} />
+
+                            {/* shop product's pages */}
+
+                            <Route path='/shop/swim-shorts-in-black' element={<Shopproduct1 />} />
+                            <Route path='/shop/high-stretch-sports-shorts' element={<Shopproduct2 />} />
+                            <Route path='/shop/letter-sports-tank-top' element={<Shopproduct3 />} />
+                            <Route path='/shop/color-sports-tank-top' element={< Shopproduct4 />} />
+                            <Route path='/shop/minimalist-training-bag' element={<Shopproduct5 />} />
+                            <Route path='/shop/flamingo-print-tank-top' element={<Shopproduct6 />} />
+                            <Route path='/shop/leopard-print-sports-shorts' element={<Shopproduct7 />} />
+                            <Route path='/shop/minimalist-oxford-duffle-bag' element={<Shopproduct8 />} />
+                            <Route path='/shop/high-crossback-sports-bra' element={<Shopproduct9 />} />
+                            <Route path='/shop/slim-fit-t-shirt' element={<Shopproduct10 />} />
+                            <Route path='/shop/waist-twisting-board' element={<Shopproduct11 />} />
+                            <Route path='/shop/sport-mini-skirt-basic' element={<Shopproduct12 />} />
+                            <Route path='/shop/solid-crop-slim-sports-tee' element={<Shopproduct13 />} />
+                            <Route path='/shop/minimalist-backpack-sports' element={<Shopproduct14 />} />
+                            <Route path='/shop/woven-training-shorts' element={<Shopproduct15 />} />
+
+
+                            {/* shop by category  */}
+
+                            <Route path='/category/football' element={<Football />} />
+                            <Route path='/football/cycling-shorts-green' element={<Footballp1 />} />
+                            <Route path='/football/drawing-waist-shorts' element={<Footballp2 />} />
+
+                        </Routes>
                     </div>
 
-                    {/* header's bottom section ends here */}
-
-                </header>
-                <div className=''>
-                    <Routes>
-                        <Route path='/' element={<Home />} />
-                        <Route path='/about' element={<About />} />
-                        <Route path='/contact' element={<Contact />} />
-                        <Route path='/blog' element={<Blog />} />
-                        <Route path='/help' element={<Help />} />
-                        <Route path='/blog/blog-fashion' element={<Fashion />} />
-                        <Route path='/blog-gallery' element={<Gallery />} />
-                        <Route path='/blog-new-arrival' element={<NewArrival />} />
-                        <Route path='/blog-sport' element={<Sport />} />
-                        <Route path='/blog-sporting-goods' element={<Sportinggoods />} />
-                        <Route path='/blog/video' element={<Video />} />
-                        <Route path='/loobek/shop' element={<Shop />} />
-                        <Route path='/loobek/category/Women-clothes' element={<Women />} />
-                        <Route path='/loobek/category/Men-clothes' element={<Men />} />
-                        <Route path='/loobek/accessories' element={<Accessories />} />
-                        <Route path='/loobek/onsale' element={<Sale />} />
-                        <Route path='/category/running' element={<Running />} />
-                        <Route path='/category/tennis' element={<Tennis />} />
-                        <Route path='/category/gym-accessories' element={<Gym />} />
-                        <Route path='/category/cycling' element={<Cycling />} />
-
-                        <Route path='/category/men' element={<Gym />} />
-
-                        {/* product section Route pages */}
-
-                        {/* training page products */}
-
-                        {/* section 1 complete */}
-                        <Route path='/gym-accessory/color-sports-tank-top' element={<Product1 />} />
-                        <Route path='/gym-accessory/flamingo-print-tank-top' element={<Product2 />} />
-                        <Route path='/gym-accessory/leopard-print-sports-shorts' element={<Product3 />} />
-                        <Route path='/gym-accessory/high-crossback-sports-bra' element={<Product4 />} />
-                        <Route path='/gym-accessory/slim-fit-tshirt' element={<Product5 />} />
-
-                        {/* section 2 complete */}
-                        <Route path='/gym-accessory/solid-crop-slim-sports-tee' element={<Product6 />} />
-                        <Route path='/gym-accessory/contrast-binding-layered-dress' element={<Product7 />} />
-                        <Route path='/gym-accessory/topshop-training-tshirt' element={<Product8 />} />
-                        <Route path='/gym-accessory/ombre-sports-tank-top' element={<Product9 />} />
-                        <Route path='/gym-accessory/cropped-tennis-skirt' element={<Product10 />} />
-
-                        {/* section 3 complete */}
-                        <Route path='/gym-accessory/solid-pocket-sport-shorts' element={<Product11 />} />
-                        <Route path='/gym-accessory/high-waisted-leggings' element={<Product12 />} />
-                        <Route path='/gym-accessory/quick-dry-tshirts' element={<Product13 />} />
-                        <Route path='/gym-accessory/Athletic-tank-top' element={<Product14 />} />
-                        <Route path='/gym-accessory/knit-sports-shorts-set' element={<Product15 />} />
-
-
-                        {/* cycling product pages page products */}
-
-                        <Route path='/cycling-accessory/minimalist-backpack-sports' element={<Cyclingproduct1 />} />
-                        <Route path='/cycling-accessory/wristband-cycling-gloves' element={<CyclingProduct2 />} />
-                        <Route path='/cycling-accessory/cycling-kit-in-black' element={<CyclingProduct3 />} />
-                        <Route path='/cycling-accessory/women-cycling-clothing' element={<CyclingProduct4 />} />
-
-                        {/* shop product's pages */}
-
-                        <Route path='/shop/swim-shorts-in-black' element={<Shopproduct1 />} />
-                        <Route path='/shop/high-stretch-sports-shorts' element={<Shopproduct2 />} />
-                        <Route path='/shop/letter-sports-tank-top' element={<Shopproduct3 />} />
-                        <Route path='/shop/color-sports-tank-top' element={< Shopproduct4 />} />
-                        <Route path='/shop/minimalist-training-bag' element={<Shopproduct5 />} />
-                        <Route path='/shop/flamingo-print-tank-top' element={<Shopproduct6 />} />
-                        <Route path='/shop/leopard-print-sports-shorts' element={<Shopproduct7 />} />
-                        <Route path='/shop/minimalist-oxford-duffle-bag' element={<Shopproduct8 />} />
-                        <Route path='/shop/high-crossback-sports-bra' element={<Shopproduct9 />} />
-                        <Route path='/shop/slim-fit-t-shirt' element={<Shopproduct10 />} />
-                        <Route path='/shop/waist-twisting-board' element={<Shopproduct11 />} />
-                        <Route path='/shop/sport-mini-skirt-basic' element={<Shopproduct12 />} />
-                        <Route path='/shop/solid-crop-slim-sports-tee' element={<Shopproduct13 />} />
-                        <Route path='/shop/minimalist-backpack-sports' element={<Shopproduct14 />} />
-                        <Route path='/shop/woven-training-shorts' element={<Shopproduct15 />} />
-
-
-                        {/* shop by category  */}
-
-                        <Route path='/category/football' element={<Football />} />
-                        <Route path='/football/cycling-shorts-green' element={<Footballp1 />} />
-                        <Route path='/football/drawing-waist-shorts' element={<Footballp2 />} />
-
-                    </Routes>
-                </div>
-
-            </BrowserRouter>
+                </BrowserRouter>
+            </counterContext.Provider>
         </>
 
     )

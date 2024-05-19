@@ -8,22 +8,35 @@ import Footer from './Components/Footer/Footer';
 // pages imported from here
 import About from "./Components/Pages/About/About"
 import { useState } from 'react';
+import { useContext, createContext } from 'react';
+import { counterContext } from './Components/context';
+
 
 
 
 function App() {
-  
+
+
+
+
+
+  const [count,setCount]=useState(0)
+
 
   return (
 
-    <div className="App">
-      <Header />
-      
-      <Footer />
+    <>
 
+      <counterContext.Provider value={{count,setCount}}>
+        <div className="App">
+          <Header />
 
-    </div>
+          <Footer />
+        </div>
+      </counterContext.Provider>
+    </>
   );
+
 }
 
 export default App;
